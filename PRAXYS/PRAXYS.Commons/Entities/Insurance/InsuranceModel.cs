@@ -1,8 +1,10 @@
-﻿using PRAXYS.Commons.Entities.Agent;
+﻿using PRAXYS.Commons.Entities.Address;
+using PRAXYS.Commons.Entities.Agent;
 using PRAXYS.Commons.Entities.Branch;
 using PRAXYS.Commons.Entities.Client;
 using PRAXYS.Commons.Entities.Company;
 using PRAXYS.Commons.Entities.CoveragePlan;
+using PRAXYS.Commons.Entities.Endorsement;
 using PRAXYS.Commons.Entities.PaymentType;
 using PRAXYS.Commons.Entities.SubAgent;
 using PRAXYS.Commons.Enum;
@@ -31,7 +33,7 @@ namespace PRAXYS.Commons.Entities.Insurance
         [Required(ErrorMessage = "Campo Requerido")]
         public DateTime? ValidThrought { get; set; }
         public DateTime? SeniorityDate { get; set; }
-        public decimal? Renewal { get; set; }
+        public decimal Renewal { get; set; }
         
         [Required(ErrorMessage = "Campo Requerido")]
         [Range(1, int.MaxValue, ErrorMessage = "Campo Requerido")]
@@ -48,7 +50,8 @@ namespace PRAXYS.Commons.Entities.Insurance
         [Range(1, int.MaxValue, ErrorMessage = "Campo Requerido")]
         [Required(ErrorMessage = "Campo Requerido")]
         public int CompanyID { get; set; }
-        
+        public int AddressID { get; set; }
+
         public bool Payed { get; set; }
         public string CurrencyType { get; set; }
 
@@ -75,6 +78,7 @@ namespace PRAXYS.Commons.Entities.Insurance
 
         public AgentModel Agent { get; set; }
         public CompanyModel Company { get; set; }
+        public AddressModel Address { get; set; }
 
         //CONTACTO
         public string ReferenceName { get; set; }
@@ -91,7 +95,8 @@ namespace PRAXYS.Commons.Entities.Insurance
         
         public CoveragePlanModel CoveragePlan { get; set; }
         public List<InsuranceDocumentationModel> InsuranceDocumentation { get; set; }
-        
+        public List<EndorsementModel> Endorsements { get; set; }
+
         [Required(ErrorMessage = "Campo Requerido")]
         [Range(1, int.MaxValue, ErrorMessage = "Campo Requerido")]
         public int PaymentTypeID { get; set; }

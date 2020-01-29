@@ -16,7 +16,7 @@ namespace PRAXYS.Shared.Entities
         [Required]
         public DateTime? ValidThrought { get; set; }
         public DateTime? SeniorityDate { get; set; }
-        public decimal? Renewal { get; set; }
+        public decimal Renewal { get; set; }
         [Required]
         public int ClientID { get; set; }
         [Required]
@@ -29,6 +29,7 @@ namespace PRAXYS.Shared.Entities
         public int SubAgentID { get; set; }
         [Required]
         public int PaymentTypeID { get; set; }
+        public int AddressID { get; set; }
         [Required]
         public int Status { get; set; }
         public bool Payed { get; set; }
@@ -68,6 +69,7 @@ namespace PRAXYS.Shared.Entities
         public Clients Client { get; set; }
         public Company Company { get; set; }
         public Agent Agent { get; set; }
+        public Address Address { get; set; }
         public SubAgent SubAgent { get; set; }
         public PaymentType PaymentType { get; set; }
         public List<InsuranceDocumentation> InsuranceDocumentation { get; set; }

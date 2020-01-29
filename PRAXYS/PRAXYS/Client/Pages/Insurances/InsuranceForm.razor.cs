@@ -2,6 +2,7 @@
 using Microsoft.JSInterop;
 using PRAXYS.Client.Helpers;
 using PRAXYS.Commons.Entities;
+using PRAXYS.Commons.Entities.Address;
 using PRAXYS.Commons.Entities.Agent;
 using PRAXYS.Commons.Entities.Client;
 using PRAXYS.Commons.Entities.Company;
@@ -24,6 +25,8 @@ namespace PRAXYS.Client.Pages.Insurances
         [Parameter] public InsuranceModel Insurance { get; set; }
         [Parameter] public EventCallback OnValidSubmit { get; set; }
         [Parameter] public int BranchID { get; set; }
+        protected List<AddressModel> Addresses { get; set; }
+
 
         //PREMIUM 
         protected decimal _netPremium 
@@ -43,7 +46,6 @@ namespace PRAXYS.Client.Pages.Insurances
             set
             {
                 Insurance.DiscountPercentage = value;
-                Insurance.Discount = Insurance.NetPremium * (value / 100);
                 TotalPremium();
             }
         }
@@ -55,7 +57,6 @@ namespace PRAXYS.Client.Pages.Insurances
             set
             {
                 Insurance.SurchargesPercentage = value;
-                Insurance.Surcharges = Insurance.SubTotal * (value / 100);
                 TotalPremium();
             }
         }
@@ -77,7 +78,6 @@ namespace PRAXYS.Client.Pages.Insurances
             set
             {
                 Insurance.TaxPercentage = value;
-                Insurance.tax = Insurance.SubTotal * (value / 100);
                 TotalPremium();
             }
         }
@@ -92,6 +92,7 @@ namespace PRAXYS.Client.Pages.Insurances
             set
             {
                 Insurance.TotalPremium = value;
+                TotalPremium();
             }
         }
 
@@ -101,25 +102,46 @@ namespace PRAXYS.Client.Pages.Insurances
         {
             get
             {
-                return Insurance.Comission_NetPremium;
+                return Insurance.Comission_NetPremium_Percentage;
             }
             set
             {
                 Insurance.Comission_NetPremium_Percentage = value;
-                Insurance.Comission_NetPremium = Insurance.NetPremium * (value/100);
+                TotalPremium();
             }
         }
 
         protected async void OnValidCreate()
         {
-            await OnValidSubmit.InvokeAsync(null);
+            if (Insurance.Renewal > 0 && (Insurance.PreviousInsurance == null || Insurance.PreviousInsurance == ""))
+            {
+                await js.Message("Error", "Al renovar una poliza es necesario especificar el numero del documento anterior", "error");
+            }
+            else
+            {
+                await OnValidSubmit.InvokeAsync(null);
+            }
+            //await OnValidSubmit.InvokeAsync(null);
         }
 
+        protected async void GetListAddress(int id)
+        {
+            var Client = await Http.GetJsonAsync<ClientModel>($"api/Clients/GetByDetails/{id}");
+            Addresses = Client.ClientAddresses.Select(x => x.Address).ToList();
+
+            StateHasChanged();
+        }
 
         protected void TotalPremium()
         {
+            Insurance.Discount = Insurance.NetPremium * (Insurance.DiscountPercentage / 100);
+            Insurance.Surcharges = Insurance.SubTotal * (Insurance.SurchargesPercentage / 100);
             Insurance.SubTotal = Insurance.NetPremium - Insurance.Discount + Insurance.Surcharges + Insurance.Rights;
+            Insurance.tax = Insurance.SubTotal * (Insurance.TaxPercentage / 100);
             Insurance.TotalPremium = Insurance.NetPremium - Insurance.Discount + Insurance.Surcharges + Insurance.Rights + Insurance.tax;
+            Insurance.Comission_NetPremium = Insurance.NetPremium * (Insurance.Comission_NetPremium_Percentage / 100);
+
+            StateHasChanged();
         }
 
         

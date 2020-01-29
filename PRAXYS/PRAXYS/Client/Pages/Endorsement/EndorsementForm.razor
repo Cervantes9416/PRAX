@@ -12,7 +12,7 @@
                     <div class="form-group col-lg-4">
                         <strong>Cliente:</strong>
                         <span>
-                            @Endorsement.Insurance.Client.Name
+                            @Endorsement.Insurance.Client.GetName()
                         </span>
                     </div>
                     <div class="form-group col-lg-2">
@@ -88,14 +88,14 @@
                 <div class="form-group col-lg-2">
                     <label>Desde</label>
                     @*<RadzenDatePicker @bind-Value="Endorsement.ValidFrom" Style="width:100%; z-index:1000; margin-top:-100px" />*@
-                    <MatDatePicker Style="width:100%;" Label="Fecha de nacimiento" @bind-Value="Endorsement.ValidFrom" DateFormat="d-m-Y"></MatDatePicker>
+                    <MatDatePicker Style="width:100%;" Label="Desde" @bind-Value="Endorsement.ValidFrom" DateFormat="d-m-Y"></MatDatePicker>
                     <ValidationMessage For="@(() => Endorsement.ValidFrom)" />
                 </div>
 
                 <div class="form-group col-lg-2">
                     <label>Hasta</label>
                     @*<RadzenDatePicker @bind-Value="Endorsement.ValidThrought" Style="width:100%; z-index:1000" />*@
-                    <MatDatePicker Style="width:100%;" Label="Fecha de nacimiento" @bind-Value="Endorsement.ValidThrought" DateFormat="d-m-Y"></MatDatePicker>
+                    <MatDatePicker Style="width:100%;" Label="Hasta" @bind-Value="Endorsement.ValidThrought" DateFormat="d-m-Y"></MatDatePicker>
                     <ValidationMessage For="@(() => Endorsement.ValidThrought)" />
                 </div>
 
@@ -121,7 +121,7 @@
                     <div class="form-group row d-flex justify-content-lg-end">
                         Prima Neta
                         <div class="col-lg-7">
-                            <input type="text" class="form-control" @bind="Endorsement.NetPremium" />
+                            <input type="text" class="form-control" @bind="_netPremium" />
                         </div>
                         <div class="col-lg-3">
                         </div>
@@ -132,7 +132,7 @@
                             <input type="text" class="form-control" @bind="Endorsement.Discount" />
                         </div>
                         <div class="col-lg-3">
-                            <input type="text" placeholder="%" class="form-control" @bind-value="Endorsement.DiscountPercentage" />
+                            <input type="text" placeholder="%" class="form-control" @bind-value="_discountPercentage" />
                         </div>
                     </div>
                     <div class="form-group row d-flex justify-content-lg-end">
@@ -141,12 +141,13 @@
                             <input type="text" class="form-control" @bind="Endorsement.Surcharges" />
                         </div>
                         <div class="col-lg-3">
+                            <input type="text" placeholder="%" class="form-control" @bind-value="_surchargesPercentage" />
                         </div>
                     </div>
                     <div class="form-group row d-flex justify-content-lg-end">
                         <label>Derechos</label>
                         <div class="col-lg-7">
-                            <input type="text" class="form-control" @bind="Endorsement.Rights" />
+                            <input type="text" class="form-control" @bind="_rights" />
                         </div>
                         <div class="col-lg-3">
                         </div>
@@ -165,14 +166,14 @@
                             <input type="text" class="form-control" @bind="Endorsement.tax" />
                         </div>
                         <div class="col-lg-3">
-                            <input type="text" placeholder="%" class="form-control" @bind-value="Endorsement.TaxPercentage" />
+                            <input type="text" placeholder="%" class="form-control" @bind-value="_taxPercentage" />
                         </div>
                     </div>
 
                     <div class="form-group row d-flex justify-content-lg-end">
                         <label>Prima Total</label>
                         <div class="col-lg-7">
-                            <input type="text" class="form-control" @bind="Endorsement.TotalPremium" />
+                            <input type="text" class="form-control" @bind="_totalPremium" />
                         </div>
                         <div class="col-lg-3">
                         </div>
@@ -229,6 +230,7 @@
                             <input type="text" class="form-control" @bind="Endorsement.Comission_NetPremium" />
                         </div>
                         <div class="col-lg-2">
+                            <input type="text" class="form-control" @bind="_commissionNet" />
                         </div>
                     </div>
 
@@ -238,6 +240,7 @@
                             <input type="text" class="form-control" @bind="Endorsement.Comission_Surcharges" />
                         </div>
                         <div class="col-lg-2">
+                            <input type="text" class="form-control" @bind="Endorsement.Comission_Surcharges_Percentage" />
                         </div>
                     </div>
 
@@ -247,6 +250,7 @@
                             <input type="text" class="form-control" @bind="Endorsement.Comission_Rights" />
                         </div>
                         <div class="col-lg-2">
+                            <input type="text" class="form-control" @bind="Endorsement.Comission_Surcharges_Percentage" />
                         </div>
                     </div>
 
@@ -256,6 +260,7 @@
                             <input type="text" class="form-control" @bind="Endorsement.Comission_Special" />
                         </div>
                         <div class="col-lg-2">
+                            <input type="text" class="form-control" @bind="Endorsement.Comission_Special_Percentage" />
                         </div>
                     </div>
                 </div>

@@ -18,11 +18,11 @@
                     <div class="row">
                         <div class="form-group col-lg-6">
                             <label>Poliza Anterior</label>
-                            <input class="form-control" />
+                            <input @bind-value="Insurance.PreviousInsurance" class="form-control" />
                         </div>
                         <div class="form-group col-lg-6">
                             <label>Poliza Posterior</label>
-                            <input class="form-control" />
+                            <input @bind-value="Insurance.RenewedInsurance" class="form-control" />
                         </div>
                     </div>
                 </div>
@@ -51,9 +51,24 @@
 
                     <div class="form-group">
                         <label>Cliente</label>
-                        <SelectClients SelectClient="Insurance" />
+                        <SelectClients SelectClient="Insurance" SendId="GetListAddress"/>
                         <ValidationMessage For="@(() => Insurance.ClientID)" />
                     </div>
+
+                    @if (Addresses != null)
+                    {
+                        <div class="form-group">
+                            <label>Direccion</label>
+                            <select class="form-control" @bind="Insurance.AddressID">
+                                <option value="0">Seleccionar...</option>
+                                @foreach (var item in Addresses)
+                                {
+                                    <option value="@item.ID">@item.AddressLine - @item.City - @item.StreetAddress</option>
+                                }
+                            </select>
+                            <ValidationMessage For="@(() => Insurance.AddressID)" />
+                        </div>
+                    }
 
                     <div class="form-group">
                         <label>Grupo</label>
@@ -77,12 +92,8 @@
                             <MatDatePicker Style="width:100%;" Label="Fecha de Antiguedad" @bind-Value="Insurance.SeniorityDate" DateFormat="d-m-Y"></MatDatePicker>
                         </div>
                         <div class="col-lg-6">
-                            <MatNumericUpDownField Label="Renovacion"
-                                                   @bind-Value="Insurance.Renewal"
-                                                   Step="0.01m"
-                                                   DecimalPlaces=2
-                                                   FullWidth="true">
-                            </MatNumericUpDownField>
+                            <label>Renovacion</label>
+                            <input class="form-control" @bind-value="Insurance.Renewal"/>
                         </div>
                     </div>
 
@@ -293,20 +304,20 @@
         {
             case "Accidente":
                 BranchInputForm =@<AccidentForm insurance="Insurance" />;
-break;
-case "Vehiculos":
-BranchInputForm = @<VehicleForm insurance="Insurance" />;
-break;
-case "Vida":
-BranchInputForm = @<LifeInsuranceForm insurance="Insurance" />;
-break;
-case "Ninguno":
-BranchInputForm = null;
-break;
-default:
-break;
-}
+            break;
+            case "Vehiculos":
+                BranchInputForm = @<VehicleForm insurance="Insurance" />;
+            break;
+            case "Vida":
+                BranchInputForm = @<LifeInsuranceForm insurance="Insurance" />;
+            break;
+            case "Ninguno":
+                BranchInputForm = null;
+            break;
+            default:
+            break;
+        }
 
-StateHasChanged();
-}
+        StateHasChanged();
+    }
 }

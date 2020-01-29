@@ -54,7 +54,7 @@ namespace PRAXYS.Server.Controllers
 
         [Route("[action]/{InsuranceNumber}")]
         [HttpGet]
-        public async Task<ActionResult<List<PaymentInformationModel>>> GetAllInsurancePayments(string InsuranceNumber)
+        public async Task<ActionResult<List<PaymentInformationModel>>> GetAllInsurancePaymentsWithInsurance(string InsuranceNumber)
         {
             return await _paymentInformationBLC.GetAllWithInsuranceNumber(InsuranceNumber);
         }

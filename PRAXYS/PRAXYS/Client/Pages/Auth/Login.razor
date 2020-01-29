@@ -65,8 +65,8 @@
 
     private async Task CrearUsuario()
     {
-        //var httpResponse = await Http.SendJsonAsync<UserToken>(HttpMethod.Post, "api/account/Login", userInfo);
-        var httpResponse = await Http.SendJsonAsync<UserToken>(HttpMethod.Post, "api/account/Create", userInfo);
+        var httpResponse = await Http.SendJsonAsync<UserToken>(HttpMethod.Post, "api/account/Login", userInfo);
+        //var httpResponse = await Http.SendJsonAsync<UserToken>(HttpMethod.Post, "api/account/Create", userInfo);
         if (httpResponse.Token != null)
         {
             await loginService.Login(httpResponse.Token,httpResponse.Expiration);

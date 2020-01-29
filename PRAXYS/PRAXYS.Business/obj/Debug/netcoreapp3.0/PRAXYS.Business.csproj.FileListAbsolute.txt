@@ -129,3 +129,18 @@ C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\
 C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PRAXYS.Business.csproj.CopyComplete
 C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PRAXYS.Business.dll
 C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PRAXYS.Business.pdb
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PRAXYS.Business.deps.json
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PRAXYS.Business.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PRAXYS.Business.pdb
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PRAXYS.Commons.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PRAXYS.Data.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PRAXYS.Commons.pdb
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PRAXYS.Data.pdb
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PRAXYS.Business.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PRAXYS.Business.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PRAXYS.Business.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PRAXYS.Business.csproj.CopyComplete
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PRAXYS.Business.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PRAXYS.Business.pdb

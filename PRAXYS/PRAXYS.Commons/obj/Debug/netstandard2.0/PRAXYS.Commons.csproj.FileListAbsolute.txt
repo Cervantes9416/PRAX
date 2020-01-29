@@ -91,3 +91,14 @@ C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Commons\obj\Debug\netstandard2.0\
 C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Commons\obj\Debug\netstandard2.0\PRAXYS.Commons.csproj.CopyComplete
 C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Commons\obj\Debug\netstandard2.0\PRAXYS.Commons.dll
 C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Commons\obj\Debug\netstandard2.0\PRAXYS.Commons.pdb
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\bin\Debug\netstandard2.0\PRAXYS.Commons.deps.json
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\bin\Debug\netstandard2.0\PRAXYS.Commons.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\bin\Debug\netstandard2.0\PRAXYS.Commons.pdb
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\bin\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\bin\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\obj\Debug\netstandard2.0\PRAXYS.Commons.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\obj\Debug\netstandard2.0\PRAXYS.Commons.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\obj\Debug\netstandard2.0\PRAXYS.Commons.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\obj\Debug\netstandard2.0\PRAXYS.Commons.csproj.CopyComplete
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\obj\Debug\netstandard2.0\PRAXYS.Commons.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\obj\Debug\netstandard2.0\PRAXYS.Commons.pdb

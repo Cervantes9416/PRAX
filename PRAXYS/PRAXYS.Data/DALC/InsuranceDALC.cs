@@ -140,6 +140,7 @@ namespace PRAXYS.Data.DALC
                 .Include(x => x.Agent)
                 .Include(x => x.SubBranch)
                 .Include(x => x.PaymentType)
+                .Include(x => x.Endorsements)
                 .ToListAsync();
         }
 
@@ -170,6 +171,8 @@ namespace PRAXYS.Data.DALC
                     .Include(x => x.SubBranch)
                     .Include(x => x.PaymentType)
                     .Include(x => x.InsuranceDocumentation)
+                    .Include(x => x.Endorsements)
+                    .Include(x => x.Address)
                     .Where(x => x.ID == id).FirstOrDefaultAsync();
             }
             catch (Exception)

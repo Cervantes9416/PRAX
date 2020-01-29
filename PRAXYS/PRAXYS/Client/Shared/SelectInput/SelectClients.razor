@@ -8,7 +8,7 @@
 }
 else
 {
-    <select @bind="SelectClient.ClientID" style="width:100%; " class="form-control">
+    <select @bind="_clientID" style="width:100%; " class="form-control">
         <option selected value="0">Seleccionar..</option>
         @foreach (var item in Clients)
         {

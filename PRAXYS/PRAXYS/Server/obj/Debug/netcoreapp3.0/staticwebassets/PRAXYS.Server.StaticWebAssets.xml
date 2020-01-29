@@ -1,7 +1,7 @@
 ﻿<StaticWebAssets Version="1.0">
-  <ContentRoot BasePath="_content/Blazor.ContextMenu" Path="C:\Users\cscxx\.nuget\packages\blazor.contextmenu\1.3.0\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/BlazorDateRangePicker" Path="C:\Users\cscxx\.nuget\packages\blazordaterangepicker\2.0.0\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/Blazorise" Path="C:\Users\cscxx\.nuget\packages\blazorise\0.8.7.1\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/BlazorStrap" Path="C:\Users\cscxx\.nuget\packages\blazorstrap\1.0.106\build\..\staticwebassets\" />
-  <ContentRoot BasePath="_content/Radzen.Blazor" Path="C:\Users\cscxx\.nuget\packages\radzen.blazor\1.2.11\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Blazor.ContextMenu" Path="C:\Users\Alejandro Chávez\.nuget\packages\blazor.contextmenu\1.3.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorDateRangePicker" Path="C:\Users\Alejandro Chávez\.nuget\packages\blazordaterangepicker\2.0.0\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Blazorise" Path="C:\Users\Alejandro Chávez\.nuget\packages\blazorise\0.8.7.1\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/BlazorStrap" Path="C:\Users\Alejandro Chávez\.nuget\packages\blazorstrap\1.0.106\build\..\staticwebassets\" />
+  <ContentRoot BasePath="_content/Radzen.Blazor" Path="C:\Users\Alejandro Chávez\.nuget\packages\radzen.blazor\1.2.11\build\..\staticwebassets\" />
 </StaticWebAssets>

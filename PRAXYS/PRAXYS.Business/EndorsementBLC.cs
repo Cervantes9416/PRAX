@@ -100,6 +100,49 @@ namespace PRAXYS.Business
             }
         }
 
+        public async Task<bool> CreateEndorsementModification(ModificationEndorsementRequest model)
+        {
+            using (var transaction = _context.Database.BeginTransaction())
+            {
+                try
+                {
+                    //Creando poliza con la informacion del Endoso
+                    var insurance = _mapper.Map<Insurance>(model.Endorsement);
+                    var TotalEndorsement = await _context.EndorsementWithInsuranceNumber(insurance.InsuranceNumber);
+                    var EndorsementNumber = TotalEndorsement.Count + 1;
+
+                    insurance.SubAgentID = model.Insurance.SubAgentID;
+                    insurance.SubBranchID = model.Insurance.SubBranchID;
+                    insurance.Endorsement = true;
+                    insurance.EndorsementNumber = EndorsementNumber;
+                    insurance.Status = (int)InsuranceStatus.Valid;
+
+                    var newInsurance = await _context.InsurancePost(insurance);
+
+                    //Actualizar datos de la poliza
+                    var insuranceEdited = _mapper.Map<Insurance>(model.Insurance);
+                    await _context.InsurancePut(insuranceEdited.ID, insuranceEdited);
+
+                    //Crear Endoso
+                    var endorsement = _mapper.Map<Endorsement>(model.Endorsement);
+                    endorsement.InsuranceID = newInsurance.ID;
+                    endorsement.Insurance = null;
+
+                    var result = await _context.EndorsementCreate(endorsement);
+                    
+                    transaction.Commit();
+                    return true;
+                }
+                catch (Exception)
+                {
+
+                    transaction.Rollback();
+                    return false;
+                }
+            }
+        }
+
+
         public async Task<EndorsementModel> GetEndorsement(int id)
         {
             return null;

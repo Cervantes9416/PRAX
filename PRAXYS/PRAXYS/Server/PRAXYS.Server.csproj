@@ -22,6 +22,18 @@
     <Compile Remove="Migrations\20200124182119_Add_Admin_User.Designer.cs" />
     <Compile Remove="Migrations\20200129075018_AddNotes_tblEndorsement.cs" />
     <Compile Remove="Migrations\20200129075018_AddNotes_tblEndorsement.Designer.cs" />
+    <Compile Remove="Migrations\20200129164343_AddRelation_AddressID_ToTblInsurance.cs" />
+    <Compile Remove="Migrations\20200129164343_AddRelation_AddressID_ToTblInsurance.Designer.cs" />
+    <Compile Remove="Migrations\20200129165038_AddColumnNote_tblEndorsement.cs" />
+    <Compile Remove="Migrations\20200129165038_AddColumnNote_tblEndorsement.Designer.cs" />
+    <Compile Remove="Migrations\20200129165225_AddColumnNote_tblEndorsement.cs" />
+    <Compile Remove="Migrations\20200129165225_AddColumnNote_tblEndorsement.Designer.cs" />
+    <Compile Remove="Migrations\20200129170021_AddNote.cs" />
+    <Compile Remove="Migrations\20200129170021_AddNote.Designer.cs" />
+    <Compile Remove="Migrations\20200129195537_last_Changes.cs" />
+    <Compile Remove="Migrations\20200129195537_last_Changes.Designer.cs" />
+    <Compile Remove="Migrations\20200129222031_last_Changes.cs" />
+    <Compile Remove="Migrations\20200129222031_last_Changes.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

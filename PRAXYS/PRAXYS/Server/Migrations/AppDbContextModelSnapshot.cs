@@ -879,6 +879,9 @@ namespace PRAXYS.Server.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int>("AddressID")
+                        .HasColumnType("int");
+
                     b.Property<int>("AgentID")
                         .HasColumnType("int");
 
@@ -1012,7 +1015,7 @@ namespace PRAXYS.Server.Migrations
                     b.Property<string>("ReferenceNumber")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal?>("Renewal")
+                    b.Property<decimal>("Renewal")
                         .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("RenewedInsurance")
@@ -1088,6 +1091,8 @@ namespace PRAXYS.Server.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("ID");
+
+                    b.HasIndex("AddressID");
 
                     b.HasIndex("AgentID");
 
@@ -1584,6 +1589,12 @@ namespace PRAXYS.Server.Migrations
 
             modelBuilder.Entity("PRAXYS.Shared.Entities.Insurance", b =>
                 {
+                    b.HasOne("PRAXYS.Shared.Entities.Address", "Address")
+                        .WithMany()
+                        .HasForeignKey("AddressID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("PRAXYS.Shared.Entities.Agent", "Agent")
                         .WithMany()
                         .HasForeignKey("AgentID")

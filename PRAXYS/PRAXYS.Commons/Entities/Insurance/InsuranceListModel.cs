@@ -19,8 +19,8 @@ namespace PRAXYS.Commons.Entities.Insurance
         public string InsuranceType { get; set; }
         public InsuranceStatus Status { get; set; }
 
-        public ClientMinModel Client { get; set; }
-        public CompanyMinModel Company { get; set; }
+        public ClientModel Client { get; set; }
+        public CompanyModel Company { get; set; }
 
         public string getStatus()
         {

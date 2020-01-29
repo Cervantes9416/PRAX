@@ -77,15 +77,19 @@ namespace PRAXYS.Client.Pages.Insurances
 
         protected async void CancelAll()
         {
-            var httpResponse = await Service.POST("api/Insurance/CancelInsurance", Insurance);
-            if (httpResponse.Error)
+            var result = await js.ConfirmMessage("Antes de continuar", "Esta seguro de querer cancelar esta poliza");
+            if (result)
             {
-                await js.Message("Error", "No se ha podido realizar el registro", "error");
-            }
-            else
-            {
-                await js.Message("Exito", "Se ha realizado el registro", "success");
-                await js.Reload();
+                var httpResponse = await Service.POST("api/Insurance/CancelInsurance", Insurance);
+                if (httpResponse.Error)
+                {
+                    await js.Message("Error", "No se ha podido realizar el registro", "error");
+                }
+                else
+                {
+                    await js.Message("Exito", "El documento ha sido cancelado", "success");
+                    await js.Reload();
+                }
             }
         }
 

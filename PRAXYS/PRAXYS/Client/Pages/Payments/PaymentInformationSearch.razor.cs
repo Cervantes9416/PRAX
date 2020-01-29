@@ -14,10 +14,10 @@ namespace PRAXYS.Client.Pages.Payments
         protected string InsuranceNumber { get; set; }
         protected List<PaymentInformationModel> Payments { get; set; }
 
-        protected async override Task OnInitializedAsync()
+        protected async Task SearchInsurance()
         {
             Payments = await Http
-                .GetJsonAsync<List<PaymentInformationModel>>($"api/paymentInformation/GetPaymentWithInsuranceNumber/{InsuranceNumber}");
+                .GetJsonAsync<List<PaymentInformationModel>>($"api/paymentInformation/GetAllInsurancePaymentsWithInsurance/{InsuranceNumber}");
         }
     }
 }

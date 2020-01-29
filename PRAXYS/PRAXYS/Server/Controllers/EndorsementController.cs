@@ -13,7 +13,7 @@ namespace PRAXYS.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class EndorsementController : ControllerBase
     {
         private readonly IEndorsementBLC _endorsementBLC;
@@ -26,14 +26,14 @@ namespace PRAXYS.Server.Controllers
         [HttpGet]
         public async Task<ActionResult<List<EndorsementModel>>> GetAll()
         {
-            return null;
+            return new List<EndorsementModel>();
         }
 
-        
+       
         [HttpPost]
         public async Task<ActionResult<bool>> Post(EndorsementModel endorsementModel)
         {
-            if(!await _endorsementBLC.CreateEndorsement(endorsementModel))
+            if (!await _endorsementBLC.CreateEndorsement(endorsementModel))
             {
                 return BadRequest();
             }
@@ -45,6 +45,17 @@ namespace PRAXYS.Server.Controllers
         public async Task<ActionResult<bool>> Delete(int id)
         {
             return await _endorsementBLC.DeleteEndorsement(id);
+        }
+
+        [Route("[action]")]
+        [HttpPost]
+        public async Task<ActionResult<bool>> CreateEndorsementModification(ModificationEndorsementRequest model)
+        {
+            if (!await _endorsementBLC.CreateEndorsementModification(model))
+            {
+                return BadRequest();
+            }
+            return true;
         }
 
         #region Endorsement Type Methods

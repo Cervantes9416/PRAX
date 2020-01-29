@@ -9,6 +9,7 @@ namespace PRAXYS.Business.Interfaces
     public interface IEndorsementBLC
     {
         Task<bool> CreateEndorsement(EndorsementModel model);
+        Task<bool> CreateEndorsementModification(ModificationEndorsementRequest item);
         Task<bool> DeleteEndorsement(int id);
         Task<List<EndorsementTypeModel>> GetAllEndorsementType();
     }

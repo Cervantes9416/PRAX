@@ -20,8 +20,8 @@ namespace PRAXYS.Client.Pages.Insurances
         [Parameter] public string origin { get; set; }
         protected List<InsuranceListModel> InsuranceList { get; set; }
         protected InsuranceFilter InsuranceFilter { get; set; } = new InsuranceFilter(); 
-        protected List<ClientMinModel> Clients { get; set; }
-        protected List<CompanyMinModel> Companies { get; set; }
+        protected List<ClientModel> Clients { get; set; }
+        protected List<CompanyModel> Companies { get; set; }
 
         protected override async Task OnInitializedAsync()
         {

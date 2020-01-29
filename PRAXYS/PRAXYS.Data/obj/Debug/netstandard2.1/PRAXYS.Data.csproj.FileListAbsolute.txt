@@ -89,3 +89,16 @@ C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Data\obj\Debug\netstandard2.1\PRA
 C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Data\obj\Debug\netstandard2.1\PRAXYS.Data.csproj.CopyComplete
 C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Data\obj\Debug\netstandard2.1\PRAXYS.Data.dll
 C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Data\obj\Debug\netstandard2.1\PRAXYS.Data.pdb
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\bin\Debug\netstandard2.1\PRAXYS.Data.deps.json
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\bin\Debug\netstandard2.1\PRAXYS.Data.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\bin\Debug\netstandard2.1\PRAXYS.Data.pdb
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\bin\Debug\netstandard2.1\PRAXYS.Commons.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\bin\Debug\netstandard2.1\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\bin\Debug\netstandard2.1\PRAXYS.Commons.pdb
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\bin\Debug\netstandard2.1\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\obj\Debug\netstandard2.1\PRAXYS.Data.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\obj\Debug\netstandard2.1\PRAXYS.Data.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\obj\Debug\netstandard2.1\PRAXYS.Data.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\obj\Debug\netstandard2.1\PRAXYS.Data.csproj.CopyComplete
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\obj\Debug\netstandard2.1\PRAXYS.Data.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Data\obj\Debug\netstandard2.1\PRAXYS.Data.pdb

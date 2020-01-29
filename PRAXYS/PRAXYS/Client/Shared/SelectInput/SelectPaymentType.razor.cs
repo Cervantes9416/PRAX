@@ -14,6 +14,18 @@ namespace PRAXYS.Client.Shared.SelectInput
         [Inject] public HttpClient Http { get; set; }
         [Parameter] public ISelectPaymentType SelectPayment { get; set; }
         protected List<PaymentTypeModel> PaymentTypes { get; set; }
+        protected int _paymentType { 
+            get 
+            {
+                return SelectPayment.PaymentTypeID;
+            } 
+            set 
+            {
+                SelectPayment.PaymentTypeID = value;
+                GetPaymentType();
+            } 
+        }
+
 
         protected async override Task OnInitializedAsync()
         {
@@ -21,6 +33,7 @@ namespace PRAXYS.Client.Shared.SelectInput
                 .GetJsonAsync<List<PaymentTypeModel>>("api/Basics/GetAllPaymentTypes");
         }
 
+        /*
         protected override void OnParametersSet()
         {
             if (PaymentTypes != null)
@@ -30,6 +43,19 @@ namespace PRAXYS.Client.Shared.SelectInput
                 .FirstOrDefault();
             }
          
+            StateHasChanged();
+        }
+        */
+
+        protected void GetPaymentType()
+        {
+            if (PaymentTypes != null)
+            {
+                SelectPayment.PaymentType = PaymentTypes
+                .Where(x => x.ID == SelectPayment.PaymentTypeID)
+                .FirstOrDefault();
+            }
+
             StateHasChanged();
         }
     }

@@ -172,7 +172,7 @@
                                                     {
                                                         <span class="badge badge-success"><i class="far fa-check-circle"></i>&nbsp;Pagada</span>
                                                     }
-                                                    else
+                                                    else if(item.EndorsementType != "Modificacion")
                                                     {
                                                         <span class="badge badge-warning"><i class="fas fa-ban"></i>&nbsp;No Pagada</span>
                                                     }
@@ -210,7 +210,7 @@
 </div>
 
 <BSModal @ref="Details" Size="Size.Large">
-    <BSModalHeader OnClick="@(() => Details.Hide())">Pagos</BSModalHeader>
+    <BSModalHeader OnClick="@(() => Details.Hide())">Pagos poliza</BSModalHeader>
     <BSModalBody>
         @ModalContent
     </BSModalBody>

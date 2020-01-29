@@ -139,6 +139,7 @@ namespace PRAXYS.Business
             
                 try
                 {
+
                     var TotalPayments = item.PaymentType.TotalPayments;
                     var PremiumPerPayment = item.TotalPremium / TotalPayments;
                     var company = await _context.CompanyGet(item.CompanyID);
