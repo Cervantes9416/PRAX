@@ -1,0 +1,17 @@
+﻿@inherits FormBranchBase
+
+    <EditForm Model="Branch" OnValidSubmit="OnValidSubmit" >
+        <div class="form-group col-12">
+            <label>Nombre</label>
+            <input type="text" @bind-value="Branch.Name" />
+        </div>
+
+        <div class="form-group col-lg-4">
+            <label>Alias</label>
+            <input type="text" @bind-value="Branch.Alias" />
+        </div>
+
+        <div class="form-group text-center">
+            <button class="btn btn-blue">Guardar datos</button>
+        </div>
+    </EditForm>

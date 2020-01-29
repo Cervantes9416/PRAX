@@ -1,0 +1,82 @@
+﻿@inherits AddAddressBase
+@using PRAXYS.Commons.Entities.Address;
+
+<div class="btn-group">
+    <BSButton @onclick="@onToggle" Class="btn btn-light"><i class="fas fa-plus"></i></BSButton>
+    <BSButton @onclick="@DeleteItem" Class="btn btn-light" IsDisabled="@(SelectAddress == null)"><i class="far fa-trash-alt"></i></BSButton>
+</div>
+
+<div class="border bg-light" style="min-height:200px;">
+    <MatList SingleSelection="true" TwoLine="true">
+
+        @foreach (var item in items)
+        {
+            <MatListItem Class="border">
+                <MatListItemText @onclick="@(() => SelecteItem(item))" >
+                    <MatListItemPrimaryText>@(item.AddressLine)</MatListItemPrimaryText>
+                    <MatListItemSecondaryText Class="text-info">@Address.ApartmentNumber, @Address.StreetAddress</MatListItemSecondaryText>
+                </MatListItemText>
+            </MatListItem>
+        }
+    </MatList>
+</div>
+
+<DataAnnotationsValidator />
+<BSModal @ref="Centered" IsCentered="true" Size="Size.Large">
+    <BSModalHeader OnClick="@onToggle" style="background-color:#c1d1d7">Direccion</BSModalHeader>
+    <BSModalBody>
+        <EditForm Model="Address" OnValidSubmit="OnValidCreate">
+            <div class="form-row ">
+                <div class="form-group col-lg-5">
+                    <select class="form-control" @bind="Address.AddressType">
+                        <option></option>
+                        <option>Fisica</option>
+                        <option>Moral</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-lg-8">
+                    <MatTextField @bind-Value="@Address.AddressLine" Label="Direccion" Style="width:100%;"></MatTextField>
+                </div>
+                <div class="form-group col-lg-2">
+                    <MatTextField @bind-Value="@Address.StreetAddress" Label="No. Interior" Style="width:100%;"></MatTextField>
+                </div>
+                <div class="form-group col-lg-2">
+                    <MatTextField @bind-Value="@Address.ApartmentNumber" Label="No. Exterior" Style="width:100%;"></MatTextField>
+                </div>
+                <div class="form-group col-lg-4">
+                    <MatTextField @bind-Value="@Address.PostalCode" Label="Codigo Postal" Style="width:100%;"></MatTextField>
+                </div>
+                <div class="form-group col-lg-6">
+                    <MatTextField @bind-Value="@Address.City" Label="Ciudad" Style="width:100%;"></MatTextField>
+                </div>
+                <div class="form-group col-lg-6">
+                    <MatTextField @bind-Value="@Address.State" Label="Estado" Style="width:100%;"></MatTextField>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-end">
+                        <BSButton Color="Color.Secondary" OnClick="@onToggle">Cerrar</BSButton>
+                        <button class="btn btn-primary ml-1">Guardar Datos</button>
+                    </div>
+                </div>
+            </div>
+        </EditForm>
+    </BSModalBody>
+</BSModal>
+
+
+@code{
+    private AddressModel SelectAddress = null;
+
+    private void SelecteItem(AddressModel address)
+    {
+        SelectAddress = address;
+    }
+
+    private void DeleteItem()
+    {
+        items.Remove(SelectAddress);
+        SelectAddress = null;
+    }
+}

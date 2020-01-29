@@ -1,0 +1,96 @@
+﻿@inherits LifeInsuranceFormBase
+
+    <div class="row">
+        <div class="col-12">
+            <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Asegurado Titular(Principal)</h5>
+        </div>
+
+        <div class="form-group col-lg-3">
+            <label>Apellido Paterno</label>
+            <input @bind-value="insurance.Insuree_LastName" class="form-control" />
+        </div>
+
+        <div class="form-group col-lg-3">
+            <label>Apellido Materno</label>
+            <input @bind-value="insurance.Insuree_SecondLastName" class="form-control" />
+        </div>
+
+        <div class="form-group col-lg-3">
+            <label>Nombre(s)</label>
+            <input @bind-value="insurance.Insuree_Name" class="form-control" />
+        </div>
+
+        <div class="form-group col-lg-3">
+            <label>Fecha de Nacimiento</label>
+            <RadzenDatePicker @bind-Value="insurance.Insuree_BirthDate" Style="width:100%;" />
+        </div>
+
+        <div class="form-group col-lg-3">
+            <label>CURP</label>
+            <input @bind-value="insurance.Insuree_CURP" class="form-control" />
+        </div>
+
+        <div class="form-group col-lg-2">
+            <label>RFC</label>
+            <input @bind-value="insurance.Insuree_RFC" class="form-control" />
+        </div>
+
+        <div class="form-group col-lg-2">
+            <label>Genero</label>
+            <select class="form-control" @bind="insurance.Insuree_Gender">
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+            </select>
+        </div>
+    </div>
+
+
+<div class="row">
+    <div class="col-12">
+        <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Asegurado Secundario</h5>
+    </div>
+   
+    <div class="form-group col-lg-3">
+        <label>Apellido Paterno</label>
+        <input @bind-value="insurance.Secondary_Insuree_LastName" class="form-control" />
+    </div>
+
+    <div class="form-group col-lg-3">
+        <label>Apellido Materno</label>
+        <input @bind-value="insurance.Secondary_Insuree_SecondLastName" class="form-control" />
+    </div>
+
+    <div class="form-group col-lg-3">
+        <label>Nombre(s)</label>
+        <input @bind-value="insurance.Secondary_Insuree_Name" class="form-control" />
+    </div>
+
+    <div class="form-group col-lg-3">
+        <label>Fecha de Nacimiento</label>
+        <RadzenDatePicker @bind-Value="insurance.Secondary_Insuree_BirthDate" Style="width:100%;" />
+    </div>
+
+    <div class="form-group col-lg-3">
+        <label>CURP</label>
+        <input @bind-value="insurance.Secondary_Insuree_CURP" class="form-control" />
+    </div>
+
+    <div class="form-group col-lg-2">
+        <label>RFC</label>
+        <input @bind-value="insurance.Secondary_Insuree_RFC" class="form-control" />
+    </div>
+
+    <div class="form-group col-lg-2">
+        <label>Genero</label>
+        <select class="form-control" @bind="insurance.Secondary_Insuree_Gender">
+            <option value="Masculino">Masculino</option>
+            <option value="Femenino">Femenino</option>
+        </select>
+    </div>
+</div>
+
+
+
+
+
+

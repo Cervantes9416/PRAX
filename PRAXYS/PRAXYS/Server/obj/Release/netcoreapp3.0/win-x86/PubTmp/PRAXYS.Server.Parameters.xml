@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="praxissegurosyfianzas" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\Alejandro\ Chávez\\Documents\\Cesar\\PRAXIS_SISTEM\\PSF\\PRAXYS\\PRAXYS\\Server\\obj\\Release\\netcoreapp3\.0\\win-x86\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="PRAXYS.Data.AppDbContext" description="" value="Server=tcp:praxist5f8jecw.database.windows.net,1433;Initial Catalog=praxis;Persist Security Info=False;User ID=M9pAJ3iHUth;Password={your_password};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\Alejandro\ Chávez\\Documents\\Cesar\\PRAXIS_SISTEM\\PSF\\PRAXYS\\PRAXYS\\Server\\obj\\Release\\netcoreapp3\.0\\win-x86\\PubTmp\\EFSQLScripts\\PRAXYS\.Data\.AppDbContext\.sql$" />
+  </parameter>
+</parameters>

@@ -1,0 +1,48 @@
+﻿@inherits InsuranceNextToExpireBase
+
+<fieldset class="scheduler-border " style="min-width:200px; max-height:500px; border-radius:5px;">
+    <legend class="scheduler-border ">Polizas proximas a vencer</legend>
+    <div class="w-100 text-center">
+        @if (Insurances != null)
+        {
+            if (Insurances.Count == 0)
+            {
+                <div class="d-flex flex-column justify-content-center align-items-center" style="height:300px;">
+                    <i class="fas fa-hourglass-start fa-5x"></i>
+                    <h4>No se encontraron pólizas próximas a vencer en el período seleccionado</h4>
+                </div>
+            }
+            else
+            {
+                <h3><span class="badge badge-warning ">Total: @Insurances.Select(x => x.TotalInsruances).Sum()</span></h3>
+                <table class="table table-striped border border-blue">
+                    <thead class="bg-blue text-white">
+                        <tr>
+                            <td>Aseguradora</td>
+                            <td>Total</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Insurances)
+                        {
+                            <tr @onclick="ToList" style="cursor:pointer">
+                                <td>
+                                    @item.Company
+                                </td>
+                                <td>
+                                    @item.TotalInsruances
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+        }
+        else
+        {
+            <div class="d-flex justify-content-center">
+                <div class="spinner-grow avatar-lg text-secondary m-2 text-center" role="status"></div>
+            </div>
+        }
+    </div>
+</fieldset>

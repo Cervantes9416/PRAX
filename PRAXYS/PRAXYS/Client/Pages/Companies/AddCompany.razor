@@ -1,0 +1,15 @@
+﻿@page "/companies/create"
+@inherits AddCompanyBase
+
+
+<h4 class="mat-h4 mb-1">Informacion de la Compañia</h4>
+
+<div class="card mat-elevation-z4">
+    <div class="card-body">
+        <CompanyForm Company="Company" OnValidSubmit="Crear" PaymentTypeNotSelect="NotSelectPayments" PaymentTypeSelect="SelectPayments" />
+    </div>
+</div>
+
+
+
+

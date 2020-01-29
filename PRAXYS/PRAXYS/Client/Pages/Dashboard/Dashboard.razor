@@ -1,0 +1,49 @@
+﻿@inherits DashboardBase
+
+
+<div class="card mat-elevation-z4">
+    <div class="card-header bg-blue text-white">
+        Filtrar proximos acontecimientos
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-12">
+                <div class="form-row d-flex justify-content-center align-items-center">
+                    @if (DatePicker != null)
+                    {
+                        <div class="form-group col-lg-3">
+                            <MatSelect Label="Rango de Fechas" @bind-Value="DateRange" Style="width:100%" Enhanced="true">
+                                <MatOption Value="MES">Mes siguiente</MatOption>
+                                <MatOption Value="TRIMESTRE">Proximos 3 meses</MatOption>
+                                <MatOption Value="SEMESTRE">Proximos 6 meses</MatOption>
+                                <MatOption Value="ANUAL">Proximo Año</MatOption>
+                            </MatSelect>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <MatDatePicker Style="width:100%;"
+                                           Label="Fecha de Inicial"
+                                           @bind-Value="@DatePicker.InitalDate">
+                            </MatDatePicker>
+                        </div>
+                        <div class="form-group col-lg-3">
+                            <MatDatePicker Style="width:100%;"
+                                           Label="Fecha Final"
+                                           @bind-Value="@DatePicker.FinalDate">
+                            </MatDatePicker>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-lg-4">
+                @if (DatePicker != null)
+                {
+                    <InsuranceNextToExpire DatePicker="DatePicker" />
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code{
+
+}

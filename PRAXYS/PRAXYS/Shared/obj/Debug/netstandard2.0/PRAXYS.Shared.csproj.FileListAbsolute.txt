@@ -1,0 +1,72 @@
+C:\Users\Alejandro Chávez\source\repos\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.deps.json
+C:\Users\Alejandro Chávez\source\repos\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\source\repos\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\source\repos\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\source\repos\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\source\repos\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\source\repos\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\source\repos\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.csprojAssemblyReference.cache
+C:\Users\Cesar\Desktop\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.deps.json
+C:\Users\Cesar\Desktop\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Cesar\Desktop\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Cesar\Desktop\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.csprojAssemblyReference.cache
+C:\Users\Cesar\Desktop\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfoInputs.cache
+C:\Users\Cesar\Desktop\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
+C:\Users\Cesar\Desktop\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Cesar\Desktop\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.deps.json
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.deps.json
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Blazor\Blazor\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Praxys\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.deps.json
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Praxys\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Praxys\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Praxys\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Praxys\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Praxys\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Praxys\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXYS\Praxys\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\cscxx\Desktop\PRAXYS\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.deps.json
+C:\Users\cscxx\Desktop\PRAXYS\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\cscxx\Desktop\PRAXYS\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\cscxx\Desktop\PRAXYS\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.csprojAssemblyReference.cache
+C:\Users\cscxx\Desktop\PRAXYS\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfoInputs.cache
+C:\Users\cscxx\Desktop\PRAXYS\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
+C:\Users\cscxx\Desktop\PRAXYS\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\cscxx\Desktop\PRAXYS\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.deps.json
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PRAXYS\PRAXYS\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.deps.json
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.deps.json
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.pdb

@@ -1,0 +1,50 @@
+﻿@inherits PaymentInformationListBase
+
+@if (Payments == null)
+{
+
+}
+else if (Payments.Count == 0)
+{
+    <div class="alert alert-primary" role="alert">
+        Esta póliza no cuenta con recibos de pago activos
+    </div>
+}
+else
+{
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th>ID</th>
+                <th>Numero de Poliza</th>
+                <th>Serie</th>
+                <th>Prima Total</th>
+                <th>Limite de Pago</th>
+                <th class="text-center">Estatus</th>
+                <th class="text-center">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Payments)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@($"{item.InsuranceNumber} - {item.Insurance.EndorsementNumber}")</td>
+                    <td class="text-info">@item.PaymentNumber</td>
+                    <td>@item.Premium</td>
+                    <td>@item.PaymentExpirationDate.ToString("dd-MM-yyyy")</td>
+                    <td class="text-center @(item.Payed ? "text-success" : "text-warning")"><strong>@(item.Payed ? "Pagada" : "Pendiente")</strong></td>
+                    <td class="text-center">
+                        <div class="btn-group">
+                            <a href="/payments/receipt/@item.ID" class="btn btn-blue waves-effect waves-light">
+                                <i class="far fa-save"></i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+

@@ -1,0 +1,132 @@
+﻿
+<div class="left-side-menu">
+    <div class="slimscroll-menu">
+
+        <MatNavMenu>
+            <MatNavItem Href="/"><i class="fas fa-digital-tachograph"></i>&nbsp; Escritorio</MatNavItem>
+            <MatNavSubMenu>
+                <MatNavSubMenuHeader Class="bg-blue text-white">
+                    <MatNavItem AllowSelection="false"> Administrar</MatNavItem>
+                </MatNavSubMenuHeader>
+                <MatNavSubMenuList>
+
+                    <MatNavSubMenu>
+                        <MatNavSubMenuHeader>
+                            <MatNavItem AllowSelection="false"><MatIcon Icon="person" Class="mr-1"> </MatIcon> Clientes</MatNavItem>
+                        </MatNavSubMenuHeader>
+                        <MatNavSubMenuList>
+                            <MatNavItem Href="clients/create">Agregar Cliente</MatNavItem>
+                            <MatNavItem Href="clients/list">Listado de Clientes</MatNavItem>
+                        </MatNavSubMenuList>
+                    </MatNavSubMenu>
+
+                    <MatNavSubMenu>
+                        <MatNavSubMenuHeader>
+                            <MatNavItem AllowSelection="false"><MatIcon Icon="domain" Class="mr-1"> </MatIcon> Compañias</MatNavItem>
+                        </MatNavSubMenuHeader>
+                        <MatNavSubMenuList>
+                            <MatNavItem Href="companies/create">Agregar Compañia</MatNavItem>
+                            <MatNavItem Href="companies/list">Listado de Compañias</MatNavItem>
+                        </MatNavSubMenuList>
+                    </MatNavSubMenu>
+
+                    <MatNavSubMenu>
+                        <MatNavSubMenuHeader>
+                            <MatNavItem AllowSelection="false"><MatIcon Icon="people" Class="mr-1"> </MatIcon> Agentes</MatNavItem>
+                        </MatNavSubMenuHeader>
+                        <MatNavSubMenuList>
+                            <MatNavItem Href="agents/create">Agregar Agentes</MatNavItem>
+                            <MatNavItem Href="agents/list">Listado de Agentes</MatNavItem>
+                        </MatNavSubMenuList>
+                    </MatNavSubMenu>
+
+                    <MatNavSubMenu>
+                        <MatNavSubMenuHeader>
+                            <MatNavItem AllowSelection="false"><MatIcon Icon="people" Class="mr-1"> </MatIcon> Grupos</MatNavItem>
+                        </MatNavSubMenuHeader>
+                        <MatNavSubMenuList>
+                            <MatNavItem Href="subagents/create">Agregar Grupos</MatNavItem>
+                            <MatNavItem Href="subagents/list">Todos los Grupos</MatNavItem>
+                        </MatNavSubMenuList>
+                    </MatNavSubMenu>
+                </MatNavSubMenuList>
+            </MatNavSubMenu>
+
+            <MatNavSubMenu>
+                <MatNavSubMenuHeader Class="bg-blue text-white">
+                    <MatNavItem AllowSelection="false"><MatIcon Icon="list" Class="mr-1"></MatIcon> Documentos</MatNavItem>
+                </MatNavSubMenuHeader>
+                <MatNavSubMenuList>
+                    <MatNavSubMenu>
+                        <MatNavSubMenuHeader>
+                            <MatNavItem AllowSelection="false"><i class="fas fa-shield-alt mr-1"></i> Seguros</MatNavItem>
+                        </MatNavSubMenuHeader>
+                        <MatNavSubMenuList>
+                            <MatNavItem Href="insurance">Agregar Poliza</MatNavItem>
+                            <MatNavItem Href="insurance/list">Todas las polizas</MatNavItem>
+                            <MatNavItem Href="insurance/near">Polizas proximas a vencer</MatNavItem>
+                        </MatNavSubMenuList>
+                    </MatNavSubMenu>
+                    <MatNavSubMenu>
+                        <MatNavSubMenuHeader>
+                            <MatNavItem AllowSelection="false"><i class="fas fa-shield-alt mr-1"></i> Fianzas</MatNavItem>
+                        </MatNavSubMenuHeader>
+                        <MatNavSubMenuList>
+                            <MatNavItem Href="bonds/create">Agregar Fianza</MatNavItem>
+                            <MatNavItem Href="bonds/list">Todas las Fianzas</MatNavItem>
+                        </MatNavSubMenuList>
+                    </MatNavSubMenu>
+                </MatNavSubMenuList>
+            </MatNavSubMenu>
+
+            <MatNavSubMenu>
+                <MatNavSubMenuHeader Class="bg-blue text-white">
+                    <MatNavItem AllowSelection="false"><MatIcon Icon="list" Class="mr-1"></MatIcon> Reportes</MatNavItem>
+                </MatNavSubMenuHeader>
+                <MatNavSubMenuList>
+                    <MatNavSubMenu>
+                        <MatNavSubMenuHeader>
+                            <MatNavItem AllowSelection="false"><i class="fas fa-shield-alt mr-1"></i> Operaciones</MatNavItem>
+                        </MatNavSubMenuHeader>
+                        <MatNavSubMenuList>
+                            <MatNavItem Href="reports/insurance">Polizas</MatNavItem>
+                        </MatNavSubMenuList>
+                    </MatNavSubMenu>
+                </MatNavSubMenuList>
+            </MatNavSubMenu>
+
+            <MatNavSubMenu>
+                <MatNavSubMenuHeader Class="bg-blue text-white">
+                    <MatNavItem AllowSelection="false"><MatIcon Icon="list" Class="mr-1"></MatIcon> Configurar</MatNavItem>
+                </MatNavSubMenuHeader>
+                <MatNavSubMenuList>
+                    <MatNavSubMenu>
+                        <MatNavSubMenuHeader>
+                            <MatNavItem AllowSelection="false"><i class="fas fa-table pl-1 mr-1"> </i> Informacion Poliza</MatNavItem>
+                        </MatNavSubMenuHeader>
+                        <MatNavSubMenuList>
+                            <MatNavItem Href="coverages/listado">Planes y Coberturas</MatNavItem>
+                        </MatNavSubMenuList>
+                    </MatNavSubMenu>
+
+                    <MatNavSubMenu>
+                        <MatNavSubMenuHeader>
+                            <MatNavItem AllowSelection="false"><i class="fas fa-table pl-1 mr-1"> </i> Basico</MatNavItem>
+                        </MatNavSubMenuHeader>
+                        <MatNavSubMenuList>
+                            <MatNavItem Href="">Ramos</MatNavItem>
+                            <MatNavItem Href="">Tipos de Endoso</MatNavItem>
+                            <MatNavItem Href="">Tipos de Poliza</MatNavItem>
+                            <MatNavItem Href="">Tipos de Tipos de Pago</MatNavItem>
+                            <MatNavItem Href="">Tipos de Moneda</MatNavItem>
+                            <MatNavItem Href="">Tipso de Documento</MatNavItem>
+                        </MatNavSubMenuList>
+                    </MatNavSubMenu>
+                </MatNavSubMenuList>
+            </MatNavSubMenu>
+            <MatNavItem><i class="fas fa-sign-out-alt"></i> &nbsp;Cerrar Sesion</MatNavItem>
+        </MatNavMenu>
+    </div>
+</div>
+
+

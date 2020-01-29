@@ -1,0 +1,15 @@
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PSF.Business.deps.json
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PSF.Business.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PSF.Business.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PSF.Business.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PSF.Business.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PSF.Business.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PSF.Business.csproj.CopyComplete
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PSF.Business.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\obj\Debug\netcoreapp3.0\PSF.Business.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PSF.Commons.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PSF.Data.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PSF.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PSF.Commons.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PSF.Data.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS.Business\bin\Debug\netcoreapp3.0\PSF.Shared.pdb

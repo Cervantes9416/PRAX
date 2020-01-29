@@ -1,0 +1,16 @@
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\bin\Release\netstandard2.0\PRAXYS.Shared.deps.json
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\bin\Release\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\bin\Release\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Release\netstandard2.0\PRAXYS.Shared.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Release\netstandard2.0\PRAXYS.Shared.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Release\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Release\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Release\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\bin\Release\netstandard2.0\PRAXYS.Shared.deps.json
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\bin\Release\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\bin\Release\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Release\netstandard2.0\PRAXYS.Shared.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Release\netstandard2.0\PRAXYS.Shared.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Release\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Release\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Release\netstandard2.0\PRAXYS.Shared.pdb

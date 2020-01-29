@@ -1,0 +1,17 @@
+﻿@inherits EditSubAgentBase
+@page "/subagents/edit/{SubAgentID:int}"
+
+<h4 class="mat-h4 mb-1">Informacion del Grupo</h4>
+
+
+<div class="card mat-elevation-z4">
+    <div class="card-body">
+
+        @if (SubAgent != null)
+        {
+            <SubAgentForm SubAgent="SubAgent"></SubAgentForm>
+        }
+
+    </div>
+</div>
+

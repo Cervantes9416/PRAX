@@ -1,0 +1,63 @@
+﻿@inherits AddBondPaymentBase
+
+@if (Bond != null)
+{
+    <div class="col-12 mb-2 border" style="border-radius:20px;">
+        <div class="row">
+            <div class="col-lg-4 d-flex justify-content-start align-content-center">
+                <span class="fa-4x">
+                    <i class="far fa-bell"></i>
+                </span>
+            </div>
+            <div class="col-lg-4 text-center">
+                <span class="h2" style="display:block">Total a Pagar</span>
+                <span class="text-blue">@Bond.PremiumTotal</span>
+            </div>
+            <div class="col-lg-4 ">
+                <span class="h3 font-weight-bold d-flex justify-content-end" style="display:block;">Fianza</span>
+                <span class="text-blue d-flex justify-content-end">@Bond.BondNumber</span>
+            </div>
+        </div>
+    </div>
+}
+
+<hr />
+
+<fieldset class="scheduler-border " style="min-width:200px; max-height:300px; border-radius:20px;">
+    <legend class="scheduler-border ">Informacion del pago</legend>
+
+    <EditForm Model="BondPayment" OnValidSubmit="Create">
+        <DataAnnotationsValidator />
+        <div class="form-group">
+            <label>Fecha de Pago</label>
+            <MatDatePicker Style="width:100%;" Label="Fecha de nacimiento" @bind-Value="BondPayment.PayedDate" DateFormat="d-m-Y"></MatDatePicker>
+        </div>
+
+
+        <div class="form-group">
+            <label>Liquidacion</label>
+            <div class="input-group mb-3 ">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-server"></i></span>
+                </div>
+                <input class="form-control col-lg-2" @bind-value="BondPayment.LiquidationNumber" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Prima Pagada</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+                </div>
+                <input class="form-control col-lg-6" @bind-value="BondPayment.PremiumPayed" />
+            </div>
+        </div>
+
+        <div class="form-group d-flex justify-content-end">
+            <button class="btn btn-blue">Registrar Pago</button>
+        </div>
+    </EditForm>
+</fieldset>
+
+    

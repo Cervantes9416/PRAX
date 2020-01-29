@@ -1,0 +1,28 @@
+﻿@page  "/subagents/details/{SubAgentID:int}"
+@inherits DetailSubAgentBase
+
+<div class="card mat-elevation-z4">
+    <div class="card-body">
+
+        <div class="col-12">
+
+            <MatTabGroup Style="min-height:90vh;">
+                <MatTab Label="Datos Generales">
+                    <SubAgentForm  SubAgent="SubAgent" ReadOnly="true"/>
+                </MatTab>
+                <MatTab Label="Polizas">
+                    @if (SubAgentInsurances != null)
+                    {
+                        <div class="mt-2 animated fadeInLeft">
+                            <ListInsurance Insurances="SubAgentInsurances"></ListInsurance>
+                        </div>
+                    }
+                </MatTab>
+                <MatTab Label="Fianzas">
+
+                </MatTab>
+            </MatTabGroup>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,147 @@
+﻿@using PRAXYS.Commons.Interfaces
+
+    <div class="border" style="min-height:70vh">
+        @if (DocumentationList == null)
+        {
+            <div class="d-flex justify-content-center align-items-center h-75 ">
+                <div class="spinner-grow avatar-lg text-secondary m-2 text-center" role="status"></div>
+            </div>
+        }
+        else if (DocumentationList.Count == 0)
+        {
+            <div class="btn-group ">
+                <button class="btn btn-light" @onclick="@(() => Modal.Show())"><i class="fas fa-plus"></i></button>
+            </div>
+            <div @onclick="@(() => Modal.Show())" style="cursor:pointer; min-height:70vh" class="d-flex flex-column justify-content-center align-items-center h-75 text-center p-2" >
+                <i class="far fa-folder-open fa-4x"></i>
+                <h4>No se ha encontrado ningun archivo</h4>
+            </div>
+        }
+        else
+        {
+            <div class="btn-group justify-content-center">
+                <button class="btn btn-light" @onclick="@(() => Modal.Show())"><i class="fas fa-plus"></i></button>
+                <button class="btn btn-light"><i class="far fa-trash-alt"></i></button>
+            </div>
+            <MatNavMenu>
+                <MatNavSubMenu Expanded="true">
+                    <MatNavSubMenuHeader>
+                        <MatNavItem AllowSelection="true">
+                            <MatIcon Icon="folder" />...
+                        </MatNavItem>
+                    </MatNavSubMenuHeader>
+                    <MatNavSubMenuList>
+                        @foreach (var item in DocumentationList)
+                        {
+                            <ContextMenuTrigger MenuId="itemMenu" Data="item">
+                                <MatNavItem AllowSelection="false" Href="">
+                                    <i class="far fa-file"></i>&nbsp;
+                                    @item.ID - @item.FileName
+                                </MatNavItem>
+                            </ContextMenuTrigger>
+                        }
+                    </MatNavSubMenuList>
+                </MatNavSubMenu>
+            </MatNavMenu>
+        }
+    </div>
+
+
+
+<ContextMenu Id="itemMenu">
+    @*<Item OnClick="SelectFile"><i class="fas fa-file-upload"></i>&nbsp;Subir nuevo Archivo</Item>*@
+    <Item OnClick="@(() => Modal.Show())"><i class="fas fa-file-upload"></i>&nbsp;Subir nuevo Archivo</Item>
+    <Item OnClick="DeleteClick"><i class="far fa-trash-alt"></i>&nbsp;Eliminar Archivo</Item>
+    <MatDivider></MatDivider>
+    <Item OnClick="ViewClick"><i class="fas fa-search"></i>&nbsp;Revisar Archivo</Item>
+    <Item OnClick="DownloadClick"><i class="fas fa-cloud-download-alt"></i>&nbsp;Descargar</Item>
+</ContextMenu>
+
+<BSModal @ref="Modal" IsCentered="true" Size="Size.Medium">
+    <BSModalHeader OnClick="@(() => Modal.Hide())"><h2>Subir Archivo</h2></BSModalHeader>
+    <BSModalBody>
+        <div class="col-12">
+            <div class="form-group">
+                <label>Tipo de archivo</label>
+                <select class="form-control" @bind="documentation.containerName">
+                    <option value="">Seleccionar..</option>
+                    <option value="acta">ACTA CONSTITUCIONAL</option>
+                    <option value="identificacion">INE/IFE/LICENCIA</option>
+                    <option value="comprobante">COMPROBANTE DE DOMICILIO</option>
+                    <option value="documento">DOCUMENTO</option>
+                    <option value="factura-fianza">FACTURA/TARJETA DE CIRCULACIÓN/PEDIMENTO</option>
+                    <option value="fianza">FIANZA</option>
+                    <option value="poliza">POLIZA</option>
+                    <option value="representante">INE/IFE REPRESENTANTE LEGAL</option>
+                    <option value="rfc">RFC</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button @onclick="SelectFile" class="btn btn-blue">Buscar Archivo</button>
+            </div>
+        </div>
+    </BSModalBody>
+</BSModal>
+
+<FileSelect @ref="FileSelect" Accept=".xml,.pdf,.jpg"></FileSelect>
+
+@code {
+    [Parameter] public EventCallback UploadFile { get; set; }
+    [Parameter] public EventCallback<int> DeleteFile { get; set; }
+    [Parameter] public EventCallback<int> DownloadFile { get; set; }
+    [Parameter] public EventCallback<int> ViewFile { get; set; }
+    [Parameter] public List<IDocumentationEntity> DocumentationList { get; set; }
+    [Parameter] public IDocumentationEntity documentation { get; set; }
+    private FileSelect FileSelect;
+    private string fileName;
+    private string fileBase64;
+    private string FrameUrl = "";
+    private string FrameTitle = "";
+    private BSModal  Modal;
+
+    private void SelectFile()
+    {
+        FileSelect.SelectFiles(FilesToUpload);
+    }
+
+    async Task FilesToUpload(SelectedFile[] files)
+    {
+        var selectedFile = files.FirstOrDefault();
+        fileName = selectedFile.Name;
+        StateHasChanged();
+        documentation.FileName = selectedFile.Name;
+        documentation.FileExtension = selectedFile.Name.Substring(selectedFile.Name.Length - 4);
+
+        using (var fileReader = FileSelect.GetFileReader(selectedFile))
+        {
+            var imageBytes = await fileReader.GetFileBytesAsync();
+            fileBase64 = Convert.ToBase64String(imageBytes);
+            documentation.fileBase64 = fileBase64;
+            await UploadFile.InvokeAsync(null);
+            selectedFile = null;
+            StateHasChanged();
+        }
+
+        Modal.Hide();
+    }
+
+    async void DeleteClick(ItemClickEventArgs e)
+    {
+        var current = e.Data as IDocumentationEntity;
+        await DeleteFile.InvokeAsync(current.ID);
+    }
+
+    async void DownloadClick(ItemClickEventArgs e)
+    {
+        var current = e.Data as IDocumentationEntity;
+        await DownloadFile.InvokeAsync(current.ID);
+    }
+
+    async void ViewClick(ItemClickEventArgs e)
+    {
+        var current = e.Data as IDocumentationEntity;
+        await ViewFile.InvokeAsync(current.ID);
+        StateHasChanged();
+    }
+}

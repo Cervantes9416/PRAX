@@ -1,0 +1,18 @@
+﻿@page "/insurance/Edit/{InsuranceID:int}/{BranchID:int}"
+@inherits EditInsuranceBase
+
+
+
+@if (Insurance != null)
+{
+    <InsuranceForm Insurance="Insurance" OnValidSubmit="Edit" BranchID="BranchID" />
+}
+else
+{
+<div class="card-box">
+    <div class="d-flex justify-content-center">
+        <div class="spinner-grow avatar-lg text-secondary m-2 text-center" role="status"></div>
+    </div>
+</div>
+}
+

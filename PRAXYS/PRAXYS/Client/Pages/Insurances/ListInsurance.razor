@@ -1,0 +1,47 @@
+﻿
+@inherits ListInsuranceBase
+
+<table class="table table-hover table-striped border border-blue" id="">
+    <thead class="bg-blue text-white">
+        <tr>
+            <td>Numero de Poliza</td>
+            <td class="text-center">Estado</td>
+            <td>Cliente</td>
+            <td>Tipo de Poliza</td>
+            <td>Fecha de Vencimiento</td>
+            <td>Aseguradora</td>
+            <td>Acciones</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Insurances)
+        {
+            <tr>
+                <td>@item.InsuranceNumber</td>
+                <td class="text-center">
+                    <i class="@item.getStatus()"></i>
+                </td>
+                <td>
+                    <a href="clients/details/@item.Client.ID">
+                        @item.Client.Name
+                    </a>
+                </td>
+                <td>@item.InsuranceType</td>
+                <td>@item.ValidThrought</td>
+                <td>@item.Company.CompanyName</td>
+                <td>
+                    <a href="" class="btn btn-blue waves-effect waves-light"><i class="far fa-edit"></i></a>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-blue dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Opciones <i class="mdi mdi-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            @*<a class="dropdown-item" href="insurance/@item.ID">Ver Poliza</a>*@
+                            <a class="dropdown-item" href="Overview/@item.ID">Ver Poliza</a>
+                            <a class="dropdown-item">Eliminar</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

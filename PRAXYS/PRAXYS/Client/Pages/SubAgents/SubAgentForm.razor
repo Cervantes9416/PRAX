@@ -1,0 +1,88 @@
+﻿@inherits SubAgentFormBase
+
+<EditForm Model="SubAgent" OnValidSubmit="OnValidSubmit">
+    <div class="text-center">
+        <strong class="text-info">Fecha de captura: </strong> @SubAgent.IssueDate.Value.ToString("dd/MM/yyyy")
+    </div>
+
+    <DataAnnotationsValidator />
+
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <MatSelect  Label="Entidad" Enhanced="true" @bind-Value="SubAgent.PersonType" Style="width:100%;">
+                <MatOption Value=""></MatOption>
+                <MatOption Value="Fisica">Fisica</MatOption>
+                <MatOption Value="Moral">Moral</MatOption>
+            </MatSelect>
+        </div>
+
+        <div class="form-group col-md-2">
+
+        </div>
+    </div>
+
+    <hr style="border: .5px solid #c1d1d7" />
+
+    @if (SubAgent.PersonType == "Fisica")
+    {
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <MatTextField Disabled="ReadOnly" ReadOnly="ReadOnly" Label="Apellido Paterno" @bind-Value="SubAgent.LastName" Style="width:100%;" />
+            </div>
+            <div class="form-group col-md-4">
+                <MatTextField ReadOnly="ReadOnly" Label="Apellido Materno" @bind-Value="SubAgent.SecondLastName" Style="width:100%;" />
+            </div>
+            <div class="form-group col-md-4">
+                <MatTextField ReadOnly="ReadOnly" Label="Nombre(s)" @bind-Value="SubAgent.Name" Style="width:100%;" />
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="form-row">
+            <div class="form-group col-md-12">
+                <MatTextField ReadOnly="ReadOnly" Label="Razon social" @bind-Value="SubAgent.CompanyName" Style="width:100%;" />
+            </div>
+        </div>
+    }
+
+    <hr style="border: .5px solid #c1d1d7" />
+
+    <div class="form-row">
+        <div class="form-group col-4">
+            <MatDatePicker Disabled="ReadOnly" Label="Fecha de Expiracion" @bind-Value="SubAgent.ExpirationDate" EnableTime="false" DateFormat="d-m-Y" Style="width:100%;"></MatDatePicker>
+        </div>
+        <div class="form-group col-4">
+            <MatTextField Disabled="ReadOnly" Label="Numero de Telefono" @bind-Value="SubAgent.PhoneNumber" Style="width:100%;" />
+        </div>
+        <div class="form-group col-4">
+            <MatTextField Disabled="ReadOnly" Label="Correo Electronico" @bind-Value="SubAgent.PersonalEmail" Style="width:100%;" />
+        </div>
+    </div>
+
+    <hr style="border: .5px solid #c1d1d7" />
+
+    <div class="form-row">
+        <div class="form-group col-4">
+            <MatTextField ReadOnly="ReadOnly" Label="RFC" @bind-Value="SubAgent.RFC" Style="width:100%;" />
+        </div>
+        <div class="form-group col-4">
+            <MatTextField ReadOnly="ReadOnly" Label="Numero de Identificacion" @bind-Value="SubAgent.IdentificationNumber" Style="width:100%;" />
+        </div>
+        <div class="form-group col-4">
+            <MatTextField ReadOnly="ReadOnly" Label="Numero de Identificacion" @bind-Value="SubAgent.Bank" Style="width:100%;" />
+        </div>
+    </div>
+
+    @if (!ReadOnly)
+    {
+        <div class="form-row">
+            <div class="col-12 d-flex justify-content-end">
+                <button type="submit" class="btn btn-blue waves-effect waves-light">
+                    <span class="btn-label"><i class="far fa-save"></i></span>Guardar Datos
+                </button>
+            </div>
+        </div>
+    }
+
+</EditForm>

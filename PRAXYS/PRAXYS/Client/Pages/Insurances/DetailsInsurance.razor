@@ -1,0 +1,77 @@
+﻿@inherits DetailsInsuranceBase
+@page "/insurance/{InsuranceID:int}"
+@using PRAXYS.Commons.Entities.Insurance
+
+<h3 class="mat-h4 mb-1">Informacion de la Poliza</h3>
+
+<div class="card mat-elevation-z4">
+    <div class="card-body">
+
+        @if (Insurance != null)
+        {
+            <div class="row">
+                <div class="col-lg-9 " style="min-height:80vh;">
+                    <div class="col-12 d-flex justify-content-lg-end align-items-center">
+                        <a href="insurance/Edit/@Insurance.ID/@Insurance.SubBranch.RamoID" class="btn btn-blue"><i class="fas fa-edit"></i>&nbsp;Editar</a>
+                    </div>
+                    <div class="col-12">
+                        <div class="col-12 d-flex justify-content-between p-0">
+                            <button @onclick="ButtonClicked" class="btn btn-blue waves-effect waves-light" href="clients/create">
+                                <span class="btn-label">
+                                    @if (Opened)
+                                    {
+                                        <i class="fas fa-arrow-left"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fas fa-arrow-right"></i>
+                                    }
+                                </span>
+                                @(Opened ? "Ocultar" : "Ver Archivos")
+                            </button>
+                        </div>
+
+                        <MatTabGroup Style="min-height:90vh;">
+                            <MatTab Label="Datos Generales">
+                                <DocumentDetails Insurance="Insurance" />
+                            </MatTab>
+                        </MatTabGroup>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <InputFile documentation="InsuranceDocumentation"
+                               UploadFile="UploadFile"
+                               DocumentationList="Insurance.InsuranceDocumentation.Cast<IDocumentationEntity>().ToList()"
+                               DeleteFile="DeleteFile"
+                               DownloadFile="DownloadFile"
+                               ViewFile="ViewFile">
+                    </InputFile>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="d-flex justify-content-center">
+                <div class="spinner-grow avatar-lg text-secondary m-2 text-center" role="status"></div>
+            </div>
+        }
+
+        <BSModal @ref="Details" Size="Size.Large">
+            <BSModalHeader OnClick="@(() => Details.Hide())">Modal title</BSModalHeader>
+            <BSModalBody>
+                <PaymentsInformationList InsuranceID="InsuranceID" />
+            </BSModalBody>
+        </BSModal>
+
+    </div>
+</div>
+
+@code{
+    bool Opened = true;
+    BSModal Details;
+
+    void ButtonClicked()
+    {
+        Opened = !Opened;
+    }
+}

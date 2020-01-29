@@ -1,0 +1,35 @@
+﻿@inherits ListCoveragePlansExpandedBase
+
+<CascadingValue Value="this">
+    <AddCoveragePlan RamoID="RamoID" />
+</CascadingValue>
+
+<MatAccordion>
+    @foreach (var item in CoveragePlans)
+    {
+        <MatExpansionPanel>
+            <MatExpansionPanelSummary>
+                <MatExpansionPanelHeader>@item.Name</MatExpansionPanelHeader>
+                <MatExpansionPanelSubHeader>
+                    Status
+                </MatExpansionPanelSubHeader>
+            </MatExpansionPanelSummary>
+            <MatExpansionPanelDetails>
+
+                <MatList SingleSelection="true">
+                    <MatListItem>
+                        Item 1
+                    </MatListItem>
+                    <MatListItem>
+                        Item 2
+                    </MatListItem>
+                    <MatListItem>
+                        Item 3
+                    </MatListItem>
+                </MatList>
+
+            </MatExpansionPanelDetails>
+        </MatExpansionPanel>
+    }
+</MatAccordion>
+

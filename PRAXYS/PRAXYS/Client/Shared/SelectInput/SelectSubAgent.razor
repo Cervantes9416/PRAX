@@ -1,0 +1,25 @@
+﻿@inherits SelectSubAgentBase
+
+@if (SubAgents == null)
+{
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border text-info m-2" role="status"></div>
+    </div>
+}
+else
+{
+    <select @bind="SelectSubAgent.SubAgentID" style="width:100%; " class="form-control">
+        <option selected value="0">Seleccionar..</option>
+        @foreach (var item in SubAgents)
+        {
+            @if (item.PersonType == "Fisica")
+            {
+                <option value="@item.ID">@($"{item.Name} {item.LastName} {item.SecondLastName}")</option>
+            }
+            else
+            {
+                <option value="@item.ID">@item.CompanyName</option>
+            }
+        }
+    </select>
+}

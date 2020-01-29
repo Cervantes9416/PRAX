@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Server\obj\Release\netcoreapp3.0\win-x86\PubTmp\Out\" />
+  <dbfullsql path="C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Server\obj\Release\netcoreapp3.0\win-x86\PubTmp\EFSQLScripts\PRAXYS.Data.AppDbContext.sql" />
+</sitemanifest>

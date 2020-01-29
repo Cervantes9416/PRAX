@@ -1,0 +1,52 @@
+﻿@implements ITab
+
+<li class="nav-item @pullClass @visible ">
+    <div class="nav-link d-flex justify-content-center @TitleCssClass ">
+        <a @onclick="Activate" class=" " style="cursor:pointer">
+            @Title
+
+
+        </a>
+        @if (ActionTab)
+        {
+            <span @onclick="Hidden" style="font-size:15px; cursor: pointer" class="nav-close text-danger ml-2">&times;</span>
+        }
+    </div>
+</li>
+
+@code {
+    [CascadingParameter] TabSet ContainerTabSet { get; set; }
+    [Parameter] public string Title { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public bool MainTab { get; set; }
+    [Parameter] public bool ActionTab { get; set; }
+    [Parameter] public bool HiddenTab { get; set; }
+
+    string TitleCssClass => ContainerTabSet.ActiveTab == this ? "active" : null;
+    string pullClass => ActionTab ? "ml-auto" : null;
+    string visible => HiddenTab ? "hidden" : null;
+
+    protected override void OnInitialized()
+    {
+        if (MainTab)
+        {
+            Activate();
+        }
+        else if (ActionTab)
+        {
+            Activate();
+        }
+    }
+
+    private void Activate()
+    {
+        ContainerTabSet.SetActivateTab(this);
+    }
+
+    private void Hidden()
+    {
+        this.HiddenTab = true;
+        ContainerTabSet.RemoveTab(this);
+    }
+
+}

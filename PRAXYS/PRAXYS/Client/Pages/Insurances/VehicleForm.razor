@@ -1,0 +1,52 @@
+﻿@inherits VehicleFormBase
+
+<div class="row">
+    <div class="form-group col-lg-3">
+        <label>Marca</label>
+        <input @bind-value="insurance.Brand" class="form-control" />
+    </div>
+
+    <div class="form-group col-lg-3">
+        <label>Placas</label>
+        <input @bind-value="insurance.Car_Plates" class="form-control" />
+    </div>
+
+    <div class="form-group col-lg-3">
+        <label>Modal</label>
+        <input @bind-value="insurance.Model" class="form-control" />
+    </div>
+
+    <div class="form-group col-lg-3">
+        <label>Transmision</label>
+        <select class="form-control" @bind="insurance.Transmission">
+            <option value="">Seleccionar..</option>
+            <option value="Automatico">Automatico</option>
+            <option value="Estandar">Estandar</option>
+        </select>
+    </div>
+
+    <div class="form-group col-lg-3">
+        <label>Motor</label>
+        <input @bind-value="insurance.Car_Motor" class="form-control" />
+    </div>
+
+    <div class="form-group col-lg-2">
+        <label>Uso</label>
+        <select class="form-control">
+            <option class="">Selecionar..</option>
+            <option class="Particular">Particular</option>
+            <option class="Carga">Carga</option>
+        </select>
+    </div>
+
+    <div class="form-group col-lg-2">
+        <label>Capacidad</label>
+        <input @bind-value="insurance.Capacity" class="form-control" />
+    </div>
+
+    <div class="form-group col-12">
+        <label>Descripcion del Vehiculo</label>
+        <textarea class="form-control" @bind="insurance.Car_Description"></textarea>
+    </div>
+</div>
+

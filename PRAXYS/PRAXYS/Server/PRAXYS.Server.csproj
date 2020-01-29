@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20200122213706_AdminUser.cs" />
+    <Compile Remove="Migrations\20200122213706_AdminUser.Designer.cs" />
+    <Compile Remove="Migrations\20200122223638_update-tabls.cs" />
+    <Compile Remove="Migrations\20200122223638_update-tabls.Designer.cs" />
+    <Compile Remove="Migrations\20200122234502_Initial-2.cs" />
+    <Compile Remove="Migrations\20200122234502_Initial-2.Designer.cs" />
+    <Compile Remove="Migrations\20200123184706_praxis.cs" />
+    <Compile Remove="Migrations\20200123184706_praxis.Designer.cs" />
+    <Compile Remove="Migrations\20200124181857_Add_Admin_User.cs" />
+    <Compile Remove="Migrations\20200124181857_Add_Admin_User.Designer.cs" />
+    <Compile Remove="Migrations\20200124182017_add_updateData.cs" />
+    <Compile Remove="Migrations\20200124182017_add_updateData.Designer.cs" />
+    <Compile Remove="Migrations\20200124182119_Add_Admin_User.cs" />
+    <Compile Remove="Migrations\20200124182119_Add_Admin_User.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Blazor.Server" Version="3.0.0-preview9.19424.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0-preview9.19424.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\PRAXYS.Business\PRAXYS.Business.csproj" />
+    <ProjectReference Include="..\..\PRAXYS.Commons\PRAXYS.Commons.csproj" />
+    <ProjectReference Include="..\..\PRAXYS.Data\PRAXYS.Data.csproj" />
+    <ProjectReference Include="..\Client\PRAXYS.Client.csproj" />
+    <ProjectReference Include="..\Shared\PRAXYS.Shared.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

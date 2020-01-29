@@ -1,0 +1,56 @@
+﻿@inherits AddModificationEndorsementBase
+@page  "/endorsement/Modify/{InsuranceID:int}"
+
+
+<div class="card-box mat-elevation-z4">
+    <div class="row p-2">
+        <div class="col-lg-3 border-right border-blue " style="min-height:70vh">
+            <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Listado de Endosos</h5>
+
+            <h5>General</h5>
+            <hr />
+
+@*<!---------------------RADIO BUTTONS MENU-------------------------->*@
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Cobertura provisional
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                    Cambio de Forma de pago
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Cambio de contratante
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                    Cambio de direccion
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Beneficiario Preferente
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                    Cambio de RFC
+                </label>
+            </div>
+
+        </div>
+        <div class="col-lg-9 mat-elevation-z4">
+
+        </div>
+    </div>
+</div>

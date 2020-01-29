@@ -1,0 +1,53 @@
+﻿@page "/clients/edit/{id:int}"
+@inherits EditClientBase
+
+<h4 class="mat-h4 mb-1">Informacion del Cliente</h4>
+
+<div class="card mat-elevation-z4">
+    <div class="card-body">
+        @if (Client != null)
+        {
+            <MatDrawerContainer Style="">
+                <MatDrawer @bind-Opened="@Opened" Mode="MatDrawerMode.Dismissible" Class="border p-1">
+                    <InputFile documentation="ClientDocumentation" UploadFile="UploadFile" DocumentationList="Client.ClientDocumentation.Cast<IDocumentationEntity>().ToList()"></InputFile>
+                </MatDrawer>
+                <MatDrawerContent Style="user-select:none;">
+                    <div class="col-12">
+                        <div class="col-12 d-flex justify-content-start p-0">
+                            <button @onclick="ButtonClicked" class="btn btn-blue waves-effect waves-light" href="clients/create">
+                                <span class="btn-label">
+                                    @if (Opened)
+                                    {
+                                        <i class="fas fa-arrow-left"></i>
+                                    }
+                                    else
+                                    {
+                                        <i class="fas fa-arrow-right"></i>
+                                    }
+                                </span>
+                                @(Opened ? "Ocultar" : "Ver Archivos")
+                            </button>
+                        </div>
+                        <ClientForm Client="Client" OnValidSubmit="Edit" />
+                    </div>
+                </MatDrawerContent>
+            </MatDrawerContainer>
+        }
+        else
+        {
+            <div class="d-flex justify-content-center">
+                <div class="spinner-grow avatar-lg text-secondary m-2 text-center" role="status"></div>
+            </div>
+        }
+    </div>
+</div>
+
+@code
+{
+    bool Opened;
+
+    void ButtonClicked()
+    {
+        Opened = !Opened;
+    }
+}

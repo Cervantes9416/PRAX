@@ -1,0 +1,77 @@
+﻿@page "/login"
+@inject NavigationManager navigationManager
+@inject ILoginService loginService
+@inject HttpClient Http
+@inject IJSRuntime js
+
+@using PRAXYS.Commons.Entities.User
+
+    <body class=" ">
+        <div class="account-pages mt-5 mb-5">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-8 col-lg-6 col-xl-5">
+                        <div class="card bg-pattern">
+                            <div class="card-body p-4">
+                                <div class="text-center w-75 m-auto">
+                                    <span><img src="/assets/img/logo.png" alt="" height="60"></span>
+                                    <p class="text-muted mb-4 mt-3">Ingrese sus credenciales</p>
+                                </div>
+
+                                <EditForm Model="userInfo" OnValidSubmit="CrearUsuario">
+                                    <DataAnnotationsValidator/>
+                                    <div class="form-group mb-3">
+                                        <label for="emailaddress">Usuario</label>
+                                        <input class="form-control" type="text" @bind-value="userInfo.Username" placeholder="Ingrese su nombre de usuario"/>
+                                        <ValidationMessage For="@(() => userInfo.Username)"/>
+                                    </div>
+
+                                    <div class="form-group mb-3">
+                                        <label for="password">Password</label>
+                                        <input class="form-control" type="password" @bind-value="userInfo.Password"  placeholder="Ingrese su contraseña"/>
+                                        <ValidationMessage For="@(() => userInfo.Password)"/>
+                                    </div>
+
+                                    @*
+                                    <div class="form-group mb-3">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="checkbox-signin" checked>
+                                            <label class="custom-control-label" for="checkbox-signin">Remember me</label>
+                                        </div>
+                                    </div>
+                                    *@
+
+                                    <div class="form-group mb-0 text-center">
+                                        <button class="btn btn-blue btn-block" type="submit"> Iniciar Sesión </button>
+                                    </div>
+                                </EditForm>
+                            </div> <!-- end card-body -->
+                        </div><!-- end card -->
+                    </div> <!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end page -->
+
+
+        <footer class="footer footer-alt">
+            PRAXYS SEGUROS Y FIANZAS
+        </footer>
+
+        <!-- Vendor js -->
+    </body>
+
+@code {
+    private UserInfo userInfo = new UserInfo();
+
+    private async Task CrearUsuario()
+    {
+        var httpResponse = await Http.SendJsonAsync<UserToken>(HttpMethod.Post, "api/account/Login", userInfo);
+        //var httpResponse = await Http.SendJsonAsync<UserToken>(HttpMethod.Post, "api/account/Create", userInfo);
+        if (httpResponse.Token != null)
+        {
+            await loginService.Login(httpResponse.Token,httpResponse.Expiration);
+            await js.Message("Bienvenido", "", "success");
+            navigationManager.NavigateTo("");
+        }
+    }
+}

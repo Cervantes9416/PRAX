@@ -1,0 +1,77 @@
+﻿@inherits CompanyFormBase
+    <EditForm Model="Company" OnValidSubmit="OnValidSubmitCreate">
+        <DataAnnotationsValidator />
+        <div class="text-center mt-2">
+            <strong class="text-info">Fecha de captura: </strong> @Company.IssueDate.ToString("dd/MM/yyyy");
+        </div>
+
+        <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Datos generales</h5>
+
+        <div class="form-row">
+            <div class="form-group col-12">
+                <label>Razon Social</label>
+                <InputText class="form-control readonly-input" @bind-Value="Company.CompanyName" />
+                
+            </div>
+            <div class="form-group col-4">
+                <label>Fecha de Constitucion</label>
+                <InputDate class="form-control readonly-input" @bind-Value="Company.ConstitutionDate" />
+                 
+            </div>
+            <div class="form-group col-4">
+                <label>RFC</label>
+                <InputText class="form-control readonly-input" @bind-Value="Company.RFC" />
+                
+            </div>
+            <div class="form-group col-4">
+                <label>Tipo de Compañia</label>
+                <select class="form-control readonly-input" @bind="Company.CompanyType">
+                    <option value="Seguros">Seguros</option>
+                    <option value="Fianzas">Fianzas</option>
+                    <option value="Seguros y Fianzas">Seguros y Fianzas</option>
+                </select>
+            </div>
+        </div>
+
+        <hr style="border: .5px solid #c1d1d7" />
+
+        <AddAddress items="AddressList" />
+
+        <hr style="border: .5px solid #c1d1d7" />
+
+        <div class="row">
+            <div class="col-lg-2">
+                <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Dias pago 1er. Recibo</h5>
+                <div class="form-group">
+                    <label>Nueva</label>
+                    <input class="form-control readonly-input" @bind-value="Company.Days_Payment_First_Recibe_New" />
+                    <ValidationMessage For="@(() => Company.Days_Payment_First_Recibe_New)" />
+                </div>
+                <div class="form-group">
+                    <label>Renovacion</label>
+                    <input class="form-control readonly-input" @bind-value="Company.Days_Payment_First_Recibe_Renewal" />
+                    <ValidationMessage For="@(() => Company.Days_Payment_First_Recibe_Renewal)" />
+                </div>
+            </div>
+        </div>
+
+        @if (!ReadOnly)
+        {
+            <div class="row">
+                <div class="col-12 d-flex justify-content-end">
+                    <button type="submit" class="btn btn-blue">Guardar Datos</button>
+                </div>
+            </div>
+        }
+    </EditForm>
+
+
+@code {
+    BSModal Centered;
+
+    void onToggle(MouseEventArgs e)
+    {
+        Centered.Toggle();
+        StateHasChanged();
+    }
+}

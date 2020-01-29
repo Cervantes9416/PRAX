@@ -1,0 +1,45 @@
+﻿<MatTabGroup>
+    @foreach (var tab in tabs)
+    {
+        <MatTab>
+            <LabelContent>
+                @tab.Label <MatIconButton Icon="@MatIconNames.Close" OnClick="@(_ => CloseTab(tab))"></MatIconButton>
+            </LabelContent>
+            <ChildContent>
+                @tab.Content
+            </ChildContent>
+        </MatTab>
+    }
+</MatTabGroup>
+
+@ChildContent
+
+
+@code
+{
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    public List<TabItem> tabs = new List<TabItem>()
+    {
+                new TabItem()
+                {
+                    Label = "Tab 1",
+                    Content = @<div>Content 1</div>
+                },
+                new TabItem()
+                {
+                    Label = "Tab 2",
+                    Content = @<div>Content 2</div>
+                },
+            };
+
+    void CloseTab(TabItem tab)
+    {
+        tabs.Remove(tab);
+    }
+
+    public void AddTab(TabItem tab)
+    {
+        tabs.Add(tab);
+        StateHasChanged();
+    }
+}

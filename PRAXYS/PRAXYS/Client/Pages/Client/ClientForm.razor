@@ -1,0 +1,147 @@
+﻿@inherits ClientFormBase
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <EditForm Model="Client" OnValidSubmit="OnValidSubmitCreate">
+                    <DataAnnotationsValidator />
+
+                    <div class="form-group mb-3 col-lg-4 p-0">
+                        <MatSelect Disabled="@ReadOnly" Label="Entidad" Enhanced="true" @bind-Value="Client.PersonType" Style="width:100%;">
+                            <MatOption Value=""></MatOption>
+                            <MatOption Value="Fisica">Fisica</MatOption>
+                            <MatOption Value="Moral">Moral</MatOption>
+                        </MatSelect>
+                    </div>
+
+                    @if (Client.PersonType == "Fisica")
+                    {
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                Apellido paterno
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user-circle" style="font-size: 11px;"></i></span>
+                                    </div>
+                                    <input @bind-value="Client.LastName" class="form-control readonly-input" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                Apellido materno
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user-circle" style="font-size: 11px;"></i></span>
+                                    </div>
+                                    <input @bind-value="Client.SecondLastName" class="form-control readonly-input" />
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                Nombres(s)
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user-circle" style="font-size: 11px;"></i></span>
+                                    </div>
+                                    <input @bind-value="Client.Name" class="form-control readonly-input" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-4">
+                                <MatSelect Disabled="@ReadOnly" Label="Genero" Enhanced="true" @bind-Value="Client.Gender" Style="width:100%;">
+                                    <MatOption Value=""></MatOption>
+                                    <MatOption Value="M">Masculino</MatOption>
+                                    <MatOption Value="F">Femenino</MatOption>
+                                </MatSelect>
+                            </div>
+                            <div class="col-md-4">
+                                <MatDatePicker Disabled="@ReadOnly" Style="width:100%;" Label="Fecha de nacimiento" @bind-Value="Client.DayOfBirth" DateFormat="d-m-Y"></MatDatePicker>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="form-group row">
+                            <div class="col-md-12">
+                                Nombre comercial
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fas fa-user-circle" style="font-size: 11px;"></i></span>
+                                    </div>
+                                    <input @bind-value="Client.CompanyName" placeholder="Ingresar nombre comercial de cliente" class="form-control readonly-input" />
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            RFC
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user-circle" style="font-size: 11px;"></i></span>
+                                </div>
+                                <input @bind-value="Client.RFC" placeholder="Ingresar RFC del cliente" class="form-control readonly-input" />
+                                <ValidationMessage For="@(() => Client.RFC)" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Direccion</h5>
+                            @if (AddressList != null)
+                            {
+                                <AddAddress @ref="AddressForm" items="AddressList" />
+                            }
+                        </div>
+                    </div>
+
+                    <div class="alert alert-info text-center h5">Opcional</div>
+
+                    <div class="form-group row">
+                        <div class="col-md-6">
+                            Numero de Telefono
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user-circle" style="font-size: 11px;"></i></span>
+                                </div>
+                                <input @bind-value="Client.PhoneNumber" type="text" @onkeypress="Alert" class="form-control phone_us readonly-input" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            Correo Electronico
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user-circle" style="font-size: 11px;"></i></span>
+                                </div>
+                                <input @bind-value="Client.Email" placeholder="Ingresar correo electronico de cliente" class="form-control readonly-input" />
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (!ReadOnly)
+                    {
+                        <div class="row text-center">
+                            <div class="col-12">
+                                <div class="p-3">
+                                    <button id="submit_btn" class="ladda-button btn btn-blue">
+                                        Guardar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </EditForm>
+            </div>
+        </div>
+    </div>
+</div>
+
+

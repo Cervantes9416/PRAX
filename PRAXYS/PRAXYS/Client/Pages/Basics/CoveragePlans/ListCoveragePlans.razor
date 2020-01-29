@@ -1,0 +1,62 @@
+﻿@page "/coverageplans/list"
+@inherits ListCoveragePlansBase
+
+<BSModal @ref="LiveDemo" Size="Size.Large">
+    <BSModalHeader OnClick="@(() => LiveDemo.Hide())">Agregar Cobertura</BSModalHeader>
+    <BSModalBody>
+        <CascadingValue Value="this">
+            <AddCoveragePlan />
+        </CascadingValue>
+    </BSModalBody>
+</BSModal>
+
+<div class="row ">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+        <h4 class="mat-h4">Planes de Cobertura</h4>
+        <button @onclick="@(() => LiveDemo.Show())" class="btn btn-blue waves-effect waves-light">
+            <span class="btn-label">
+                <i class="fas fa-plus"></i>
+            </span>
+            Agregar Plan
+        </button>
+    </div>
+</div>
+
+<div class="card card mat-elevation-z4 border-blue border-top">
+    <div class="card-body">
+        @if (CoveragePlans == null)
+        {
+            <div class="d-flex justify-content-center">
+                <div class="spinner-grow avatar-lg text-secondary m-2 text-center" role="status"></div>
+            </div>
+        }
+        else if (CoveragePlans.Count == 0)
+        {
+            <p>No existen registros que mostrar</p>
+        }
+        else
+        {
+            <table class="table table-responsive-lg table-hover table-striped">
+                <thead class="bg-blue text-white">
+                    <tr>
+                        <td>ID</td>
+                        <td>Nombre</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in CoveragePlans)
+                    {
+                        <tr @ondblclick="@(() => OnDblClick.InvokeAsync(item.ID))">
+                            <td>@item.ID</td>
+                            <td>@item.Name</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+</div>
+
+@code {
+    public BSModal LiveDemo;
+}

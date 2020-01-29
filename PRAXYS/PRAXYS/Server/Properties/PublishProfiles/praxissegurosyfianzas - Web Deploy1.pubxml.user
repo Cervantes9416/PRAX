@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQN96FbMry0+3B6HsWMgypAAAAAACAAAAAAAQZgAAAAEAACAAAAC3CawWM0/K7ec5B7/vH+S3G22PemTLbcFHYgm4e1ClDgAAAAAOgAAAAAIAACAAAADvYVmxQxhdW0d7OaU5+NkzVKozA+a31vK2pPhwUw61IoAAAACISUAHk1ZFjI6CcqwAvnuXH7Ji/N3PpMO+sHj5Dmpy4zba280sMGDddC11R4pohUiKPFCNo+PmuZxMiLLu0WMIG7GcrXzZkjgLUDItXWd44kn4y2c+JOa9E8mh9nzWB11oDTeW3xSuuyb7ZtS+oTKf+Rz9d+fC2TsDAt2KPCevpkAAAADFKUygDsSU9qA1ifqdTYUOyl2S1BqQ+ZAHIzQu5uU1o5jLr1pHuJIoPZ6+D7LwVMo8YwVD/CDlnHfpYdzEB6N2</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ServerDataConnection">
+      <Value>Server=tcp:praxist5f8jecw.database.windows.net,1433%3bInitial Catalog=praxis%3bPersist Security Info=False%3bUser ID=M9pAJ3iHUth%3bPassword={your_password}%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="PRAXYS.Data.AppDbContext">
+      <Value>Server=tcp:praxist5f8jecw.database.windows.net,1433%3bInitial Catalog=praxis%3bPersist Security Info=False%3bUser ID=M9pAJ3iHUth%3bPassword={your_password}%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

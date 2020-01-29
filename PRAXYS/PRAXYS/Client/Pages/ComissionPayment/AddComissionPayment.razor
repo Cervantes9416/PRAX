@@ -1,0 +1,29 @@
+﻿@inherits AddComissionPaymentBase
+
+<EditForm Model="ComissionPayment" OnValidSubmit="Create">
+    @if (ComissionPayment != null)
+    {
+        <div class="form-group">
+            <label>Fecha de comision pagada</label>
+            <MatDatePicker Style="width:100%;" Label="Fecha de nacimiento" @bind-Value="ComissionPayment.PayedDate" DateFormat="d-m-Y"></MatDatePicker>
+        </div>
+
+        <div class="form-group">
+            <label>Importe de comision pagada</label>
+            <div class="input-group mb-3 ">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-dollar-sign"></i></span>
+                </div>
+                <input class="form-control col-lg-2" @bind-value="ComissionPayment.AmountPayed" />
+            </div>
+        </div>
+
+        <div class="form-group d-flex justify-content-end">
+            <button class="btn btn-blue">Guardar Datos</button>
+        </div>
+    }
+</EditForm>
+
+
+
+

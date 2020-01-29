@@ -1,0 +1,6 @@
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Server\obj\Debug\netcoreapp3.0\PSF.Server.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Server\obj\Debug\netcoreapp3.0\staticwebassets\PSF.Server.StaticWebAssets.Manifest.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Server\obj\Debug\netcoreapp3.0\staticwebassets\PSF.Server.StaticWebAssets.xml
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Server\obj\Debug\netcoreapp3.0\PSF.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Server\obj\Debug\netcoreapp3.0\PSF.Server.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Server\obj\Debug\netcoreapp3.0\PSF.Server.AssemblyInfo.cs

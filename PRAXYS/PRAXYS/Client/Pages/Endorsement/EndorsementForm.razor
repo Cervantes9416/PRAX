@@ -1,0 +1,273 @@
+﻿@inherits EndorsementFormBase
+
+<EditForm Model="Endorsement" OnValidSubmit="OnValidSubmit" class="animated fadeInUp">
+    <DataAnnotationsValidator />
+    <div class="card-box mat-elevation-z4">
+
+        <div class="card-box mat-elevation-z4">
+            <div class="col-lg-12">
+                <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Informacion General</h5>
+                <!--FIRST ROW-->
+                <div class="row">
+                    <div class="form-group col-lg-4">
+                        <strong>Cliente:</strong>
+                        <span>
+                            @Endorsement.Insurance.Client.Name
+                        </span>
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <strong>RFC:</strong>
+                        <span>
+                            @Endorsement.Insurance.Client.RFC
+                        </span>
+                    </div>
+
+                    <div class="form-group col-lg-2">
+                        <strong>Sub Ramo:</strong>
+                        <span>
+                            @Endorsement.Insurance.SubBranch.Name
+                        </span>
+                    </div>
+
+                    <div class="form-group col-lg-2">
+                        <strong>Tipo de Pago</strong>
+                        <span>
+                            @Endorsement.Insurance.PaymentType.Description
+                        </span>
+                    </div>
+                </div>
+                <!--END FIRST ROW-->
+                <!--SECOND ROW-->
+                <div class="row">
+                    <div class="form-group col-lg-2">
+                        <strong>Documento</strong>
+                        <span>
+                            @Endorsement.Insurance.InsuranceNumber
+                        </span>
+                    </div>
+                    <div class="form-group col-lg-2">
+                        <strong>Grupo</strong>
+                        <span>
+                            @Endorsement.Insurance.SubAgent.CompanyName
+                        </span>
+                    </div>
+
+                    <div class="form-group col-lg-4">
+                        <strong>Cliente</strong>
+                        <span>
+                            @Endorsement.Insurance.Company.CompanyName
+                        </span>
+                    </div>
+
+                    <div class="form-group col-lg-4">
+                        <strong>Agente</strong>
+                        <span>
+                            @Endorsement.Insurance.Agent.CompanyName
+                        </span>
+                    </div>
+                </div>
+                <!--END SECOND ROW-->
+            </div>
+        </div>
+
+        <div class="col-12">
+            <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Detalles del Endoso</h5>
+
+            <div class="row">
+
+                <div class="form-group col-lg-4">
+                    <label>Tipo de Endoso</label>
+                    @*<SelectEndorsement SelectEndorsementType="Endorsement" />*@
+                    <select class="form-control" @bind="Endorsement.EndorsementTypeID">
+                        <option value="1">Aumento</option>
+                        <option value="2">Disminucion</option>
+                    </select>
+                    <ValidationMessage For="@(() => Endorsement.EndorsementTypeID)" />
+                </div>
+
+                <div class="form-group col-lg-2">
+                    <label>Desde</label>
+                    @*<RadzenDatePicker @bind-Value="Endorsement.ValidFrom" Style="width:100%; z-index:1000; margin-top:-100px" />*@
+                    <MatDatePicker Style="width:100%;" Label="Fecha de nacimiento" @bind-Value="Endorsement.ValidFrom" DateFormat="d-m-Y"></MatDatePicker>
+                    <ValidationMessage For="@(() => Endorsement.ValidFrom)" />
+                </div>
+
+                <div class="form-group col-lg-2">
+                    <label>Hasta</label>
+                    @*<RadzenDatePicker @bind-Value="Endorsement.ValidThrought" Style="width:100%; z-index:1000" />*@
+                    <MatDatePicker Style="width:100%;" Label="Fecha de nacimiento" @bind-Value="Endorsement.ValidThrought" DateFormat="d-m-Y"></MatDatePicker>
+                    <ValidationMessage For="@(() => Endorsement.ValidThrought)" />
+                </div>
+
+                <div class="form-group col-lg-4">
+                    <label>Tipo de Pago</label>
+                    <SelectPaymentType SelectPayment="Endorsement" />
+                </div>
+
+                <div class="form-group col-12 text-center">
+                    <label>Concepto</label>
+                    <textarea class="form-control" @bind="Endorsement.Description"></textarea>
+                    <ValidationMessage For="@(() => Endorsement.Description)" />
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="row mt-1">
+                <div class="col-lg-4 ">
+                    <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Detalles de Primas</h5>
+
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        Prima Neta
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" @bind="Endorsement.NetPremium" />
+                        </div>
+                        <div class="col-lg-3">
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        <label>Descuento</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" @bind="Endorsement.Discount" />
+                        </div>
+                        <div class="col-lg-3">
+                            <input type="text" placeholder="%" class="form-control" @bind-value="Endorsement.DiscountPercentage" />
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        <label>Recargos</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" @bind="Endorsement.Surcharges" />
+                        </div>
+                        <div class="col-lg-3">
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        <label>Derechos</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" @bind="Endorsement.Rights" />
+                        </div>
+                        <div class="col-lg-3">
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        <label>Sub Total</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" @bind="Endorsement.SubTotal" />
+                        </div>
+                        <div class="col-lg-3">
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        <label>IVA</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" @bind="Endorsement.tax" />
+                        </div>
+                        <div class="col-lg-3">
+                            <input type="text" placeholder="%" class="form-control" @bind-value="Endorsement.TaxPercentage" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        <label>Prima Total</label>
+                        <div class="col-lg-7">
+                            <input type="text" class="form-control" @bind="Endorsement.TotalPremium" />
+                        </div>
+                        <div class="col-lg-3">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 ">
+                    <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Primer Recibo</h5>
+
+                    <div class="form-group row d-flex">
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" @bind="Endorsement.FirstPayment.NetPremium" />
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex">
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" @bind="Endorsement.FirstPayment.Discount" />
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex">
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" @bind="Endorsement.FirstPayment.Surcharges" />
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex">
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" @bind="Endorsement.FirstPayment.Rights" />
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex">
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" @bind="Endorsement.FirstPayment.SubTotal" />
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex">
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" @bind="Endorsement.FirstPayment.tax" />
+                        </div>
+
+                    </div>
+                    <div class="form-group row d-flex">
+                        <div class="col-lg-8">
+                            <input type="text" class="form-control" @bind="Endorsement.FirstPayment.TotalPremium" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Detalles de comision</h5>
+
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        Neta
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Endorsement.Comission_NetPremium" />
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                    </div>
+
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        Recargos
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Endorsement.Comission_Surcharges" />
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                    </div>
+
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        Derechos
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Endorsement.Comission_Rights" />
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                    </div>
+
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        Especial
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Endorsement.Comission_Special" />
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="d-flex justify-content-end align-items-center">
+            <button type="submit" class="btn btn-blue">
+                Guardar Datos
+            </button>
+        </div>
+    </div>
+</EditForm>
+

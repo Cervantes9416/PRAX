@@ -1,0 +1,224 @@
+﻿@inherits DocumentDetailsBase
+
+<div class="row">
+
+    <div class="col-md-6 col-xl-3  ">
+        <div class="widget-rounded-circle card-box mb-2 mat-elevation-z4">
+            <div class="row">
+                <div class="col-6">
+                    <div class="avatar-lg rounded-circle bg-soft-warning">
+                        <i class=" fe-check-circle text-success font-24 avatar-title"></i>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="text-right">
+                        <h3>Documento</h3>
+                        <p class="text-muted mb-1">@Insurance.InsuranceNumber</p>
+                    </div>
+                </div>
+            </div> <!-- end row-->
+        </div> <!-- end widget-rounded-circle-->
+    </div> <!-- end col-->
+
+    <div class="col-md-6 col-xl-3  ">
+        <div class="widget-rounded-circle card-box mb-2 mat-elevation-z4">
+            <div class="row">
+                <div class="col-6">
+                    <div class="avatar-lg rounded-circle @(Insurance.Payed ? "bg-soft-success" : "bg-soft-warning") ">
+                        <i class=" fe-check-circle text-success font-24 avatar-title"></i>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="text-right">
+                        <h5>Estado</h5>
+                        <p class="text-muted mb-1">@(Insurance.Payed ? "Pagada" : "Pendiente")</p>
+                    </div>
+                </div>
+            </div> <!-- end row-->
+        </div> <!-- end widget-rounded-circle-->
+    </div> <!-- end col-->
+
+</div><!--end row-->
+
+
+<div class="row mt-3 p-0">
+    <div class="col-lg-4">
+        <div class="card-box ribbon-box mat-elevation-z4">
+            <div class="ribbon ribbon-blue float-left"><i class="mdi mdi-access-point mr-1"></i> Informacion general</div>
+            <div class="ribbon-content">
+
+                <table class="table">
+                    <tr>
+                        <td>Cliente</td>
+                        <td>
+                            @if (Insurance.Client.PersonType == "Fisica")
+                            {
+                                @($"{Insurance.Client.Name} {Insurance.Client.LastName} {Insurance.Client.SecondLastName}")
+                            }
+                            else
+                            {
+                                @Insurance.Client.CompanyName
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Agente</td>
+                        <td>
+                            @if (Insurance.Agent.PersonType == "Fisica")
+                            {
+                                @($"{Insurance.Agent.Name} {Insurance.Agent.LastName} {Insurance.Agent.SecondLastName}")
+                            }
+                            else
+                            {
+                                @Insurance.Agent.CompanyName
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Compañia</td>
+                        <td>@Insurance.Company.CompanyName</td>
+                    </tr>
+                    <tr>
+                        <td>Grupo</td>
+                        <td>
+                            @if (Insurance.SubAgent.PersonType == "Fisica")
+                            {
+                                @($"{Insurance.SubAgent.Name} {Insurance.SubAgent.LastName} {Insurance.SubAgent.SecondLastName}")
+                            }
+                            else
+                            {
+                                @Insurance.SubAgent.CompanyName
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Tipo de Poliza</td>
+                        <td>Vehiculos</td>
+                    </tr>
+                    <tr>
+                        <td>Tipo de Pago</td>
+                        <td>@Insurance.PaymentType.Description</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        @*
+        <div class="card-box ribbon-box mat-elevation-z4">
+            <div class="ribbon ribbon-pink float-left"><i class="mdi mdi-access-point mr-1"></i> Contacto</div>
+            <div class="ribbon-content">
+
+                <table class="table">
+                    <tr>
+                        <td>Tipo de Poliza</td>
+                        <td>Vehiculos</td>
+                    </tr>
+                    <tr>
+                        <td>Tipo de Pago</td>
+                        <td>@Insurance.PaymentType.Description</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        *@
+    </div><!--end col-->
+
+    <div class="col-lg-4">
+        <div class="card-box ribbon-box mat-elevation-z4">
+            <div class="ribbon ribbon-success float-left"><i class="mdi mdi-access-point mr-1"></i> Detalles de Primas</div>
+            <div class="ribbon-content">
+
+                <table class="table">
+                    <tr>
+                        <td>Prima Neta</td>
+                        <td>@Insurance.NetPremium</td>
+                    </tr>
+                    <tr>
+                        <td>Descuento</td>
+                        <td>@Insurance.Discount</td>
+                    </tr>
+                    <tr>
+                        <td>Recargos</td>
+                        <td>@Insurance.Surcharges</td>
+                    </tr>
+                    <tr>
+                        <td>Derechos</td>
+                        <td>@Insurance.Rights</td>
+                    </tr>
+                    <tr>
+                        <td>Sub Total</td>
+                        <td>@Insurance.SubTotal</td>
+                    </tr>
+                    <tr>
+                        <td>IVA</td>
+                        <td>@Insurance.tax</td>
+                    </tr>
+                    <tr>
+                        <td>Prima Total</td>
+                        <td>@Insurance.TotalPremium</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+    </div><!--end col-->
+
+    <div class="col-lg-4">
+        <div class="card-box ribbon-box mat-elevation-z4">
+            <div class="ribbon ribbon-success float-left"><i class="mdi mdi-access-point mr-1"></i> Contacto</div>
+            <div class="ribbon-content">
+
+                <table class="table">
+                    <tr>
+                        <td>Nombre</td>
+                        <td>@Insurance.ReferenceName</td>
+                    </tr>
+                    <tr>
+                        <td>Telefono</td>
+                        <td>@Insurance.ReferenceNumber</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>@Insurance.ReferenceEmail</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+    </div><!--end col-->
+
+</div><!--end row-->
+
+<div class="row">
+    <div class="col-12">
+        <div class="card-box ribbon-box mat-elevation-z4">
+            <div class="ribbon ribbon-blue float-left"><i class="mdi mdi-access-point mr-1"></i> Detalles</div>
+            <div class="ribbon-content">
+                @GetContent(Insurance.SubBranch.InputForm)
+            </div>
+        </div>
+    </div>
+</div>
+
+@code{
+    RenderFragment GetContent(string SubBranch)
+    {
+        switch (SubBranch)
+        {
+            case "Accidente":
+                return@<AccidentForm insurance="Insurance" ReadOnly="true"/>;
+           
+            case "Vehiculos":
+                return @<VehicleForm insurance="Insurance" ReadOnly="true"/>;
+            
+            case "Vida":
+                return @<LifeInsuranceForm insurance="Insurance" ReadOnly="true"/>;
+            
+            default:
+                return null;
+        }
+    }
+}

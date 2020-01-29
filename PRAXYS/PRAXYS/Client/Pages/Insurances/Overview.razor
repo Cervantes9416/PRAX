@@ -1,0 +1,241 @@
+﻿@inherits OverviewBase
+@page  "/Overview/{InsuranceID:int}"
+@************* VIEW TITLE *************@
+
+<div class="row">
+    <div class="col-7">
+        <span class="display-4">Póliza</span> <span class="text-blue display-4 font-weight-bold">@((Insurance != null) ? Insurance.InsuranceNumber : "")</span>
+    </div>
+</div>
+
+<div class="card mat-elevation-z4 animated fadeInUp">
+    <div class="card-body">
+        @if (Insurance != null)
+        {
+            <MatDrawerContainer Style="min-height:80vh" Class="row">
+                @*
+                <MatDrawer @bind-Opened="@Opened" Mode="MatDrawerMode.Dismissible" Class="col-lg-3 p-1 mat-elevation-z4">
+                    <InputFile documentation="InsuranceDocumentation"
+                               UploadFile="UploadFile"
+                               DocumentationList="Insurance.InsuranceDocumentation.Cast<IDocumentationEntity>().ToList()"
+                               DeleteFile="DeleteFile">
+                    </InputFile>
+                </MatDrawer>*@
+                <MatDrawerContent Style="user-select:none;" Class="col ">
+                    <div class="card-box">
+                        <div class="row">
+                            <div class="col-md-6 col-xl-3  ">
+                                <div class="widget-rounded-circle card-box mb-2 mat-elevation-z4">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="avatar-lg rounded-circle bg-soft-warning">
+                                                <i class=" fe-check-circle text-success font-24 avatar-title"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-right">
+                                                <h5>Endosos</h5>
+                                                <p class="text-muted mb-1">@InsuranceList.Where(x => x.EndorsementNumber > 0).Count()</p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end row-->
+                                </div> <!-- end widget-rounded-circle-->
+                            </div> <!-- end col-->
+
+                            <div class="col-md-6 col-xl-3  ">
+                                <div class="widget-rounded-circle card-box mb-2 mat-elevation-z4">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="avatar-lg rounded-circle bg-soft-success ">
+                                                <i class=" fe-check-circle text-success font-24 avatar-title"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-right">
+                                                <h5>Venta</h5>
+                                                <p class="text-muted mb-1">
+                                                    @Total
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end row-->
+                                </div> <!-- end widget-rounded-circle-->
+                            </div> <!-- end col-->
+
+                            <div class="col-md-6 col-xl-3  ">
+                                <div class="widget-rounded-circle card-box mb-2 mat-elevation-z4">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="avatar-lg rounded-circle bg-soft-success">
+                                                <i class=" fe-check-circle text-success font-24 avatar-title"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-right">
+                                                <h5>Devoluciones</h5>
+                                                    @TotalReturn
+                                            </div>
+                                        </div>
+                                    </div> <!-- end row-->
+                                </div> <!-- end widget-rounded-circle-->
+                            </div> <!-- end col-->
+
+                            <div class="col-md-6 col-xl-3  ">
+                                <div class="widget-rounded-circle card-box mb-2 mat-elevation-z4">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="avatar-lg rounded-circle bg-soft-success">
+                                                <i class=" fe-check-circle text-success font-24 "></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="text-right">
+                                                <h5>Balance</h5>
+                                                <p class="text-muted mb-1">
+                                                    @Balance
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end row-->
+                                </div> <!-- end widget-rounded-circle-->
+                            </div> <!-- end col-->
+                        </div>
+                    </div>
+
+                    @*-----------------------------------OPTION BUTTONS--------------------------------------*@
+                <div class="row d-flex align-content-center mb-2">
+
+                    <div class="col">
+                        <div class="p-1 text-center ">
+                            <button @onclick="@OpenModal" id='showModal' class="btn btn-blue width-xl ladda-button" data-style="zoom-in" data-animation="fadeIn">
+                                <i class="fas fa-comment-dollar"></i> Ver Pagos
+                            </button>
+                        </div>
+                    </div>
+
+                    @if (Insurance.Status != Commons.Enum.InsuranceStatus.Cancelled)
+                    {
+                        <div class="col">
+                            <div class="p-1 text-center ">
+                                <a href="endorsement/create/@Insurance.ID" id='showModal' class="btn btn-blue width-xl ladda-button" data-style="zoom-in" data-animation="fadeIn">
+                                    <i class="fas fa-comment-dollar"></i> Crear Endoso
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="p-1 text-center ">
+                                <button @onclick="CancelAll" class="btn btn-blue width-xl ladda-button" data-style="zoom-in" data-animation="fadeIn">
+                                    <i class="fas fa-comment-dollar"></i> Cancelar Todo
+                                </button>
+                            </div>
+                        </div>
+                    }
+
+                    @*
+        <div class="col">
+            <div class="p-1 text-center ">
+                <a href="endorsement/Modify/@Insurance.ID" id='showModal' class="btn btn-blue width-xl ladda-button" data-style="zoom-in" data-animation="fadeIn">
+                    <i class="fas fa-comment-dollar"></i> Endoso automatico
+                </a>
+            </div>
+        </div>
+                    *@
+                </div>
+
+
+                    @*-----------------------------------OPTION BUTTONS--------------------------------------*@
+                    <div class="card-box mt-2 mat-elevation-z4">
+                        <div class="col-12">
+                            <table class="table border table-striped">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <td>Estado</td>
+                                        <td>Pagado</td>
+                                        <td>Documento</td>
+                                        <td>Tipo de Endoso</td>
+                                        <td>Concepto</td>
+                                        <td>Prima Neta</td>
+                                        <td>Prima Total</td>
+                                        <td class="text-center">Acciones</td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @if (InsuranceList != null)
+                                    {
+                                        var last = InsuranceList.Last();
+
+                                        @foreach (var item in InsuranceList)
+                                        {
+                                            <tr>
+                                                <td class="">
+                                                    <i class="@item.getStatus()"></i>
+                                                </td>
+                                                <td>
+                                                    @if (item.Payed)
+                                                    {
+                                                        <span class="badge badge-success"><i class="far fa-check-circle"></i>&nbsp;Pagada</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="badge badge-warning"><i class="fas fa-ban"></i>&nbsp;No Pagada</span>
+                                                    }
+                                                </td>
+                                                <td><a href="insurance/@item.ID">@($"{item.InsuranceNumber}-{item.EndorsementNumber}")</a></td>
+                                                <td>@item.EndorsementType</td>
+                                                <td>@item.Description</td>
+                                                <td>@item.NetPremium</td>
+                                                <td class="@textColor(item.EndorsementType)">@item.TotalPremium</td>
+                                                <td class="text-center">
+                                                    @if (item.Equals(last) && item.EndorsementNumber > 0)
+                                                    {
+                                                        <div class="btn-group">
+                                                            <button @onclick="@(() => DeleteEndorsement(item.ID))" type="button" class="btn btn-light"><i class="fas fa-trash"></i></button>
+                                                        </div>
+                                                    }
+                                                </td>
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </MatDrawerContent>
+            </MatDrawerContainer>
+        }
+        else
+        {
+            <div class="d-flex justify-content-center">
+                <div class="spinner-grow avatar-lg text-secondary m-2 text-center" role="status"></div>
+            </div>
+        }
+    </div>
+</div>
+
+<BSModal @ref="Details" Size="Size.Large">
+    <BSModalHeader OnClick="@(() => Details.Hide())">Pagos</BSModalHeader>
+    <BSModalBody>
+        @ModalContent
+    </BSModalBody>
+</BSModal>
+
+@code{
+    bool Opened = true;
+    BSModal Details;
+
+    void OpenModal()
+    {
+        ModalContent = @<PaymentsInformationList InsuranceID="InsuranceID" />;
+        StateHasChanged();
+        Details.Show();
+    }
+
+
+    void ButtonClicked()
+    {
+        Opened = !Opened;
+    }
+
+
+}

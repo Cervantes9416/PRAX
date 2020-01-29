@@ -1,0 +1,10 @@
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PSF.DATA\obj\Debug\netcoreapp3.1\PSF.DATA.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PSF.DATA\obj\Debug\netcoreapp3.1\PSF.DATA.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PSF.DATA\obj\Debug\netcoreapp3.1\PSF.DATA.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PSF.DATA\bin\Debug\netcoreapp3.1\PSF.DATA.deps.json
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PSF.DATA\bin\Debug\netcoreapp3.1\PSF.DATA.runtimeconfig.json
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PSF.DATA\bin\Debug\netcoreapp3.1\PSF.DATA.runtimeconfig.dev.json
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PSF.DATA\bin\Debug\netcoreapp3.1\PSF.DATA.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PSF.DATA\bin\Debug\netcoreapp3.1\PSF.DATA.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PSF.DATA\obj\Debug\netcoreapp3.1\PSF.DATA.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PSF.DATA\obj\Debug\netcoreapp3.1\PSF.DATA.pdb

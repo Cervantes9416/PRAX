@@ -1,0 +1,38 @@
+﻿@inherits SelectClientsBase
+
+@if (Clients == null)
+{
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border text-info m-2" role="status"></div>
+    </div>
+}
+else
+{
+    <select @bind="SelectClient.ClientID" style="width:100%; " class="form-control">
+        <option selected value="0">Seleccionar..</option>
+        @foreach (var item in Clients)
+        {
+            @if (item.PersonType == "Fisica")
+            {
+                <option value="@item.ID">@($"{item.Name} {item.LastName} {item.SecondLastName}")</option>
+            }
+            else
+            {
+                <option value="@item.ID">@item.CompanyName</option>
+            }
+        }
+        }
+    </select>
+
+}
+
+<BSModal Size="Size.Large" @ref="LiveDemo">
+    <BSModalHeader OnClick="@(() => LiveDemo.Hide())">Modal title</BSModalHeader>
+    <BSModalBody>
+        <ClientModalForm Client="new ClientModel()" />
+    </BSModalBody>
+</BSModal>
+
+@code {
+    BSModal LiveDemo;
+}

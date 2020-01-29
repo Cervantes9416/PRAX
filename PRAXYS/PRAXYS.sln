@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29418.71
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRAXYS.Server", "PRAXYS\Server\PRAXYS.Server.csproj", "{6337CC8E-F60B-4394-8A19-C0591E1A168E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRAXYS.Client", "PRAXYS\Client\PRAXYS.Client.csproj", "{E0BCA24B-57E1-47D1-9343-33795E781CB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRAXYS.Shared", "PRAXYS\Shared\PRAXYS.Shared.csproj", "{EEE2AA81-CAFC-41ED-880F-05CFDE541CE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRAXYS.Data", "PRAXYS.Data\PRAXYS.Data.csproj", "{F548F154-1DD5-440B-9E62-DF1C7BC41413}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRAXYS.Business", "PRAXYS.Business\PRAXYS.Business.csproj", "{766C1E6F-9146-4347-8ABD-CA2FC0C457CA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PRAXYS.Commons", "PRAXYS.Commons\PRAXYS.Commons.csproj", "{61B2FE65-B4C2-494F-BDA1-911415C4BFFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6337CC8E-F60B-4394-8A19-C0591E1A168E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6337CC8E-F60B-4394-8A19-C0591E1A168E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6337CC8E-F60B-4394-8A19-C0591E1A168E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6337CC8E-F60B-4394-8A19-C0591E1A168E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0BCA24B-57E1-47D1-9343-33795E781CB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0BCA24B-57E1-47D1-9343-33795E781CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0BCA24B-57E1-47D1-9343-33795E781CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0BCA24B-57E1-47D1-9343-33795E781CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE2AA81-CAFC-41ED-880F-05CFDE541CE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE2AA81-CAFC-41ED-880F-05CFDE541CE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE2AA81-CAFC-41ED-880F-05CFDE541CE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE2AA81-CAFC-41ED-880F-05CFDE541CE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F548F154-1DD5-440B-9E62-DF1C7BC41413}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F548F154-1DD5-440B-9E62-DF1C7BC41413}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F548F154-1DD5-440B-9E62-DF1C7BC41413}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F548F154-1DD5-440B-9E62-DF1C7BC41413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{766C1E6F-9146-4347-8ABD-CA2FC0C457CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766C1E6F-9146-4347-8ABD-CA2FC0C457CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766C1E6F-9146-4347-8ABD-CA2FC0C457CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766C1E6F-9146-4347-8ABD-CA2FC0C457CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61B2FE65-B4C2-494F-BDA1-911415C4BFFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B2FE65-B4C2-494F-BDA1-911415C4BFFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B2FE65-B4C2-494F-BDA1-911415C4BFFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B2FE65-B4C2-494F-BDA1-911415C4BFFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CCE025A5-F35C-452E-9452-47BC071C8B19}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,50 @@
+﻿@inherits AccidentFormBase
+
+    <div class="row">
+        <div class="form-group col-lg-3">
+            <label>Apellido Paterno</label>
+            <input @bind-value="insurance.Insuree_LastName" class="form-control readonly-input" />
+        </div>
+
+        <div class="form-group col-lg-3">
+            <label>Apellido Materno</label>
+            <input @bind-value="insurance.Insuree_SecondLastName" class="form-control readonly-input" />
+        </div>
+
+        <div class="form-group col-lg-3">
+            <label>Nombre(s)</label>
+            <input @bind-value="insurance.Insuree_Name" class="form-control readonly-input" />
+        </div>
+
+        <div class="form-group col-lg-3">
+            <label>Fecha de Nacimiento</label>
+            <RadzenDatePicker @bind-Value="insurance.Insuree_BirthDate" Style="width:100%;" ReadOnly="@ReadOnly"/>
+        </div>
+
+        <div class="form-group col-lg-3">
+            <label>CURP</label>
+            <input @bind-value="insurance.Insuree_CURP" class="form-control readonly-input" />
+        </div>
+
+        <div class="form-group col-lg-2">
+            <label>RFC</label>
+            <input @bind-value="insurance.Insuree_RFC" class="form-control readonly-input" />
+        </div>
+
+        <div class="form-group col-lg-2">
+            <label>Genero</label>
+            @if (ReadOnly)
+            {
+                <input @bind-value="@insurance.Insuree_Gender" class="form-control readonly-input"/>
+            }
+            else
+            {
+                <select class="form-control readonly-input" @bind="insurance.Insuree_Gender">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+            }
+        </div>
+    </div>
+
+

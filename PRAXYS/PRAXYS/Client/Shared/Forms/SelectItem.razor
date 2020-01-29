@@ -1,0 +1,13 @@
+﻿
+<select class="form-control" @bind="Value">
+    @foreach (var item in ItemList)
+    {
+        <option value="@Convert.ToInt32(item.Value)">@item.Key</option>
+    }
+</select>
+
+@code {
+
+    [Parameter] public List<MultipleSelectModel> ItemList { get; set; }
+    [Parameter] public int Value { get; set; }
+}

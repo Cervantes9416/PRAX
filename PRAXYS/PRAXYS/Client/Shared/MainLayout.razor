@@ -1,0 +1,226 @@
+﻿@inherits LayoutComponentBase
+@inject IJSRuntime js
+@inject ILoginService service
+@inject HttpClient Http
+<AuthorizeView>
+    <Authorized>
+
+        @*
+                <div id="wrapper">
+                <!--SIDEBAR-->
+                <CascadingValue Value="this">
+                    <TopBar />
+                    <LeftBar />
+                    <div class="content-page border">
+                        <div class="content">
+                            <div class="container-fluid pt-3">
+                                @Body
+                            </div>
+                        </div>
+                    </div>
+                    <!--FOOTER-->
+                </CascadingValue>
+            </div>
+        *@
+
+        <div class="wrapper-page">
+            <div class="top_navbar">
+                <div class="hamburguer" @onclick="CollapseMenu">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="top_menu">
+                    <img src="/assets/img/Praxys.png" alt="" height="60">
+
+                    <ul>
+                        @*<li><a href=""><i class="fas fa-search"></i></a></li>*@
+                        @*<li><a href=""><i class="fas fa-bell"></i></a></li>*@
+                        <li><a href=""><i class="fas fa-user"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="sidebar">
+                    <ul>
+                        <li class="bg-blue">
+                            <a href="/" style="cursor:pointer;">
+                                <span class="icon">
+                                    <i class="fas fa-home"></i>&nbsp;
+                                </span>
+                                <span class="title">Escritorio</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a>
+                                <span class="icon">
+                                    <i class="fas fa-list-ul"></i>
+                                </span>
+                                <span class="title">Catalogos&nbsp;<i class="fas fa-angle-right"></i></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="basics/payments">
+                                        Tipos de Pago
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="basics/branchs">
+                                        Ramos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="basics/subBranchs">
+                                        SubRamos
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a>
+                                <span class="icon">
+                                    <i class="fas fa-list-ul"></i>
+                                </span>
+                                <span class="title">Administrar&nbsp;<i class="fas fa-angle-right"></i></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a>
+                                        Clientes
+                                        <i class="fas fa-angle-right"></i>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="clients/create">Agregar Clientes</a></li>
+                                        <li><a href="clients/list">Todos los Clientes</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>
+                                        Agentes
+                                        <i class="fas fa-angle-right"></i>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="agents/create">Agregar Agente</a></li>
+                                        <li><a href="agents/list">Todos los Agentes</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>
+                                        Compañias
+                                        <i class="fas fa-angle-right"></i>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="companies/create">Agregar Compañias</a></li>
+                                        <li><a href="companies/list">Todos las Compañias</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>
+                                        Grupos
+                                        <i class="fas fa-angle-right"></i>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="subagents/create">Agregar Grupos</a></li>
+                                        <li><a href="subagents/list">Todos los Grupos</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a>
+                                <span class="icon">
+                                    <i class="fas fa-digital-tachograph"></i>
+                                </span>
+                                <span class="title">Documentos&nbsp;<i class="fas fa-angle-right"></i></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a>
+                                        Polizas
+                                        <i class="fas fa-angle-right"></i>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li>
+                                            <a>Agregar Poliza &nbsp;<i class="fas fa-angle-right"></i></a>
+                                            <ul class="sub-menu">
+                                                <li><a href="insurance/Create/1">Accidentes y Enfermedades</a></li>
+                                                <li><a href="insurance/Create/2">Daños</a></li>
+                                                <li><a href="insurance/Create/3">Vehiculos</a></li>
+                                                <li><a href="insurance/Create/4">Vida</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="insurance/list">Todas las polizas</a></li>
+                                        <li><a href="insurance/near">Polizas proximas a vencer</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a>
+                                        Fianzas
+                                        <i class="fas fa-angle-right"></i>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="bonds/create">Agregar Fianza</a></li>
+                                        <li><a href="bonds/list">Todas las Fianzas</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a>
+                                <span class="icon">
+                                    <i class="fas fa-file-alt"></i>
+                                </span>
+                                <span class="title">Reportes&nbsp;<i class="fas fa-angle-right"></i></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a>
+                                        Operaciones
+                                        <i class="fas fa-angle-right"></i>
+                                    </a>
+                                    <ul class="sub-menu">
+                                        <li><a href="reports/insurance">Polizas</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a>
+                                <span class="icon">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                </span>
+                                <span class="title" @onclick="LogOut" style="cursor:pointer;">Cerrar Sesion</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="main_container">
+                @Body
+            </div>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <Login />
+    </NotAuthorized>
+</AuthorizeView>
+
+@code{
+
+    protected async Task CollapseMenu()
+    {
+        await js.InitMenu();
+    }
+
+    private async void LogOut()
+    {
+        var result = await js.ConfirmMessage("Antes de continuar", "Esta seguro que quiere cerrar su sesión?");
+        if (result)
+        {
+            await service.Logout();
+        }
+    }
+}

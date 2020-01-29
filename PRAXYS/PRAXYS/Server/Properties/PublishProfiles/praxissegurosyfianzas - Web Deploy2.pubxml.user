@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAQN96FbMry0+3B6HsWMgypAAAAAACAAAAAAAQZgAAAAEAACAAAADxNrKXY8/plQmuHpMinMs4eVYlQsrAJGS7LpviJuQRtwAAAAAOgAAAAAIAACAAAADk6oBvd5fKDOtn+DBzYvkcH6LHYKejnZKUCQwUY3dDIIAAAAAT1YyP4cH0Kp/gIc7RvsH71RA9D4/aoY0kh4dkvqxaeE8faNOFAzCZ71WarVfJ9IhSd0jFkkKwOCb/4KU/pUk7waG+vUAG/YqINe9PlPskpd97eibnnihKDOdZPbXm1nKaP/vrnmBjYstmh5g5tweJhI2hOlzYMmUycdaHQXqdAEAAAAChB4cis8wRS7O5jzTzhwd4OEvj9F9Ilc1GAhKJy1ES+3pBLsazaCOIUSe4gNtTXP1Hgj0jmWQhqJz1uutzauuy</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="AzureStorage">
+      <Value>DefaultEndpointsProtocol=https%3bAccountName=praxiscontainer%3bAccountKey=2ei3jj3uDDUvJlxoCn13GpTJpD9WbfTc7hXVzP2hfcWjEWwB5luZqcj/4Z5Km4lpWHz89FvQc7kWXavF52mrTQ==</Value>
+    </DestinationConnectionStrings>
+    <DestinationConnectionStrings Include="ServerDataConnection">
+      <Value>Server=tcp:praxist5f8jecw.database.windows.net,1433%3bInitial Catalog=praxis%3bPersist Security Info=False%3bUser ID=M9pAJ3iHUth%3bPassword=mlPH77lxutR2%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

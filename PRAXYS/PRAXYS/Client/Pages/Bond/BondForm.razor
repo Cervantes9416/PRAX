@@ -1,0 +1,178 @@
+﻿@inherits BondFormBase
+
+<EditForm Model="Bond" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator/>
+    <div class="row card-box mat-elevation-z4">
+        <div class="col-lg-4 d-flex justify-content-start align-content-center">
+            <img src="/assets/img/logo_extendido.png" width="390" height="50" />
+        </div>
+        <div class="col-lg-4 d-flex justify-content-center align-items-center">
+            <h3>Detalles de Fianzas</h3>
+        </div>
+        <div class="col-lg-4 d-flex justify-content-end align-items-center">
+            <strong>Fecha de captura: &nbsp;</strong>
+            <span class="text-blue">12/16/2019</span>
+        </div>
+
+        <div class="col-lg-6">
+            <MatTextField @bind-Value="Bond.BondNumber" Label="Numero de Fianza" FullWidth="true"></MatTextField>
+        </div>
+    </div>
+
+
+
+    <div class="row card-box mat-elevation-z4">
+        <div class="col-12">
+            <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Identificacion</h5>
+            <div class="form-row">
+                <div class="form-group col-lg-6">
+                    <label>Numero de Factura</label>
+                    <input @bind-value="Bond.BillingNumber" type="text" class="form-control" />
+
+                    <label>Vigencia</label>
+                    <div class="d-flex justify-content-between">
+                        @*<input type="text" placeholder="Desde" class="form-control datepicker-test" />*@
+                        <MatDatePicker Style="width:100%;" Label="Desde" @bind-Value="Bond.Start" DateFormat="d-m-Y"></MatDatePicker>
+                        <MatDatePicker Style="width:100%;" Label="Hasta" @bind-Value="Bond.End" DateFormat="d-m-Y"></MatDatePicker>
+                    </div>
+                </div>
+                <div class="form-group col-lg-6">
+                    <label>Ramo</label>
+                    <input type="text" @bind-value="Bond.BranchID" class="form-control" />
+                    
+                    <label>Riesgo</label>
+                    <input type="text" @bind-value="Bond.RiskTypeID" class="form-control" />
+                    
+                    <label>Movimiento</label>
+                    <input type="text" @bind-value="Bond.MovementID" class="form-control" />
+                    
+                    <label>Oficina</label>
+                    <input type="text" @bind-value="Bond.OfficeID" class="form-control" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row card-box mat-elevation-z4">
+        <div class="col-12">
+            <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Datos generales</h5>
+            <div class="form-row">
+                <div class="form-group col-lg-6">
+                    <label>Cliente</label>
+                    <SelectClients SelectClient="Bond" />
+                    @if (Bond.Client != null)
+                    {
+                        <fieldset class="scheduler-border">
+                            <legend class="scheduler-border">Datos del Cliente</legend>
+                            <strong>Nombre:</strong>&nbsp;Cliente 1
+
+                            <h5>Direccion</h5>
+                            <address>
+                                Stanley Jones, 795 Folsom Ave, Suite 600<br>
+                                San Francisco, CA 94107<br>
+                                Numero de Telefono: @Bond.Client.PhoneNumber
+                            </address>
+                        </fieldset>
+                    }
+                    <label>Beneficiario</label>
+                    <input placeholder="Nombre del beneficiario" @bind-value="Bond.Beneficiary" class="form-control" />
+                </div>
+                <div class="form-group col-lg-6">
+                    <label>Agente</label>
+                    <SelectAgent SelectAgent="Bond" />
+
+                    <label>Compañia</label>
+                    <SelectCompany SelectCompany="Bond" />
+
+                    <label>Grupo</label>
+                    <SelectSubAgent SelectSubAgent="Bond" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row card-box mat-elevation-z4">
+        <div class="col-lg-6">
+            <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Detalles de primas</h5>
+
+            <div class="form-group row d-flex justify-content-lg-end">
+                Monto de Cobertura
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" @bind-value="Bond.CovergeAmount" />
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="form-group row d-flex justify-content-lg-end">
+                <label>Prima Neta</label>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" @bind-value="Bond.Premium" />
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="form-group row d-flex justify-content-lg-end">
+                <label>Cuota</label>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" @bind-value="Bond.Fee" />
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="form-group row d-flex justify-content-lg-end">
+                <label>Gastos de Expedicion</label>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" @bind-value="Bond.IssueCost" />
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="form-group row d-flex justify-content-lg-end">
+                <label>Gastos de Buro</label>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" @bind-value="Bond.BureauCost" />
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+            <div class="form-group row d-flex justify-content-lg-end">
+                <label>IVA</label>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" @bind-value="Bond.Tax" />
+                </div>
+                <div class="col-lg-2">
+                    <input type="text" class="form-control" @bind-value="Bond.TaxPercentage" />
+                </div>
+            </div>
+            <div class="form-group row d-flex justify-content-lg-end">
+                <label>Prima Total</label>
+                <div class="col-lg-5">
+                    <input type="text" class="form-control" @bind-value="Bond.PremiumTotal" />
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Detalles de comision</h5>
+
+            <div class="form-group row d-flex justify-content-lg-end">
+                <label>Porcentaje de comision</label>
+                <div class="col-lg-8">
+                    <input type="text" class="form-control" @bind-value="Bond.CommissionPercentage" />
+                </div>
+            </div>
+
+            <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Comision Grupo (Opcional)</h5>
+            <div class="form-group row d-flex justify-content-lg-end">
+                <label>Porcentaje de comision</label>
+                <div class="col-lg-8">
+                    <input type="text" class="form-control" @bind-value="Bond.GroupCommissionPercentage" />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <button class="btn btn-blue">Guardar Datos</button>
+        </div>
+    </div>
+
+   
+
+</EditForm>
+

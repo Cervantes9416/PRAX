@@ -1,0 +1,6 @@
+﻿@page "/insurance/Create/{BranchID:int}"
+@inherits AddInsuranceBase
+
+<h3 class="mat-h4 mb-1"><i class="fas fa-digital-tachograph"></i>&nbsp; Informacion de la Poliza - @GetTItle()</h3>
+
+<InsuranceForm Insurance="Insurance" OnValidSubmit="Create" BranchID="BranchID" />

@@ -1,0 +1,53 @@
+﻿
+<div class="row d-flex justify-content-center">
+    <div class="col-5 border">
+        <h4 class="border-bottom border-blue">No Seleccionados</h4>
+        @foreach (var item in NoSelectItems)
+        {
+            <MatListItem @onclick="@(() => Select(item))"><i class="fas fa-minus text-info mr-2"></i>  @item.Value </MatListItem>
+        }
+    </div>
+    <div class="col-1 d-flex flex-column justify-content-center align-items-center">
+        <button class="btn btn-light" type="button" @onclick="SelectAll">>></button>
+        <button class="btn btn-light" type="button" @onclick="UnSelectAll">@UnSelectText</button>
+    </div>
+    <div class="col-5 border">
+        <h4 class="border-bottom border-blue">Seleccionados</h4>
+        @foreach (var item in SelectItems)
+        {
+            <MatListItem @onclick="@(() => UnSelect(item))"><i class="fas fa-check text-success mr-2"></i>  @item.Value </MatListItem>
+        }
+    </div>
+</div>
+
+
+
+@code {
+    [Parameter] public List<MultipleSelectModel> NoSelectItems { get; set; }
+    [Parameter] public List<MultipleSelectModel> SelectItems { get; set; }
+    private string UnSelectText = "<<";
+
+    private void Select(MultipleSelectModel item)
+    {
+        NoSelectItems.Remove(item);
+        SelectItems.Add(item);
+    }
+
+    private void UnSelect(MultipleSelectModel item)
+    {
+        SelectItems.Remove(item);
+        NoSelectItems.Add(item);
+    }
+
+    private void UnSelectAll()
+    {
+        NoSelectItems.AddRange(SelectItems);
+        SelectItems.Clear();
+    }
+
+    private void SelectAll()
+    {
+        SelectItems.AddRange(NoSelectItems);
+        NoSelectItems.Clear();
+    }
+}

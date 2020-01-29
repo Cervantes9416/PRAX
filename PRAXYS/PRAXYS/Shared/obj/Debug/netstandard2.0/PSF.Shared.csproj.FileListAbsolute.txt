@@ -1,0 +1,8 @@
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PSF.Shared.deps.json
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PSF.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PSF.Shared.pdb
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PSF.Shared.csprojAssemblyReference.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PSF.Shared.AssemblyInfoInputs.cache
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PSF.Shared.AssemblyInfo.cs
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PSF.Shared.dll
+C:\Users\Alejandro Chávez\Documents\Cesar\PRAXIS_SISTEM\PSF\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PSF.Shared.pdb

@@ -1,0 +1,13 @@
+﻿@inherits AddEndorsementBase
+@page  "/endorsement/create/{InsuranceID:int}"
+
+
+<h4 class="mat-h4 mb-1"> Informacion del Endoso</h4>
+
+@if (Endorsement.Insurance != null)
+{
+    <EndorsementForm Endorsement="Endorsement" OnValidSubmit="Create" />
+}
+
+
+

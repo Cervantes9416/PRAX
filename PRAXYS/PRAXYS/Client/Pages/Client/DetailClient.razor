@@ -1,0 +1,55 @@
+﻿@page "/clients/details/{ClientID:int}"
+@inherits DetailClientBase
+
+<div class="card mat-elevation-z4">
+    <div class="card-body">
+        @if (Client != null)
+        {
+            <div class="row">
+                <div class="col-lg-9">
+                    <MatTabGroup Style="min-height:90vh;">
+                        <MatTab Label="Datos Generales">
+                            <ClientForm ReadOnly="true" Client="Client" />
+                        </MatTab>
+                        <MatTab Label="Polizas">
+                            @if (ClientInsurances != null)
+                            {
+                                <div class="mt-2 animated fadeInLeft">
+                                    <ListInsurance Insurances="ClientInsurances"></ListInsurance>
+                                </div>
+                            }
+                        </MatTab>
+                        <MatTab Label="Fianzas">
+
+                        </MatTab>
+                    </MatTabGroup>
+                </div>
+
+                <div class="col-lg-3">
+                    <InputFile documentation="ClientDocumentation"
+                               UploadFile="UploadFile"
+                               DocumentationList="Client.ClientDocumentation.Cast<IDocumentationEntity>().ToList()"
+                               DeleteFile="DeleteFile"
+                               DownloadFile="DownloadFile"
+                               ViewFile="ViewFile">
+                    </InputFile>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="d-flex justify-content-center">
+                <div class="spinner-grow avatar-lg text-secondary m-2 text-center" role="status"></div>
+            </div>
+        }
+    </div>
+</div>
+
+@code {
+    bool Opened = true;
+
+    void ButtonClicked()
+    {
+        Opened = !Opened;
+    }
+}
