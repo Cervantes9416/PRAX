@@ -57,6 +57,9 @@ namespace PRAXYS.Shared.Entities
         [Required]
         public decimal ExchangeRate { get; set; }
 
+        public string PreviousInsurance { get; set; }
+        public string RenewedInsurance { get; set; }
+
         //ENDOSO
         public bool Endorsement { get; set; }
         public int EndorsementNumber { get; set; }

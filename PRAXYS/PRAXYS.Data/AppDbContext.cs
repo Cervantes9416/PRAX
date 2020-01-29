@@ -27,7 +27,7 @@ namespace PRAXYS.Data
             modelBuilder.Entity<Ramo_Coverage>().HasKey(x => new { x.CoverageID, x.BranchID });
 
             //------CREAR DATOS DEL USUARIO ADMINISTRADOR
-            var hasher = new PasswordHasher<IdentityUser>();
+            /*var hasher = new PasswordHasher<IdentityUser>();
             var roleAdminId = "6b62204f-d8ee-41cb-8ef5-0d9bd46622b2";
             var userAdminID = "47a5d10c-25ba-4f8a-80d1-2e4918a20ca4";
 
@@ -56,7 +56,7 @@ namespace PRAXYS.Data
                     RoleId =  roleAdminId, 
                     UserId = userAdminID 
                 });
-            modelBuilder.Entity<IdentityRole>().HasData(roleAdmin);
+            modelBuilder.Entity<IdentityRole>().HasData(roleAdmin);*/
 
             base.OnModelCreating(modelBuilder);
         }

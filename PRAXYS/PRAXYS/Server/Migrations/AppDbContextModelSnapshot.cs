@@ -44,15 +44,6 @@ namespace PRAXYS.Server.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "6b62204f-d8ee-41cb-8ef5-0d9bd46622b2",
-                            ConcurrencyStamp = "8dac9f7d-8102-453d-96a9-edaf0e43bbef",
-                            Name = "admin",
-                            NormalizedName = "admin"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -142,24 +133,6 @@ namespace PRAXYS.Server.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = "47a5d10c-25ba-4f8a-80d1-2e4918a20ca4",
-                            AccessFailedCount = 0,
-                            ConcurrencyStamp = "44e651c7-92e3-4243-865b-b6a26b330f75",
-                            Email = "ccervantes@umbrella-seguros.com",
-                            EmailConfirmed = true,
-                            LockoutEnabled = false,
-                            NormalizedEmail = "ccervantes@umbrella-seguros.com",
-                            NormalizedUserName = "Admin1234",
-                            PasswordHash = "AQAAAAEAACcQAAAAEHT5wAr9mOqzrU85S07bTBWSsNyGxZx1hPLZD+LXxD5DwTkUvDrVveseu/usS8KOXw==",
-                            PhoneNumberConfirmed = false,
-                            SecurityStamp = "509545a4-02b2-43d3-a829-de80a8ee32e6",
-                            TwoFactorEnabled = false,
-                            UserName = "Admin1234"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
@@ -221,13 +194,6 @@ namespace PRAXYS.Server.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = "47a5d10c-25ba-4f8a-80d1-2e4918a20ca4",
-                            RoleId = "6b62204f-d8ee-41cb-8ef5-0d9bd46622b2"
-                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -868,6 +834,9 @@ namespace PRAXYS.Server.Migrations
                     b.Property<int>("InsuranceID")
                         .HasColumnType("int");
 
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("ValidFrom")
                         .HasColumnType("datetime2");
 
@@ -1031,6 +1000,9 @@ namespace PRAXYS.Server.Migrations
                     b.Property<int>("PaymentTypeID")
                         .HasColumnType("int");
 
+                    b.Property<string>("PreviousInsurance")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ReferenceEmail")
                         .HasColumnType("nvarchar(max)");
 
@@ -1042,6 +1014,9 @@ namespace PRAXYS.Server.Migrations
 
                     b.Property<decimal?>("Renewal")
                         .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("RenewedInsurance")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Rights")
                         .HasColumnType("decimal(18,2)");

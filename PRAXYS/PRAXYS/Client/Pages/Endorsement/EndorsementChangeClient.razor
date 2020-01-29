@@ -1,0 +1,62 @@
+﻿@inherits EndorsementChangeClientBase
+
+
+@if (Insurance != null && Endorsement != null)
+{
+    <div class="card-box">
+        <div class="col-lg-12">
+            <div class="row">
+                <div class="col-lg-4">
+                    <MatDatePicker Style="width:100%;" Label="Fecha Desde" @bind-Value="Endorsement.ValidFrom" DateFormat="d-m-Y"></MatDatePicker>
+                </div>
+                <div class="col-lg-4">
+                    <MatDatePicker Style="width:100%;" Label="Fecha Hasta" @bind-Value="Endorsement.ValidFrom" DateFormat="d-m-Y"></MatDatePicker>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            Datos del Endoso
+        </div>
+        <div class="card-body">
+            <div class="col-12">
+                <div class="row">
+                    <div class="form-group col-lg-6">
+                        <label class="d-block">Contratante Actual</label>
+                        <label class="text-danger">@Insurance.Client.GetName()</label>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label class="d-block">Contratante Nuevo(a)</label>
+                        <SelectClients SelectClient="Insurance"/>
+                    </div>
+
+                    <div class="form-group col-lg-6">
+                        <label class="d-block">Direccion</label>
+                        <select class="form-control">
+                            <option>Seleccionar..</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-box">
+        <div class="col-12">
+            <div class="row">
+                <div class="col-lg-12">
+                    <label>Concepto</label>
+                    <input @bind-value="Endorsement.Description" class="form-control" />
+                </div>
+                <div class="col-lg-12">
+                    <label class="text-center">Notas</label>
+                    <textarea class="form-control" @bind="Endorsement.Notes"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+

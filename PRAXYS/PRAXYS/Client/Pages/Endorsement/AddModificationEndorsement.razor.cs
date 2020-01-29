@@ -9,5 +9,6 @@ namespace PRAXYS.Client.Pages.Endorsement
     public class AddModificationEndorsementBase : ComponentBase
     {
         [Parameter] public int InsuranceID { get; set; }
+        protected int EndorsementType { get; set; }
     }
 }

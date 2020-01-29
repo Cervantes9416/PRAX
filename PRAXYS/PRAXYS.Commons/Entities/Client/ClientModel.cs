@@ -23,5 +23,17 @@ namespace PRAXYS.Commons.Entities.Client
 
         public List<ClientAddressModel> ClientAddresses { get; set; }
         public List<ClientDocumentationModel> ClientDocumentation { get; set; }
+
+        public string GetName()
+        {
+            if (this.PersonType == "Fisica")
+            {
+                return $"{this.Name} {this.LastName} {this.SecondLastName}";
+            }
+            else
+            {
+                return this.CompanyName;
+            }
+        }
     }
 }

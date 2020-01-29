@@ -30,6 +30,14 @@ namespace PRAXYS.Data.DALC
                 .ToListAsync();
         }
 
+        public async static Task<List<PaymentInformation>> PaymentInformationGetAllByInsurance(this AppDbContext context, string insuranceNumber)
+        {
+            return await context.PaymentInformation
+                .Include(x => x.Insurance)
+                .Where(x => x.Insurance.InsuranceNumber == insuranceNumber)
+                .ToListAsync();
+        }
+
 
         public async static Task<List<PaymentInformation>> GetPaymentWithDetails(this AppDbContext context, int insuranceID)
         {

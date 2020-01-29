@@ -56,6 +56,9 @@ namespace PRAXYS.Commons.Entities.Insurance
         public string InsuranceNumber { get; set; }
         public string InsuranceType { get; set; }
 
+        public string PreviousInsurance { get; set; }
+        public string RenewedInsurance { get; set; }
+
         //DATOS PRIMA
         public decimal NetPremium { get; set; }
         public decimal Discount { get; set; }

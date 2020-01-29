@@ -1,268 +1,287 @@
 ﻿@inherits InsuranceFormBase
 
-    <div class="card-box mat-elevation-z4">
-        <EditForm Model="Insurance" OnValidSubmit="OnValidCreate">
-            <DataAnnotationsValidator />
-            <div class="col-lg-3 card-box mat-elevation-z4">
-                <div class="form-group">
-                    <label>Sub Ramo</label>
-                    <SelectSubBranch SelectSubBranch="Insurance" BranchID="BranchID" InputFormMethod="DynamicForm" />
-                    <ValidationMessage For="@(() => Insurance.SubBranchID)" />
+<div class="card-box mat-elevation-z4">
+    <EditForm Model="Insurance" OnValidSubmit="OnValidCreate">
+        <DataAnnotationsValidator />
+
+        <div class="col-12">
+            <div class="row d-flex justify-content-between align-items-center">
+                <div class="col-lg-3 card-box mat-elevation-z4">
+                    <div class="form-group">
+                        <label>Sub Ramo</label>
+                        <SelectSubBranch SelectSubBranch="Insurance" BranchID="BranchID" InputFormMethod="DynamicForm" />
+                        <ValidationMessage For="@(() => Insurance.SubBranchID)" />
+                    </div>
+                </div>
+
+                <div class="col-lg-8 card-box mat-elevation-z4">
+                    <div class="row">
+                        <div class="form-group col-lg-6">
+                            <label>Poliza Anterior</label>
+                            <input class="form-control" />
+                        </div>
+                        <div class="form-group col-lg-6">
+                            <label>Poliza Posterior</label>
+                            <input class="form-control" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-6 col-12">
+                <div class="card-box mat-elevation-z4">
+                    <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Informacion General</h5>
+
+                    <div class="form-group mb-3 col-6">
+                        <MatTextField @bind-Value="Insurance.InsuranceNumber" Label="Numero de Poliza" FullWidth="true"></MatTextField>
+                        <ValidationMessage For="@(() => Insurance.InsuranceNumber)" />
+                    </div>
+                    <div class="form-group">
+                        <label>Compañia</label>
+                        <SelectCompany SelectCompany="Insurance" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Agente</label>
+                        <SelectAgent SelectAgent="Insurance" />
+                        <ValidationMessage For="@(() => Insurance.AgentID)" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cliente</label>
+                        <SelectClients SelectClient="Insurance" />
+                        <ValidationMessage For="@(() => Insurance.ClientID)" />
+                    </div>
+
+                    <div class="form-group">
+                        <label>Grupo</label>
+                        <SelectSubAgent SelectSubAgent="Insurance" />
+                        <ValidationMessage For="@(() => Insurance.SubAgentID)" />
+                    </div>
+                </div>
+
+                <div class="card-box mat-elevation-z4">
+                    <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Vigencias</h5>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <MatDatePicker Style="width:100%;" Label="Desde" @bind-Value="Insurance.ValidFrom" DateFormat="d-m-Y"></MatDatePicker>
+                            <ValidationMessage For="@(() => Insurance.ValidFrom)" />
+                        </div>
+                        <div class="col-lg-6">
+                            <MatDatePicker Style="width:100%;" Label="Hasta" @bind-Value="Insurance.ValidThrought" DateFormat="d-m-Y"></MatDatePicker>
+                            <ValidationMessage For="@(() => Insurance.ValidThrought)" />
+                        </div>
+                        <div class="col-lg-6">
+                            <MatDatePicker Style="width:100%;" Label="Fecha de Antiguedad" @bind-Value="Insurance.SeniorityDate" DateFormat="d-m-Y"></MatDatePicker>
+                        </div>
+                        <div class="col-lg-6">
+                            <MatNumericUpDownField Label="Renovacion"
+                                                   @bind-Value="Insurance.Renewal"
+                                                   Step="0.01m"
+                                                   DecimalPlaces=2
+                                                   FullWidth="true">
+                            </MatNumericUpDownField>
+                        </div>
+                    </div>
+
+                    <h5 class="text-uppercase bg-light p-2 mt-3 mb-3">Moneda y Forma de Pago</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <label>Moneda</label>
+                            <select class="form-control ">
+                                <option value="PESOS">Pesos</option>
+                                <option value="DOLARES">Dolares</option>
+                            </select>
+                        </div>
+                        <div class="col-6">
+                            <label>Tipo de Cambio</label>
+                            <input type="number" class="form-control" @bind-value="Insurance.ExchangeRate" />
+                        </div>
+                        <div class="col-6">
+                            <label>Tipo de Pago</label>
+                            <SelectPaymentType SelectPayment="Insurance" />
+                        </div>
+                    </div>
                 </div>
             </div>
 
+            <div class="col-lg-6 ">
+                <div class="col-lg-12 card-box mat-elevation-z4">
+                    <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Detalles de Primas</h5>
+
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        Prima Neta
+                        <div class="col-lg-5">
+                            @*<input type="text" class="form-control" @bind="Insurance.NetPremium" />*@
+                            <input type="text" class="form-control" @bind="_netPremium" />
+                            <ValidationMessage For="@(() => Insurance.NetPremium)" />
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        <label>Descuento</label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Insurance.Discount" />
+                            <ValidationMessage For="@(() => Insurance.Discount)" />
+                        </div>
+                        <div class="col-lg-2">
+                            @*<input type="text" placeholder="%" class="form-control" @bind-value="Insurance.DiscountPercentage" />*@
+                            <input type="text" placeholder="%" class="form-control" @bind-value="_discountPercentage" />
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        <label>Recargos</label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Insurance.Surcharges" />
+                            <ValidationMessage For="@(() => Insurance.Surcharges)" />
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="text" placeholder="%" class="form-control" @bind-value="_surchargesPercentage" />
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        <label>Derechos</label>
+                        <div class="col-lg-5">
+                            @*<input type="text" class="form-control" @bind="Insurance.Rights" />*@
+                            <input type="text" class="form-control" @bind="_rights" />
+                            <ValidationMessage For="@(() => Insurance.Rights)" />
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        <label>Sub Total</label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Insurance.SubTotal" />
+                            <ValidationMessage For="@(() => Insurance.SubTotal)" />
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        <label>IVA</label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Insurance.tax" />
+                            <ValidationMessage For="@(() => Insurance.tax)" />
+                        </div>
+                        <div class="col-lg-2">
+                            @*<input type="text" placeholder="%" class="form-control" @bind="Insurance.TaxPercentage" />*@
+                            <input type="text" placeholder="%" class="form-control" @bind="_taxPercentage" />
+                            <ValidationMessage For="@(() => Insurance.TaxPercentage)" />
+                        </div>
+                    </div>
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        <label>Prima Total</label>
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Insurance.TotalPremium" />
+                            <ValidationMessage For="@(() => Insurance.TotalPremium)" />
+                        </div>
+                        <div class="col-lg-2">
+                        </div>
+                    </div>
+
+                    <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Detalles de Comisión</h5>
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        Neta
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Insurance.Comission_NetPremium" />
+                            <ValidationMessage For="@(() => Insurance.NetPremium)" />
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="text" placeholder="%" class="form-control" @bind="_commissionNet" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        Recargos
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Insurance.Comission_Surcharges" />
+                            <ValidationMessage For="@(() => Insurance.NetPremium)" />
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="text" placeholder="%" class="form-control" @bind="Insurance.Comission_Surcharges_Percentage" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        Derechos
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Insurance.Comission_Rights" />
+                            <ValidationMessage For="@(() => Insurance.NetPremium)" />
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="text" placeholder="%" class="form-control" @bind="Insurance.Comission_Rights_Percentage" />
+                        </div>
+                    </div>
+
+                    <div class="form-group row d-flex justify-content-lg-end">
+                        Especial
+                        <div class="col-lg-5">
+                            <input type="text" class="form-control" @bind="Insurance.Comission_Special" />
+                            <ValidationMessage For="@(() => Insurance.NetPremium)" />
+                        </div>
+                        <div class="col-lg-2">
+                            <input type="text" placeholder="%" class="form-control" @bind="Insurance.Comission_Special_Percentage" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @* ----------------------- SECTION DYNAMIC FORM ---------------------- *@
+
+        @if (BranchInputForm != null)
+        {
             <div class="row">
-                <div class="col-lg-6 col-12">
-                    <div class="card-box mat-elevation-z4">
-                        <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Informacion General</h5>
-
-                        <div class="form-group mb-3 col-6">
-                            <MatTextField @bind-Value="Insurance.InsuranceNumber" Label="Numero de Poliza" FullWidth="true"></MatTextField>
-                            <ValidationMessage For="@(() => Insurance.InsuranceNumber)" />
-                        </div>
-                        <div class="form-group">
-                            <label>Compañia</label>
-                            <SelectCompany SelectCompany="Insurance" />
-                        </div>
-
-                        <div class="form-group">
-                            <label>Agente</label>
-                            <SelectAgent SelectAgent="Insurance" />
-                            <ValidationMessage For="@(() => Insurance.AgentID)" />
-                        </div>
-
-                        <div class="form-group">
-                            <label>Cliente</label>
-                            <SelectClients SelectClient="Insurance" />
-                            <ValidationMessage For="@(() => Insurance.ClientID)" />
-                        </div>
-
-                        <div class="form-group">
-                            <label>Grupo</label>
-                            <SelectSubAgent SelectSubAgent="Insurance" />
-                            <ValidationMessage For="@(() => Insurance.SubAgentID)" />
-                        </div>
-                    </div>
-
-                    <div class="card-box mat-elevation-z4">
-                        <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Vigencias</h5>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <MatDatePicker Style="width:100%;" Label="Desde" @bind-Value="Insurance.ValidFrom" DateFormat="d-m-Y"></MatDatePicker>
-                                <ValidationMessage For="@(() => Insurance.ValidFrom)" />
-                            </div>
-                            <div class="col-lg-6">
-                                <MatDatePicker Style="width:100%;" Label="Hasta" @bind-Value="Insurance.ValidThrought" DateFormat="d-m-Y"></MatDatePicker>
-                                <ValidationMessage For="@(() => Insurance.ValidThrought)" />
-                            </div>
-                            <div class="col-lg-6">
-                                <MatDatePicker Style="width:100%;" Label="Fecha de Antiguedad" @bind-Value="Insurance.SeniorityDate" DateFormat="d-m-Y"></MatDatePicker>
-                            </div>
-                            <div class="col-lg-6">
-                                <MatNumericUpDownField Label="Renovacion"
-                                                       @bind-Value="Insurance.Renewal"
-                                                       Step="0.01m"
-                                                       DecimalPlaces=2
-                                                       FullWidth="true">
-                                </MatNumericUpDownField>
-                            </div>
-                        </div>
-
-                        <h5 class="text-uppercase bg-light p-2 mt-3 mb-3">Moneda y Forma de Pago</h5>
-                        <div class="row">
-                            <div class="col-6">
-                                <label>Moneda</label>
-                                <select class="form-control ">
-                                    <option value="PESOS">Pesos</option>
-                                    <option value="DOLARES">Dolares</option>
-                                </select>
-                            </div>
-                            <div class="col-6">
-                                <label>Tipo de Cambio</label>
-                                <input type="number" class="form-control" @bind-value="Insurance.ExchangeRate" />
-                            </div>
-                            <div class="col-6">
-                                <label>Tipo de Pago</label>
-                                <SelectPaymentType SelectPayment="Insurance" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6 ">
-                    <div class="col-lg-12 card-box mat-elevation-z4">
-                        <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Detalles de Primas</h5>
-
-                        <div class="form-group row d-flex justify-content-lg-end">
-                            Prima Neta
-                            <div class="col-lg-5">
-                                @*<input type="text" class="form-control" @bind="Insurance.NetPremium" />*@
-                                <input type="text" class="form-control" @bind="_netPremium" />
-                                <ValidationMessage For="@(() => Insurance.NetPremium)" />
-                            </div>
-                            <div class="col-lg-2">
-                            </div>
-                        </div>
-                        <div class="form-group row d-flex justify-content-lg-end">
-                            <label>Descuento</label>
-                            <div class="col-lg-5">
-                                <input type="text" class="form-control" @bind="Insurance.Discount" />
-                                <ValidationMessage For="@(() => Insurance.Discount)" />
-                            </div>
-                            <div class="col-lg-2">
-                                @*<input type="text" placeholder="%" class="form-control" @bind-value="Insurance.DiscountPercentage" />*@
-                                <input type="text" placeholder="%" class="form-control" @bind-value="_discountPercentage" />
-                            </div>
-                        </div>
-                        <div class="form-group row d-flex justify-content-lg-end">
-                            <label>Recargos</label>
-                            <div class="col-lg-5">
-                                <input type="text" class="form-control" @bind="Insurance.Surcharges" />
-                                <ValidationMessage For="@(() => Insurance.Surcharges)" />
-                            </div>
-                            <div class="col-lg-2">
-                                <input type="text" placeholder="%" class="form-control" @bind-value="_surchargesPercentage" />
-                            </div>
-                        </div>
-                        <div class="form-group row d-flex justify-content-lg-end">
-                            <label>Derechos</label>
-                            <div class="col-lg-5">
-                                @*<input type="text" class="form-control" @bind="Insurance.Rights" />*@
-                                <input type="text" class="form-control" @bind="_rights" />
-                                <ValidationMessage For="@(() => Insurance.Rights)" />
-                            </div>
-                            <div class="col-lg-2">
-                            </div>
-                        </div>
-                        <div class="form-group row d-flex justify-content-lg-end">
-                            <label>Sub Total</label>
-                            <div class="col-lg-5">
-                                <input type="text" class="form-control" @bind="Insurance.SubTotal" />
-                                <ValidationMessage For="@(() => Insurance.SubTotal)" />
-                            </div>
-                            <div class="col-lg-2">
-                            </div>
-                        </div>
-                        <div class="form-group row d-flex justify-content-lg-end">
-                            <label>IVA</label>
-                            <div class="col-lg-5">
-                                <input type="text" class="form-control" @bind="Insurance.tax" />
-                                <ValidationMessage For="@(() => Insurance.tax)" />
-                            </div>
-                            <div class="col-lg-2">
-                                @*<input type="text" placeholder="%" class="form-control" @bind="Insurance.TaxPercentage" />*@
-                                <input type="text" placeholder="%" class="form-control" @bind="_taxPercentage" />
-                                <ValidationMessage For="@(() => Insurance.TaxPercentage)" />
-                            </div>
-                        </div>
-                        <div class="form-group row d-flex justify-content-lg-end">
-                            <label>Prima Total</label>
-                            <div class="col-lg-5">
-                                <input type="text" class="form-control" @bind="Insurance.TotalPremium" />
-                                <ValidationMessage For="@(() => Insurance.TotalPremium)" />
-                            </div>
-                            <div class="col-lg-2">
-                            </div>
-                        </div>
-
-                        <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Detalles de Comisión</h5>
-                        <div class="form-group row d-flex justify-content-lg-end">
-                            Neta
-                            <div class="col-lg-5">
-                                <input type="text" class="form-control" @bind="Insurance.Comission_NetPremium" />
-                                <ValidationMessage For="@(() => Insurance.NetPremium)" />
-                            </div>
-                            <div class="col-lg-2">
-                                <input type="text" placeholder="%" class="form-control" @bind="_commissionNet" />
-                            </div>
-                        </div>
-
-                        <div class="form-group row d-flex justify-content-lg-end">
-                            Recargos
-                            <div class="col-lg-5">
-                                <input type="text" class="form-control" @bind="Insurance.Comission_Surcharges" />
-                                <ValidationMessage For="@(() => Insurance.NetPremium)" />
-                            </div>
-                            <div class="col-lg-2">
-                                <input type="text" placeholder="%" class="form-control" @bind="Insurance.Comission_Surcharges_Percentage" />
-                            </div>
-                        </div>
-
-                        <div class="form-group row d-flex justify-content-lg-end">
-                            Derechos
-                            <div class="col-lg-5">
-                                <input type="text" class="form-control" @bind="Insurance.Comission_Rights" />
-                                <ValidationMessage For="@(() => Insurance.NetPremium)" />
-                            </div>
-                            <div class="col-lg-2">
-                                <input type="text"  placeholder="%" class="form-control" @bind="Insurance.Comission_Rights_Percentage" />
-                            </div>
-                        </div>
-
-                        <div class="form-group row d-flex justify-content-lg-end">
-                            Especial
-                            <div class="col-lg-5">
-                                <input type="text" class="form-control" @bind="Insurance.Comission_Special" />
-                                <ValidationMessage For="@(() => Insurance.NetPremium)" />
-                            </div>
-                            <div class="col-lg-2">
-                                <input type="text"  placeholder="%" class="form-control" @bind="Insurance.Comission_Special_Percentage" />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            @* ----------------------- SECTION DYNAMIC FORM ---------------------- *@
-
-            @if (BranchInputForm != null)
-            {
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="col-12 card-box mat-elevation-z4">
-                            <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Detalles</h5>
-                            @BranchInputForm
-                        </div>
-                    </div>
-                </div>
-            }
-
-            @*------------------------ SECTION REFERENCE --------------------------*@
-
-            <div class="row p-1">
                 <div class="col-lg-12">
-                    <div class="card-box mat-elevation-z4">
-                        <h5 class="text-uppercase bg-light p-2 mb-3">Referencia</h5>
-                        <div class="form-row">
-                            <div class="form-group col-12">
-                                <label>Nombre</label>
-                                <input type="text" class="form-control" @bind-value="Insurance.ReferenceName" />
-                            </div>
-                            <div class="form-group col-4">
-                                <label>Telefono</label>
-                                <input type="text" class="form-control" @bind-value="Insurance.ReferenceNumber" />
-                            </div>
-                            <div class="form-group col-4">
-                                <label>Email</label>
-                                <input type="text" class="form-control" @bind-value="Insurance.ReferenceEmail" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="d-flex justify-content-end">
-                        <button type="submit" class="btn btn-blue waves-effect waves-light">
-                            <span class="btn-label">
-                                <i class="far fa-save"></i>
-                            </span>
-                            Guardar Datos
-                        </button>
+                    <div class="col-12 card-box mat-elevation-z4">
+                        <h5 class="text-uppercase bg-light p-2 mt-0 mb-3">Detalles</h5>
+                        @BranchInputForm
                     </div>
                 </div>
             </div>
+        }
 
-        </EditForm>
-    </div>
-    
+        @*------------------------ SECTION REFERENCE --------------------------*@
+
+        <div class="row p-1">
+            <div class="col-lg-12">
+                <div class="card-box mat-elevation-z4">
+                    <h5 class="text-uppercase bg-light p-2 mb-3">Referencia</h5>
+                    <div class="form-row">
+                        <div class="form-group col-12">
+                            <label>Nombre</label>
+                            <input type="text" class="form-control" @bind-value="Insurance.ReferenceName" />
+                        </div>
+                        <div class="form-group col-4">
+                            <label>Telefono</label>
+                            <input type="text" class="form-control" @bind-value="Insurance.ReferenceNumber" />
+                        </div>
+                        <div class="form-group col-4">
+                            <label>Email</label>
+                            <input type="text" class="form-control" @bind-value="Insurance.ReferenceEmail" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-blue waves-effect waves-light">
+                        <span class="btn-label">
+                            <i class="far fa-save"></i>
+                        </span>
+                        Guardar Datos
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </EditForm>
+</div>
+
+
 
 @code{
 
@@ -273,21 +292,21 @@
         switch (InpuForm)
         {
             case "Accidente":
-                BranchInputForm = @<AccidentForm insurance="Insurance"/>;
-                break;
-            case "Vehiculos":
-                BranchInputForm = @<VehicleForm insurance="Insurance"/>;
-                break;
-            case "Vida":
-                BranchInputForm = @<LifeInsuranceForm insurance="Insurance"/>;
-                break;
-            case "Ninguno":
-                BranchInputForm = null;
-                break;
-            default:
-                break;
-        }
+                BranchInputForm =@<AccidentForm insurance="Insurance" />;
+break;
+case "Vehiculos":
+BranchInputForm = @<VehicleForm insurance="Insurance" />;
+break;
+case "Vida":
+BranchInputForm = @<LifeInsuranceForm insurance="Insurance" />;
+break;
+case "Ninguno":
+BranchInputForm = null;
+break;
+default:
+break;
+}
 
-        StateHasChanged();
-    }
+StateHasChanged();
+}
 }

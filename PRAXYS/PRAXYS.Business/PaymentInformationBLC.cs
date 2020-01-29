@@ -52,6 +52,12 @@ namespace PRAXYS.Business
             return _mapper.Map<List<PaymentInformationModel>>(payments);
         }
 
+        public async Task<List<PaymentInformationModel>> GetAllWithInsuranceNumber(string InsuranceNumber)
+        {
+            var payments = await _context.PaymentInformationGetAllByInsurance(InsuranceNumber);
+            return _mapper.Map<List<PaymentInformationModel>>(payments);
+        }
+
         public Task<PaymentInformation> Post(PaymentInformation item)
         {
             throw new NotImplementedException();

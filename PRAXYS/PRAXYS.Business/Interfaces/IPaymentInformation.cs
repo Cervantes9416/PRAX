@@ -10,5 +10,6 @@ namespace PRAXYS.Business.Interfaces
     public interface IPaymentInformation : IGenericBLC<PaymentInformation>
     {
         Task<List<PaymentInformationModel>> GetAllInsurancePayments(int id);
+        Task<List<PaymentInformationModel>> GetAllWithInsuranceNumber(string InsuranceNumber);
     }
 }

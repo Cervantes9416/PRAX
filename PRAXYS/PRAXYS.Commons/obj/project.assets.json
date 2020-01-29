@@ -1050,27 +1050,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alejandro Chávez\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\cscxx\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alejandro Chávez\\Documents\\BitBucket_Projects\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj",
+      "projectUniqueName": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj",
       "projectName": "PRAXYS.Commons",
-      "projectPath": "C:\\Users\\Alejandro Chávez\\Documents\\BitBucket_Projects\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj",
-      "packagesPath": "C:\\Users\\Alejandro Chávez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alejandro Chávez\\Documents\\BitBucket_Projects\\PRAXYS\\PRAXYS.Commons\\obj\\",
+      "projectPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj",
+      "packagesPath": "C:\\Users\\cscxx\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Commons\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Alejandro Chávez\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\cscxx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -1082,8 +1075,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Alejandro Chávez\\Documents\\BitBucket_Projects\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj": {
-              "projectPath": "C:\\Users\\Alejandro Chávez\\Documents\\BitBucket_Projects\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj"
+            "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj": {
+              "projectPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj"
             }
           }
         }

@@ -70,3 +70,11 @@ C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj
 C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
 C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.dll
 C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.deps.json
+C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.pdb
+C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.csprojAssemblyReference.cache
+C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfoInputs.cache
+C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.AssemblyInfo.cs
+C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS\Shared\obj\Debug\netstandard2.0\PRAXYS.Shared.pdb

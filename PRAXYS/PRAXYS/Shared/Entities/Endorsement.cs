@@ -18,7 +18,8 @@ namespace PRAXYS.Shared.Entities
         public int EndorsementTypeID { get; set; }
         [Required]
         public string Description { get; set; }
-        
+        public string Notes { get; set; }
+
         public Insurance Insurance { get; set; }
         public EndorsementType EndorsementType { get; set; }
     }

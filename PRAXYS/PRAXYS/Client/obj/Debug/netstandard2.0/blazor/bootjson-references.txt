@@ -51,3 +51,8 @@ System.Threading.Tasks.Extensions.dll
 System.Xml.dll
 System.Xml.Linq.dll
 W8lessLabs.Blazor.LocalFiles.dll
+AutoMapper.pdb
+PRAXYS.Client.pdb
+PRAXYS.Commons.pdb
+PRAXYS.Shared.pdb
+System.Linq.Dynamic.Core.pdb

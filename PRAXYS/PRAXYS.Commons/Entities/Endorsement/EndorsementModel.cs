@@ -21,6 +21,7 @@ namespace PRAXYS.Commons.Entities.Endorsement
 
         [Required(ErrorMessage = "Campo Obligatorio")]
         public string Description { get; set; }
+        public string Notes { get; set; }
 
         //DETALLES DE PRIMAS
         //[Required(ErrorMessage = "Campo Requerido")]

@@ -38,7 +38,7 @@ namespace PRAXYS.Server
         {
             services.AddAutoMapper(typeof(EntityProfile));
             
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("ServerDataConnection"),b => b.MigrationsAssembly("PRAXYS.Server")));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DataConnection"),b => b.MigrationsAssembly("PRAXYS.Server")));
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
