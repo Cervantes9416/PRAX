@@ -8326,27 +8326,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alejandro Chávez\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\cscxx\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Business\\PRAXYS.Business.csproj",
+      "projectUniqueName": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Business\\PRAXYS.Business.csproj",
       "projectName": "PRAXYS.Business",
-      "projectPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Business\\PRAXYS.Business.csproj",
-      "packagesPath": "C:\\Users\\Alejandro Chávez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Business\\obj\\",
+      "projectPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Business\\PRAXYS.Business.csproj",
+      "packagesPath": "C:\\Users\\cscxx\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Business\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Alejandro Chávez\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\cscxx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.0"
@@ -8358,14 +8351,14 @@
       "frameworks": {
         "netcoreapp3.0": {
           "projectReferences": {
-            "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj": {
-              "projectPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj"
+            "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj": {
+              "projectPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj"
             },
-            "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Data\\PRAXYS.Data.csproj": {
-              "projectPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Data\\PRAXYS.Data.csproj"
+            "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Data\\PRAXYS.Data.csproj": {
+              "projectPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Data\\PRAXYS.Data.csproj"
             },
-            "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj": {
-              "projectPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj"
+            "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj": {
+              "projectPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj"
             }
           }
         }
@@ -8414,20 +8407,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.0.1, 3.0.1]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.0.0, 3.0.0]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[3.0.0, 3.0.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -8442,7 +8421,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'iTextSharp 5.5.13.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"iTextSharp 5.5.13.1\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "iTextSharp",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.0"
@@ -8452,7 +8431,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.Office.Interop.Excel 15.0.4795.1000' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.0'. This package may not be fully compatible with your project.",
+      "message": "El paquete \"Microsoft.Office.Interop.Excel 15.0.4795.1000\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \".NETCoreApp,Version=v3.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
       "libraryId": "Microsoft.Office.Interop.Excel",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.0"

@@ -15,5 +15,10 @@ namespace PRAXYS.Client.Pages.Endorsement
             Endorsement.Description = "Cambio de RFC";
             Endorsement.Notes = "Favor de expedir endoso 'Modificacion' por cambio de RFC";
         }
+
+        protected override Task CreateEndorsement()
+        {
+            return base.CreateEndorsement();
+        }
     }
 }

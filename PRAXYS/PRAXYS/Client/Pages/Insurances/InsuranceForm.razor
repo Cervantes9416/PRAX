@@ -126,7 +126,7 @@
                         Prima Neta
                         <div class="col-lg-5">
                             @*<input type="text" class="form-control" @bind="Insurance.NetPremium" />*@
-                            <input type="text" class="form-control" @bind="_netPremium" />
+                            <input type="number" step="0.01" class="form-control" @bind="_netPremium" />
                             <ValidationMessage For="@(() => Insurance.NetPremium)" />
                         </div>
                         <div class="col-lg-2">
@@ -135,29 +135,29 @@
                     <div class="form-group row d-flex justify-content-lg-end">
                         <label>Descuento</label>
                         <div class="col-lg-5">
-                            <input type="text" class="form-control" @bind="Insurance.Discount" />
+                            <input type="number" step="0.01" class="form-control" @bind="Insurance.Discount" />
                             <ValidationMessage For="@(() => Insurance.Discount)" />
                         </div>
                         <div class="col-lg-2">
                             @*<input type="text" placeholder="%" class="form-control" @bind-value="Insurance.DiscountPercentage" />*@
-                            <input type="text" placeholder="%" class="form-control" @bind-value="_discountPercentage" />
+                            <input type="number" step="0.01" placeholder="%" class="form-control" @bind-value="_discountPercentage" />
                         </div>
                     </div>
                     <div class="form-group row d-flex justify-content-lg-end">
                         <label>Recargos</label>
                         <div class="col-lg-5">
-                            <input type="text" class="form-control" @bind="Insurance.Surcharges" />
+                            <input type="number" step="0.01" class="form-control" @bind="Insurance.Surcharges" />
                             <ValidationMessage For="@(() => Insurance.Surcharges)" />
                         </div>
                         <div class="col-lg-2">
-                            <input type="text" placeholder="%" class="form-control" @bind-value="_surchargesPercentage" />
+                            <input type="number" step="0.01" placeholder="%" class="form-control" @bind-value="_surchargesPercentage" />
                         </div>
                     </div>
                     <div class="form-group row d-flex justify-content-lg-end">
                         <label>Derechos</label>
                         <div class="col-lg-5">
                             @*<input type="text" class="form-control" @bind="Insurance.Rights" />*@
-                            <input type="text" class="form-control" @bind="_rights" />
+                            <input type="number" step="0.01" class="form-control" @bind="_rights" />
                             <ValidationMessage For="@(() => Insurance.Rights)" />
                         </div>
                         <div class="col-lg-2">
@@ -166,7 +166,7 @@
                     <div class="form-group row d-flex justify-content-lg-end">
                         <label>Sub Total</label>
                         <div class="col-lg-5">
-                            <input type="text" class="form-control" @bind="Insurance.SubTotal" />
+                            <input type="number" step="0.01" class="form-control" @bind="Insurance.SubTotal" />
                             <ValidationMessage For="@(() => Insurance.SubTotal)" />
                         </div>
                         <div class="col-lg-2">
@@ -175,19 +175,19 @@
                     <div class="form-group row d-flex justify-content-lg-end">
                         <label>IVA</label>
                         <div class="col-lg-5">
-                            <input type="text" class="form-control" @bind="Insurance.tax" />
+                            <input type="number" step="0.01" class="form-control" @bind="Insurance.tax" />
                             <ValidationMessage For="@(() => Insurance.tax)" />
                         </div>
                         <div class="col-lg-2">
                             @*<input type="text" placeholder="%" class="form-control" @bind="Insurance.TaxPercentage" />*@
-                            <input type="text" placeholder="%" class="form-control" @bind="_taxPercentage" />
+                            <input type="number" step="0.01" placeholder="%" class="form-control" @bind="_taxPercentage" />
                             <ValidationMessage For="@(() => Insurance.TaxPercentage)" />
                         </div>
                     </div>
                     <div class="form-group row d-flex justify-content-lg-end">
                         <label>Prima Total</label>
                         <div class="col-lg-5">
-                            <input type="text" class="form-control" @bind="Insurance.TotalPremium" />
+                            <input type="number" step="0.01" class="form-control" @bind="Insurance.TotalPremium" />
                             <ValidationMessage For="@(() => Insurance.TotalPremium)" />
                         </div>
                         <div class="col-lg-2">
@@ -198,44 +198,44 @@
                     <div class="form-group row d-flex justify-content-lg-end">
                         Neta
                         <div class="col-lg-5">
-                            <input type="text" class="form-control" @bind="Insurance.Comission_NetPremium" />
+                            <input type="number" step="0.01" class="form-control" @bind="Insurance.Comission_NetPremium" />
                             <ValidationMessage For="@(() => Insurance.NetPremium)" />
                         </div>
                         <div class="col-lg-2">
-                            <input type="text" placeholder="%" class="form-control" @bind="_commissionNet" />
+                            <input type="number" step="0.01" placeholder="%" class="form-control" @bind="_commissionNet" />
                         </div>
                     </div>
 
                     <div class="form-group row d-flex justify-content-lg-end">
                         Recargos
                         <div class="col-lg-5">
-                            <input type="text" class="form-control" @bind="Insurance.Comission_Surcharges" />
+                            <input type="number" step="any" class="form-control" @bind="Insurance.Comission_Surcharges" />
                             <ValidationMessage For="@(() => Insurance.NetPremium)" />
                         </div>
                         <div class="col-lg-2">
-                            <input type="text" placeholder="%" class="form-control" @bind="Insurance.Comission_Surcharges_Percentage" />
+                            <input type="number" step="0.01" placeholder="%" class="form-control" @bind="Insurance.Comission_Surcharges_Percentage" />
                         </div>
                     </div>
 
                     <div class="form-group row d-flex justify-content-lg-end">
                         Derechos
                         <div class="col-lg-5">
-                            <input type="text" class="form-control" @bind="Insurance.Comission_Rights" />
+                            <input type="number" step="any" class="form-control" @bind="Insurance.Comission_Rights" />
                             <ValidationMessage For="@(() => Insurance.NetPremium)" />
                         </div>
                         <div class="col-lg-2">
-                            <input type="text" placeholder="%" class="form-control" @bind="Insurance.Comission_Rights_Percentage" />
+                            <input type="number" step="0.01" placeholder="%" class="form-control" @bind="Insurance.Comission_Rights_Percentage" />
                         </div>
                     </div>
 
                     <div class="form-group row d-flex justify-content-lg-end">
                         Especial
                         <div class="col-lg-5">
-                            <input type="text" class="form-control" @bind="Insurance.Comission_Special" />
+                            <input type="number" step="0.01" class="form-control" @bind="Insurance.Comission_Special" />
                             <ValidationMessage For="@(() => Insurance.NetPremium)" />
                         </div>
                         <div class="col-lg-2">
-                            <input type="text" placeholder="%" class="form-control" @bind="Insurance.Comission_Special_Percentage" />
+                            <input type="number" step="0.01" placeholder="%" class="form-control" @bind="Insurance.Comission_Special_Percentage" />
                         </div>
                     </div>
                 </div>

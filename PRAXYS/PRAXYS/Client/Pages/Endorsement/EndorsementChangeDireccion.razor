@@ -31,7 +31,7 @@
                                 @if (Addresses != null)
                                 {
                                     <label>Direccion Nueva</label>
-                                    <select class="form-control">
+                                    <select @bind="Insurance.AddressID " class="form-control">
                                         <option>Seleccionar..</option>
                                         @foreach (var item in Addresses)
                                         {

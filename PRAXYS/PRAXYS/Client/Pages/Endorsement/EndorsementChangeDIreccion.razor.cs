@@ -23,16 +23,20 @@ namespace PRAXYS.Client.Pages.Endorsement
             Endorsement.Description = "Cambio de direccion";
             Endorsement.Notes = "Favor de expedir endoso 'Modificacion' por cambio de direccion";
 
-           
+            GetAddress();
         }
 
         protected async void GetAddress()
         {
-            var Client = await Http.GetJsonAsync<ClientModel>($"api/Clients/GetByDetails/{InsuranceID}");
+            var Client = await Http.GetJsonAsync<ClientModel>($"api/Clients/GetByDetails/{Insurance.ClientID}");
             Addresses = Client.ClientAddresses.Select(x => x.Address).ToList();
 
             StateHasChanged();
         }
 
+        protected override Task CreateEndorsement()
+        {
+            return base.CreateEndorsement();
+        }
     }
 }

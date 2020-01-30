@@ -2742,27 +2742,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alejandro Chávez\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\cscxx\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Client\\PRAXYS.Client.csproj",
+      "projectUniqueName": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Client\\PRAXYS.Client.csproj",
       "projectName": "PRAXYS.Client",
-      "projectPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Client\\PRAXYS.Client.csproj",
-      "packagesPath": "C:\\Users\\Alejandro Chávez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Client\\obj\\",
+      "projectPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Client\\PRAXYS.Client.csproj",
+      "packagesPath": "C:\\Users\\cscxx\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Client\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Alejandro Chávez\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\cscxx\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -2774,11 +2767,11 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj": {
-              "projectPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj"
+            "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj": {
+              "projectPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj"
             },
-            "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj": {
-              "projectPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj"
+            "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj": {
+              "projectPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj"
             }
           }
         }
