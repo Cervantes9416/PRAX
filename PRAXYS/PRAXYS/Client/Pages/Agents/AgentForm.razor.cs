@@ -25,8 +25,7 @@ namespace PRAXYS.Client.Pages.Agents
 
         protected override void OnInitialized()
         {
-            Agent.PersonType = "Fisica";
-            Agent.Status = true;
+            
         }
 
         protected async override Task OnAfterRenderAsync(bool firstRender)

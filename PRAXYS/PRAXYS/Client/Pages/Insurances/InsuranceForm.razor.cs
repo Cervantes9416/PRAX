@@ -113,7 +113,7 @@ namespace PRAXYS.Client.Pages.Insurances
 
         protected async void OnValidCreate()
         {
-            if (Insurance.Renewal > 0 && (Insurance.PreviousInsurance == null || Insurance.PreviousInsurance == ""))
+            if (Insurance.Renewal > 1 && Insurance.PreviousInsurance == "NUEVA") 
             {
                 await js.Message("Error", "Al renovar una poliza es necesario especificar el numero del documento anterior", "error");
             }
@@ -137,9 +137,9 @@ namespace PRAXYS.Client.Pages.Insurances
             Insurance.Discount = Insurance.NetPremium * (Insurance.DiscountPercentage / 100);
             Insurance.Surcharges = Insurance.SubTotal * (Insurance.SurchargesPercentage / 100);
             Insurance.SubTotal = Insurance.NetPremium - Insurance.Discount + Insurance.Surcharges + Insurance.Rights;
-            Insurance.tax = Insurance.SubTotal * (Insurance.TaxPercentage / 100);
-            Insurance.TotalPremium = Insurance.NetPremium - Insurance.Discount + Insurance.Surcharges + Insurance.Rights + Insurance.tax;
-            Insurance.Comission_NetPremium = Insurance.NetPremium * (Insurance.Comission_NetPremium_Percentage / 100);
+            Insurance.tax = Math.Round((Insurance.SubTotal * (Insurance.TaxPercentage / 100)),2);
+            Insurance.TotalPremium = Math.Round((Insurance.NetPremium - Insurance.Discount + Insurance.Surcharges + Insurance.Rights + Insurance.tax),2);
+            Insurance.Comission_NetPremium = Math.Round( (Insurance.NetPremium * (Insurance.Comission_NetPremium_Percentage / 100)),2);
 
             StateHasChanged();
         }

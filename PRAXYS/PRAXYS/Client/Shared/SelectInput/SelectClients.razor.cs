@@ -18,14 +18,15 @@ namespace PRAXYS.Client.Shared.SelectInput
         [Parameter] public ISelectClient SelectClient{ get; set; }
         [Parameter] public EventCallback<int> SendId { get; set; }
         protected List<ClientModel> Clients { get; set; }
-        protected int _clientID { 
+        protected string _clientID { 
             get 
             {
-                return SelectClient.ClientID;    
+                return SelectClient.ClientID.ToString();    
             }
             set 
             {
-                SelectClient.ClientID = value;
+                SelectClient.ClientID = Convert.ToInt32(value);
+                StateHasChanged();
                 SendClientID();
             } 
         }

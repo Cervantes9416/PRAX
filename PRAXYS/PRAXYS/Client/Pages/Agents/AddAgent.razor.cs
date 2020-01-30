@@ -27,6 +27,8 @@ namespace PRAXYS.Client.Pages.Agents
         {
             Agent = new AgentModel();
             Agent.IssueDate = DateTime.Now;
+            Agent.PersonType = "Fisica";
+            Agent.Status = true;
         }
 
         protected async Task Crear()

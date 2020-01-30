@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj": {}
+    "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj": {
+    "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj",
+        "projectUniqueName": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj",
         "projectName": "PRAXYS.Commons",
-        "projectPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj",
-        "packagesPath": "C:\\Users\\cscxx\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS.Commons\\obj\\",
+        "projectPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Commons\\PRAXYS.Commons.csproj",
+        "packagesPath": "C:\\Users\\Alejandro Chávez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS.Commons\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\cscxx\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Alejandro Chávez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -27,8 +32,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj": {
-                "projectPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj"
+              "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj": {
+                "projectPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj"
               }
             }
           }
@@ -71,18 +76,23 @@
         }
       }
     },
-    "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj": {
+    "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj",
+        "projectUniqueName": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj",
         "projectName": "PRAXYS.Shared",
-        "projectPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj",
-        "packagesPath": "C:\\Users\\cscxx\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cscxx\\Desktop\\PRAX\\PRAX\\PRAXYS\\PRAXYS\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Shared\\PRAXYS.Shared.csproj",
+        "packagesPath": "C:\\Users\\Alejandro Chávez\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Alejandro Chávez\\Documents\\PRAXIS\\PRAX\\PRAXYS\\PRAXYS\\Shared\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\cscxx\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Alejandro Chávez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"

@@ -83,12 +83,24 @@
                 <EditForm Model="Agent" OnValidSubmit="OnValidSubmit">
                     <DataAnnotationsValidator />
 
-                    <div class="form-group mb-3 col-lg-4 p-0">
-                        <MatSelect Disabled="@ReadOnly" Label="Entidad" Enhanced="true" @bind-Value="Agent.PersonType" Style="width:100%;">
-                            <MatOption Value=""></MatOption>
-                            <MatOption Value="Fisica">Fisica</MatOption>
-                            <MatOption Value="Moral">Moral</MatOption>
-                        </MatSelect>
+                    <div class="form-group col-lg-12 mb-3  p-0">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <MatSelect Disabled="@ReadOnly" Label="Entidad" Enhanced="true" @bind-Value="Agent.PersonType" Style="width:100%;">
+                                    <MatOption Value=""></MatOption>
+                                    <MatOption Value="Fisica">Fisica</MatOption>
+                                    <MatOption Value="Moral">Moral</MatOption>
+                                </MatSelect>
+                            </div>
+                            
+                            <div class="col-lg-4"></div>
+
+                            <div class="col-lg-4">
+                                <label>Clabe</label>
+                                <input class="form-control readonly-input" @bind-value="Agent.Code"/>
+                                <ValidationMessage For="@(() => Agent.Code)"/>
+                            </div>
+                        </div>
                     </div>
 
                     @if (Agent.PersonType == "Fisica")

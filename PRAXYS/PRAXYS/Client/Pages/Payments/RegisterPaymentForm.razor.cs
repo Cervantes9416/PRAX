@@ -19,29 +19,14 @@ namespace PRAXYS.Client.Pages.Payments
         [Inject] NavigationManager navigationManager { get; set; }
         [Parameter] public int PaymentInformationID { get; set; }
         [Parameter] public int InsuranceID { get; set; }
-        protected InsurancePaymentModel InsurancePayment { get; set; }
+        [Parameter] public EventCallback OnValidSubmit { get; set; }
+        [Parameter] public InsurancePaymentModel InsurancePayment { get; set; }
 
         protected override void OnInitialized()
         {
-            InsurancePayment = new InsurancePaymentModel();
             InsurancePayment.PaymentInformationID = PaymentInformationID;
             InsurancePayment.DatePayment = DateTime.Now;
             InsurancePayment.IssueDate = DateTime.Now;
-        }
-
-        protected async void RegisterPayment()
-        {
-            //var result = await Http.SendJsonAsync<bool>(HttpMethod.Post, "api/PaymentInformation/PayReceipt", InsurancePayment);
-            var httpResponse = await Service.POST("api/PaymentInformation/PayReceipt", InsurancePayment);
-            if (httpResponse.Error)
-            {
-                await js.Message("Error", "No se ha podido realizar el registro", "error");
-            }
-            else
-            {
-                await js.Message("Exito", "El registro se ha guardado de forma exitosa", "success");
-                navigationManager.NavigateTo($"Overview/{InsuranceID}");
-            }
         }
     }
 }

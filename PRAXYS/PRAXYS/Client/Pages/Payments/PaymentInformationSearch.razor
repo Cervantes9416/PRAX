@@ -1,6 +1,12 @@
 ﻿@page "/payments/search"
 @inherits PaymentInformationSearchBase
 
+<div class="row">
+    <div class="col-7">
+        <span class="display-4">Cobranza</span>
+    </div>
+</div>
+
 <div class="card mat-elevation-z4">
     <div class="card-header">
         Documento
@@ -9,8 +15,25 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-lg-5">
-                    <input type="text" @bind-value="InsuranceNumber" class="form-control" placeholder="Buscar documento"/>
+                    <input type="text" @bind-value="_insuranceNumber" class="form-control" placeholder="Buscar documento" />
                     <button @onclick="SearchInsurance" class="btn btn-light">Buscar</button>
+                    @*@if (InsuranceList != null)
+                        {
+                            <select @bind="_insuranceNumber" class="form-control js-select2">
+                                <option>Buscar Documento</option>
+                                @foreach (var item in InsuranceList)
+                                {
+                                    <option value="@item.InsuranceNumber">@($"{item.InsuranceNumber} - {item.InsuranceType}")</option>
+                                }
+                            </select>
+                            <button @onclick="SearchInsurance" class="btn btn-light">Buscar</button>
+                        }
+                        else
+                        {
+                            <div class="d-flex justify-content-center">
+                                <div class="spinner-border text-info m-2" role="status"></div>
+                            </div>
+                        }*@
                 </div>
             </div>
         </div>
@@ -54,9 +77,9 @@
                         <td class="text-center @(item.Payed ? "text-success" : "text-warning")"><strong>@(item.Payed ? "Pagada" : "Pendiente")</strong></td>
                         <td class="text-center">
                             <div class="btn-group">
-                                <a href="/payments/receipt/@item.ID" class="btn btn-blue waves-effect waves-light">
+                                <button @onclick="(() => OpenModal(item.ID))" class="btn btn-blue waves-effect waves-light">
                                     <i class="far fa-save"></i>
-                                </a>
+                                </button>
                             </div>
                         </td>
                     </tr>
@@ -65,3 +88,31 @@
         </table>
     }
 </div>
+
+<BSModal @ref="Details" Size="Size.ExtraLarge">
+    <BSModalHeader OnClick="@(() => Details.Hide())">Pagos poliza</BSModalHeader>
+    <BSModalBody>
+        @ModalContent
+    </BSModalBody>
+</BSModal>
+
+@code{
+    bool Opened = true;
+    BSModal Details;
+    private RenderFragment ModalContent { get; set; }
+
+    void OpenModal(int id)
+    {
+        ModalContent =@<PaymentReceipt PaymentID="id" OnModalForm="closeModal" />;
+StateHasChanged();
+Details.Show();
+}
+
+async void closeModal()
+{
+ModalContent = null;
+StateHasChanged();
+Details.Hide();
+await SearchInsurance();
+}
+}

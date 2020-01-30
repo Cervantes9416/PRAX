@@ -64,10 +64,11 @@ namespace PRAXYS.Client.Pages.Insurances
             if (result.IsSuccessStatusCode)
             {
                 await js.Message("Exito", "El registro se ha eliminado de forma exitosa", "success");
-                InsuranceList = await Http
+                /*InsuranceList = await Http
                     .GetJsonAsync<List<InsuranceEndorsementModel>>($"api/insurance/GetAllByInsuranceNumber/{Insurance.InsuranceNumber}");
                 ModalContent = null;
-                StateHasChanged();
+                StateHasChanged();*/
+                await js.Reload();
             }
             else
             {

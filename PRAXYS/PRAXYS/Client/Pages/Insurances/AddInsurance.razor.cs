@@ -39,6 +39,9 @@ namespace PRAXYS.Client.Pages.Insurances
         {
             Insurance = new InsuranceModel();
             Insurance.SeniorityDate = DateTime.Now;
+            Insurance.CreateDate = DateTime.Now;
+            Insurance.Renewal = 1;
+            Insurance.PreviousInsurance = "NUEVA";
         }
 
         protected async void Create()

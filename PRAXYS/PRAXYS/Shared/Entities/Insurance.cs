@@ -16,6 +16,7 @@ namespace PRAXYS.Shared.Entities
         [Required]
         public DateTime? ValidThrought { get; set; }
         public DateTime? SeniorityDate { get; set; }
+        public DateTime? CreateDate { get; set; }
         public decimal Renewal { get; set; }
         [Required]
         public int ClientID { get; set; }

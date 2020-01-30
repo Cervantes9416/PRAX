@@ -28,7 +28,7 @@
         }
         else
         {
-            <table class="table table-hover border-blue table-striped" id="datable-init">
+            <table class="table table-hover border-blue table-striped table-responsive-lg" id="datable-init">
                 <thead class="bg-blue text-white">
                     <tr>
                         <th scope="col">Nombre</th>
@@ -42,16 +42,10 @@
                     @foreach (var item in AgentList)
                     {
                         <tr>
-                            @if (item.PersonType == "Fisica")
-                            {
-                                <td>@(item.Name + " " + item.LastName + " " + item.SecondLastName)</td>
-                            }
-                            else if (item.PersonType == "Moral")
-                            {
-                                <td><span>@item.CompanyName</span></td>
-                            }
+                            <td>@item.GetName()</td>
+                            
                             <td>@item.PersonType</td>
-                            <td>@item.ExpirationDate.Value.ToString("dd-MM-yyyy")</td>
+                            <td></td>
                             <td>@item.PersonalEmail</td>
                             <td>
                                 <a href="agents/edit/@item.ID"class="btn btn-blue waves-effect waves-light"><i class="far fa-edit"></i></a>

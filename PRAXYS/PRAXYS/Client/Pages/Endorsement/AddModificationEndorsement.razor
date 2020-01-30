@@ -29,6 +29,11 @@
 @code{
     RenderFragment Content { get; set; }
 
+    protected override void OnInitialized()
+    {
+        SelectEndorsement();
+    }
+
     int _endorsementType
     {
         get

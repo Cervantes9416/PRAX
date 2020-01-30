@@ -10,8 +10,6 @@ namespace PRAXYS.Client.Pages.Endorsement
         protected async override Task OnInitializedAsync()
         {
             await base.OnInitializedAsync();
-            Endorsement.PaymentTypeID = 17;
-            Endorsement.EndorsementTypeID = 3;
             Endorsement.ValidFrom = Insurance.ValidFrom;
             Endorsement.ValidThrought = Insurance.ValidThrought;
             Endorsement.Description = "Endoso de beneficiario";

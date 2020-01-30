@@ -1963,3 +1963,198 @@ END;
 
 GO
 
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129052831_Test-Mig')
+BEGIN
+    UPDATE [AspNetRoles] SET [ConcurrencyStamp] = N'd123b58f-e7e7-4c80-8574-9bcd279affbb'
+    WHERE [Id] = N'6b62204f-d8ee-41cb-8ef5-0d9bd46622b2';
+    SELECT @@ROWCOUNT;
+
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129052831_Test-Mig')
+BEGIN
+    UPDATE [AspNetUsers] SET [ConcurrencyStamp] = N'b4947f54-4b14-4513-8633-98e82b5feb0e', [PasswordHash] = N'AQAAAAEAACcQAAAAEBXjp9a/gZVvSArkzYjv6hf3Az1CQsRubza2b0vLxIXOnO0cCQiAPZ4f4Tl98Z/0Vw==', [SecurityStamp] = N'712ee466-98a2-4105-b333-8231f99b8e9a'
+    WHERE [Id] = N'47a5d10c-25ba-4f8a-80d1-2e4918a20ca4';
+    SELECT @@ROWCOUNT;
+
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129052831_Test-Mig')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20200129052831_Test-Mig', N'3.0.0');
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129075258_AddNotes_tblEndorsement')
+BEGIN
+    DELETE FROM [AspNetUserRoles]
+    WHERE [UserId] = N'47a5d10c-25ba-4f8a-80d1-2e4918a20ca4' AND [RoleId] = N'6b62204f-d8ee-41cb-8ef5-0d9bd46622b2';
+    SELECT @@ROWCOUNT;
+
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129075258_AddNotes_tblEndorsement')
+BEGIN
+    DELETE FROM [AspNetRoles]
+    WHERE [Id] = N'6b62204f-d8ee-41cb-8ef5-0d9bd46622b2';
+    SELECT @@ROWCOUNT;
+
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129075258_AddNotes_tblEndorsement')
+BEGIN
+    DELETE FROM [AspNetUsers]
+    WHERE [Id] = N'47a5d10c-25ba-4f8a-80d1-2e4918a20ca4';
+    SELECT @@ROWCOUNT;
+
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129075258_AddNotes_tblEndorsement')
+BEGIN
+    ALTER TABLE [Endorsement] ADD [Notes] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129075258_AddNotes_tblEndorsement')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20200129075258_AddNotes_tblEndorsement', N'3.0.0');
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129122612_addPreviusInsuranceColumn')
+BEGIN
+    ALTER TABLE [Insurance] ADD [PreviousInsurance] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129122612_addPreviusInsuranceColumn')
+BEGIN
+    ALTER TABLE [Insurance] ADD [RenewedInsurance] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129122612_addPreviusInsuranceColumn')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20200129122612_addPreviusInsuranceColumn', N'3.0.0');
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129170240_AddNote')
+BEGIN
+    DECLARE @var61 sysname;
+    SELECT @var61 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Insurance]') AND [c].[name] = N'Renewal');
+    IF @var61 IS NOT NULL EXEC(N'ALTER TABLE [Insurance] DROP CONSTRAINT [' + @var61 + '];');
+    ALTER TABLE [Insurance] ALTER COLUMN [Renewal] decimal(18,2) NOT NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129170240_AddNote')
+BEGIN
+    ALTER TABLE [Insurance] ADD [AddressID] int NOT NULL DEFAULT 0;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129170240_AddNote')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20200129170240_AddNote', N'3.0.0');
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129222544_last_Changes')
+BEGIN
+    CREATE INDEX [IX_Insurance_AddressID] ON [Insurance] ([AddressID]);
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129222544_last_Changes')
+BEGIN
+    ALTER TABLE [Insurance] ADD CONSTRAINT [FK_Insurance_Adress_AddressID] FOREIGN KEY ([AddressID]) REFERENCES [Adress] ([ID]) ON DELETE CASCADE;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200129222544_last_Changes')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20200129222544_last_Changes', N'3.0.0');
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200130184702_RFC_null')
+BEGIN
+    DECLARE @var62 sysname;
+    SELECT @var62 = [d].[name]
+    FROM [sys].[default_constraints] [d]
+    INNER JOIN [sys].[columns] [c] ON [d].[parent_column_id] = [c].[column_id] AND [d].[parent_object_id] = [c].[object_id]
+    WHERE ([d].[parent_object_id] = OBJECT_ID(N'[Company]') AND [c].[name] = N'RFC');
+    IF @var62 IS NOT NULL EXEC(N'ALTER TABLE [Company] DROP CONSTRAINT [' + @var62 + '];');
+    ALTER TABLE [Company] ALTER COLUMN [RFC] nvarchar(max) NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200130184702_RFC_null')
+BEGIN
+    ALTER TABLE [Company] ADD [Days_Payment_subsequent] int NOT NULL DEFAULT 0;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200130184702_RFC_null')
+BEGIN
+    ALTER TABLE [Company] ADD [Days_Payment_subsequent_Renewal] int NOT NULL DEFAULT 0;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200130184702_RFC_null')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20200130184702_RFC_null', N'3.0.0');
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200130191026_AddColumn_CreateDate')
+BEGIN
+    ALTER TABLE [Insurance] ADD [CreateDate] datetime2 NULL;
+END;
+
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20200130191026_AddColumn_CreateDate')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20200130191026_AddColumn_CreateDate', N'3.0.0');
+END;
+
+GO
+

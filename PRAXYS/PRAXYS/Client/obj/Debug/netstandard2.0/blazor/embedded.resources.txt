@@ -1,42 +1,42 @@
-C:\Users\cscxx\.nuget\packages\automapper\9.0.0\lib\netstandard2.0\AutoMapper.dll
-C:\Users\cscxx\.nuget\packages\blazor.contextmenu\1.3.0\lib\netstandard2.0\BlazorContextMenu.dll
-C:\Users\cscxx\.nuget\packages\blazorcomponentutilities\1.1.0\lib\netstandard2.0\BlazorComponentUtilities.dll
-C:\Users\cscxx\.nuget\packages\blazordaterangepicker\2.0.0\lib\netstandard2.0\BlazorDateRangePicker.dll
-C:\Users\cscxx\.nuget\packages\blazorise\0.8.7.1\lib\netstandard2.0\Blazorise.dll
-C:\Users\cscxx\.nuget\packages\blazorise.datagrid\0.8.7.1\lib\netstandard2.0\Blazorise.DataGrid.dll
-C:\Users\cscxx\.nuget\packages\blazorstrap\1.0.106\lib\netstandard2.0\BlazorStrap.dll
-C:\Users\cscxx\.nuget\packages\matblazor\1.7.4\lib\netstandard2.0\MatBlazor.dll
-C:\Users\cscxx\.nuget\packages\microsoft.aspnetcore.authorization\3.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Authorization.dll
-C:\Users\cscxx\.nuget\packages\microsoft.aspnetcore.blazor\3.0.0-preview9.19424.4\lib\netstandard2.0\Microsoft.AspNetCore.Blazor.dll
-C:\Users\cscxx\.nuget\packages\microsoft.aspnetcore.blazor.httpclient\3.0.0-preview9.19424.4\lib\netstandard2.0\Microsoft.AspNetCore.Blazor.HttpClient.dll
-C:\Users\cscxx\.nuget\packages\microsoft.aspnetcore.components\3.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Components.dll
-C:\Users\cscxx\.nuget\packages\microsoft.aspnetcore.components.authorization\3.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Components.Authorization.dll
-C:\Users\cscxx\.nuget\packages\microsoft.aspnetcore.components.forms\3.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Components.Forms.dll
-C:\Users\cscxx\.nuget\packages\microsoft.aspnetcore.components.web\3.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Components.Web.dll
-C:\Users\cscxx\.nuget\packages\microsoft.aspnetcore.http.abstractions\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll
-C:\Users\cscxx\.nuget\packages\microsoft.aspnetcore.http.features\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll
-C:\Users\cscxx\.nuget\packages\microsoft.aspnetcore.metadata\3.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Metadata.dll
-C:\Users\cscxx\.nuget\packages\microsoft.bcl.asyncinterfaces\1.1.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\cscxx\.nuget\packages\microsoft.csharp\4.6.0\lib\netstandard2.0\Microsoft.CSharp.dll
-C:\Users\cscxx\.nuget\packages\microsoft.extensions.dependencyinjection\3.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\cscxx\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\3.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\cscxx\.nuget\packages\microsoft.extensions.logging.abstractions\3.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\cscxx\.nuget\packages\microsoft.extensions.options\3.1.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll
-C:\Users\cscxx\.nuget\packages\microsoft.extensions.primitives\3.1.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll
-C:\Users\cscxx\.nuget\packages\microsoft.jsinterop\3.1.0\lib\netstandard2.0\Microsoft.JSInterop.dll
-C:\Users\cscxx\.nuget\packages\mono.webassembly.interop\3.0.0-preview9.19423.4\lib\netstandard2.0\Mono.WebAssembly.Interop.dll
-C:\Users\cscxx\.nuget\packages\radzen.blazor\1.2.11\lib\netstandard2.0\Radzen.Blazor.dll
-C:\Users\cscxx\.nuget\packages\system.buffers\4.5.0\lib\netstandard2.0\System.Buffers.dll
-C:\Users\cscxx\.nuget\packages\system.componentmodel.annotations\4.7.0\lib\netstandard2.0\System.ComponentModel.Annotations.dll
-C:\Users\cscxx\.nuget\packages\system.linq.dynamic.core\1.0.19\lib\netstandard2.0\System.Linq.Dynamic.Core.dll
-C:\Users\cscxx\.nuget\packages\system.memory\4.5.3\lib\netstandard2.0\System.Memory.dll
-C:\Users\cscxx\.nuget\packages\system.numerics.vectors\4.5.0\lib\netstandard2.0\System.Numerics.Vectors.dll
-C:\Users\cscxx\.nuget\packages\system.reflection.emit\4.3.0\lib\netstandard1.3\System.Reflection.Emit.dll
-C:\Users\cscxx\.nuget\packages\system.reflection.emit.ilgeneration\4.3.0\lib\netstandard1.3\System.Reflection.Emit.ILGeneration.dll
-C:\Users\cscxx\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\cscxx\.nuget\packages\system.text.encodings.web\4.7.0\lib\netstandard2.0\System.Text.Encodings.Web.dll
-C:\Users\cscxx\.nuget\packages\system.text.json\4.7.0\lib\netstandard2.0\System.Text.Json.dll
-C:\Users\cscxx\.nuget\packages\system.threading.tasks.extensions\4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll
-C:\Users\cscxx\.nuget\packages\w8lesslabs.blazor.localfiles\0.9.0\lib\netstandard2.0\W8lessLabs.Blazor.LocalFiles.dll
-C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS.Commons\bin\Debug\netstandard2.0\PRAXYS.Commons.dll
-C:\Users\cscxx\Desktop\PRAX\PRAX\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\.nuget\packages\automapper\9.0.0\lib\netstandard2.0\AutoMapper.dll
+C:\Users\Alejandro Chávez\.nuget\packages\blazor.contextmenu\1.3.0\lib\netstandard2.0\BlazorContextMenu.dll
+C:\Users\Alejandro Chávez\.nuget\packages\blazorcomponentutilities\1.1.0\lib\netstandard2.0\BlazorComponentUtilities.dll
+C:\Users\Alejandro Chávez\.nuget\packages\blazordaterangepicker\2.0.0\lib\netstandard2.0\BlazorDateRangePicker.dll
+C:\Users\Alejandro Chávez\.nuget\packages\blazorise\0.8.7.1\lib\netstandard2.0\Blazorise.dll
+C:\Users\Alejandro Chávez\.nuget\packages\blazorise.datagrid\0.8.7.1\lib\netstandard2.0\Blazorise.DataGrid.dll
+C:\Users\Alejandro Chávez\.nuget\packages\blazorstrap\1.0.106\lib\netstandard2.0\BlazorStrap.dll
+C:\Users\Alejandro Chávez\.nuget\packages\matblazor\1.7.4\lib\netstandard2.0\MatBlazor.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.aspnetcore.authorization\3.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Authorization.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.aspnetcore.blazor\3.0.0-preview9.19424.4\lib\netstandard2.0\Microsoft.AspNetCore.Blazor.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.aspnetcore.blazor.httpclient\3.0.0-preview9.19424.4\lib\netstandard2.0\Microsoft.AspNetCore.Blazor.HttpClient.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.aspnetcore.components\3.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Components.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.aspnetcore.components.authorization\3.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.aspnetcore.components.forms\3.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Components.Forms.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.aspnetcore.components.web\3.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Components.Web.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.aspnetcore.http.abstractions\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.aspnetcore.http.features\2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.aspnetcore.metadata\3.1.0\lib\netstandard2.0\Microsoft.AspNetCore.Metadata.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.bcl.asyncinterfaces\1.1.0\lib\netstandard2.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.csharp\4.6.0\lib\netstandard2.0\Microsoft.CSharp.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.extensions.dependencyinjection\3.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\3.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.extensions.logging.abstractions\3.1.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.extensions.options\3.1.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.extensions.primitives\3.1.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Alejandro Chávez\.nuget\packages\microsoft.jsinterop\3.1.0\lib\netstandard2.0\Microsoft.JSInterop.dll
+C:\Users\Alejandro Chávez\.nuget\packages\mono.webassembly.interop\3.0.0-preview9.19423.4\lib\netstandard2.0\Mono.WebAssembly.Interop.dll
+C:\Users\Alejandro Chávez\.nuget\packages\radzen.blazor\1.2.11\lib\netstandard2.0\Radzen.Blazor.dll
+C:\Program Files\dotnet\sdk\NuGetFallbackFolder\system.buffers\4.5.0\lib\netstandard2.0\System.Buffers.dll
+C:\Users\Alejandro Chávez\.nuget\packages\system.componentmodel.annotations\4.7.0\lib\netstandard2.0\System.ComponentModel.Annotations.dll
+C:\Users\Alejandro Chávez\.nuget\packages\system.linq.dynamic.core\1.0.19\lib\netstandard2.0\System.Linq.Dynamic.Core.dll
+C:\Users\Alejandro Chávez\.nuget\packages\system.memory\4.5.3\lib\netstandard2.0\System.Memory.dll
+C:\Program Files\dotnet\sdk\NuGetFallbackFolder\system.numerics.vectors\4.5.0\lib\netstandard2.0\System.Numerics.Vectors.dll
+C:\Program Files\dotnet\sdk\NuGetFallbackFolder\system.reflection.emit\4.3.0\lib\netstandard1.3\System.Reflection.Emit.dll
+C:\Program Files\dotnet\sdk\NuGetFallbackFolder\system.reflection.emit.ilgeneration\4.3.0\lib\netstandard1.3\System.Reflection.Emit.ILGeneration.dll
+C:\Users\Alejandro Chávez\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Alejandro Chávez\.nuget\packages\system.text.encodings.web\4.7.0\lib\netstandard2.0\System.Text.Encodings.Web.dll
+C:\Users\Alejandro Chávez\.nuget\packages\system.text.json\4.7.0\lib\netstandard2.0\System.Text.Json.dll
+C:\Users\Alejandro Chávez\.nuget\packages\system.threading.tasks.extensions\4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll
+C:\Users\Alejandro Chávez\.nuget\packages\w8lesslabs.blazor.localfiles\0.9.0\lib\netstandard2.0\W8lessLabs.Blazor.LocalFiles.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\bin\Debug\netstandard2.0\PRAXYS.Commons.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS\Shared\bin\Debug\netstandard2.0\PRAXYS.Shared.dll

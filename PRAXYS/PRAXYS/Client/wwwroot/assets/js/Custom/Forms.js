@@ -1,7 +1,7 @@
 ﻿
 
 function Select2Init(){
-    $('.js-example-basic-single').select2();
+    $('.js-select2').select2();
 }
 
 async function ConfirmMessage(title,message) {

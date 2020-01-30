@@ -671,11 +671,16 @@ namespace PRAXYS.Server.Migrations
                     b.Property<int>("Days_Payment_First_Recibe_Renewal")
                         .HasColumnType("int");
 
+                    b.Property<int>("Days_Payment_subsequent")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Days_Payment_subsequent_Renewal")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("IssueDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("RFC")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -938,6 +943,9 @@ namespace PRAXYS.Server.Migrations
 
                     b.Property<int>("CompanyID")
                         .HasColumnType("int");
+
+                    b.Property<DateTime?>("CreateDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CurrencyType")
                         .HasColumnType("nvarchar(50)")

@@ -38,5 +38,5 @@ C:\Users\Alejandro Chávez\.nuget\packages\system.text.encodings.web\4.7.0\lib\n
 C:\Users\Alejandro Chávez\.nuget\packages\system.text.json\4.7.0\lib\netstandard2.0\System.Text.Json.dll
 C:\Users\Alejandro Chávez\.nuget\packages\system.threading.tasks.extensions\4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll
 C:\Users\Alejandro Chávez\.nuget\packages\w8lesslabs.blazor.localfiles\0.9.0\lib\netstandard2.0\W8lessLabs.Blazor.LocalFiles.dll
-C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS.Commons\bin\Release\netstandard2.0\PRAXYS.Commons.dll
-C:\Users\Alejandro Chávez\Documents\BitBucket_Projects\PRAXYS\PRAXYS\Shared\bin\Release\netstandard2.0\PRAXYS.Shared.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS.Commons\bin\Release\netstandard2.0\PRAXYS.Commons.dll
+C:\Users\Alejandro Chávez\Documents\PRAXIS\PRAX\PRAXYS\PRAXYS\Shared\bin\Release\netstandard2.0\PRAXYS.Shared.dll

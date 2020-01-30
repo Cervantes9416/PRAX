@@ -12,8 +12,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <DestinationConnectionStrings Include="AzureStorage">
       <Value>DefaultEndpointsProtocol=https%3bAccountName=praxiscontainer%3bAccountKey=2ei3jj3uDDUvJlxoCn13GpTJpD9WbfTc7hXVzP2hfcWjEWwB5luZqcj/4Z5Km4lpWHz89FvQc7kWXavF52mrTQ==</Value>
     </DestinationConnectionStrings>
-    <DestinationConnectionStrings Include="ServerDataConnection">
+    <DestinationConnectionStrings Include="DataConnection">
       <Value>Server=tcp:praxist5f8jecw.database.windows.net,1433%3bInitial Catalog=praxis%3bPersist Security Info=False%3bUser ID=M9pAJ3iHUth%3bPassword=mlPH77lxutR2%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
     </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="PRAXYS.Data.AppDbContext">
+      <Value>Server=tcp:praxist5f8jecw.database.windows.net,1433%3bInitial Catalog=praxis%3bPersist Security Info=False%3bUser ID=M9pAJ3iHUth%3bPassword=mlPH77lxutR2%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </EFMigrations>
   </ItemGroup>
 </Project>

@@ -31,15 +31,22 @@
 
             <div class="form-group col-lg-6">
                 <label class="d-block">Contratante Nuevo(a)</label>
-                <SelectClients SelectClient="Insurance" />
+                <SelectClients SelectClient="Insurance" SendId="GetListAddress" />
             </div>
 
-            <div class="form-group col-lg-6">
-                <label class="d-block">Direccion</label>
-                <select class="form-control">
-                    <option>Seleccionar..</option>
-                </select>
-            </div>
+            @if (Addresses != null)
+            {
+                <div class="form-group col-lg-6">
+                    <label class="d-block">Direccion</label>
+                    <select class="form-control" @bind="Insurance.AddressID">
+                        <option>Seleccionar..</option>
+                        @foreach (var item in Addresses)
+	                    {
+                            <option value="@item.ID">@item.AddressLine</option>
+	                    }
+                    </select>
+                </div>
+            }
 
         </div>
     </div>

@@ -41,6 +41,7 @@ namespace PRAXYS.Business
                     insurance.Endorsement = true;
                     insurance.EndorsementNumber = EndorsementNumber;
                     insurance.Status = (int)InsuranceStatus.Valid;
+                    insurance.AddressID = model.Insurance.AddressID;
 
                     int totalpayments = (model.TotalPremium != model.FirstPayment.TotalPremium) ? insurance.PaymentType.TotalPayments : 1;
                     insurance.PaymentType = null;

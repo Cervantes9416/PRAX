@@ -34,6 +34,8 @@
     <Compile Remove="Migrations\20200129195537_last_Changes.Designer.cs" />
     <Compile Remove="Migrations\20200129222031_last_Changes.cs" />
     <Compile Remove="Migrations\20200129222031_last_Changes.Designer.cs" />
+    <Compile Remove="Migrations\20200130181403_LastChanges.cs" />
+    <Compile Remove="Migrations\20200130181403_LastChanges.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

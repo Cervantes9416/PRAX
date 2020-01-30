@@ -33,6 +33,7 @@ namespace PRAXYS.Commons.Entities.Insurance
         [Required(ErrorMessage = "Campo Requerido")]
         public DateTime? ValidThrought { get; set; }
         public DateTime? SeniorityDate { get; set; }
+        public DateTime? CreateDate { get; set; }
         public decimal Renewal { get; set; }
         
         [Required(ErrorMessage = "Campo Requerido")]

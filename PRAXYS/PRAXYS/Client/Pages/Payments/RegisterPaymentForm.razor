@@ -1,11 +1,13 @@
 ﻿@inherits RegisterPaymentFormBase
-
+<EditForm Model="InsurancePayment" OnValidSubmit="OnValidSubmit">
     <div class="col-12 text-center mt-2">
         <strong class="text-info">Fecha de Captura:</strong> <span class="">@InsurancePayment.IssueDate.Value.ToString("dd-MM-yyyy")</span>
     </div>
 
-    <EditForm Model="InsurancePayment" OnValidSubmit="RegisterPayment">
-        <div class="form-group mt-3">
+    <hr />
+
+    <div class="row">
+        <div class="form-group col-lg-4 mt-3">
             <label>Banco</label>
             <div class="input-group">
                 <div class="input-group-prepend">
@@ -15,7 +17,7 @@
             </div>
         </div>
 
-        <div class="form-group mt-3">
+        <div class="form-group col-lg-4 mt-3">
             <label>Tipo de Pago</label>
             <select class="form-control" @bind="InsurancePayment.PaymentType">
                 <option value="efectivo">Efectivo</option>
@@ -25,26 +27,27 @@
             </select>
         </div>
 
-        <div class="form-group mt-3 col-lg-6 p-lg-0 col-12">
+        <div class="form-group mt-3 col-lg-6 col-12">
             <MatDatePicker Label="Fecha de Pago" @bind-value="InsurancePayment.DatePayment" Style="width:100%;" />
         </div>
 
-        <div class="form-group mt-3 col-lg-6 p-lg-0 col-12">
+        <div class="form-group mt-3 col-lg-6 col-12">
             <label>Cantidad a Pagar</label>
             <div class="input-group">
                 <div class="input-group-prepend">
                     <span class="input-group-text">$</span>
                 </div>
-                <input type="number" class="form-control" @bind-value="InsurancePayment.PaymentAmount" />
+                <input type="number" step="any" class="form-control" @bind-value="InsurancePayment.PaymentAmount" />
             </div>
         </div>
+    </div>
 
-        <div class="form-group mt-3 d-flex justify-content-lg-end">
-            <button type="submit" class="btn btn-blue waves-effect waves-light">
-                <span class="btn-label">
-                    <i class="far fa-save"></i>
-                </span>
-                Guardar Datos
-            </button>
-        </div>
-    </EditForm>
+    <div class="form-group mt-3 d-flex justify-content-lg-end">
+        <button type="submit" class="btn btn-blue btn-block waves-effect waves-light">
+            <span class="btn-label">
+                <i class="far fa-save"></i>
+            </span>
+            Guardar Datos
+        </button>
+    </div>
+</EditForm>

@@ -11,12 +11,14 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using PRAXYS.Client.Helpers;
+using PRAXYS.Client.Services;
 
 namespace PRAXYS.Client.Pages.Companies
 {
     public class AddCompanyBase : ComponentBase
     {
         [Inject] IJSRuntime js { get; set; }
+        [Inject] IService Service { get; set; }
         [Inject] public HttpClient Http { get; set; }
         [Inject] public NavigationManager navigationManager { get; set; }
         
@@ -34,9 +36,16 @@ namespace PRAXYS.Client.Pages.Companies
 
         protected async Task Crear()
         {
-            await Http.SendJsonAsync(HttpMethod.Post, "api/companies", Company);
-            await js.Message("Exito", "El registro se ha realizado de forma exitosa", "success");
-            navigationManager.NavigateTo("companies/list");
+            var httpResponse = await Service.POST("api/companies", Company);
+            if (httpResponse.Error)
+            {
+                await js.Message("Error", "No se ha podido realizar el registro", "error");
+            }
+            else
+            {
+                await js.Message("Exito", "Se ha realizado el registro", "success");
+                navigationManager.NavigateTo("companies/list");
+            }
         }
         
     }

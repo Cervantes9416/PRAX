@@ -28,6 +28,8 @@ namespace PRAXYS.Client.Pages.Endorsement
                 .GetJsonAsync<InsuranceModel>($"api/Insurance/GetByDetails/{InsuranceID}");
             Endorsement = new EndorsementModel();
             Endorsement.Insurance = Insurance;
+            Endorsement.PaymentTypeID = 17;
+            Endorsement.EndorsementTypeID = 3;
         }
 
         protected virtual async Task CreateEndorsement()
